@@ -7,6 +7,8 @@ public class UI : MonoBehaviour
     public static UI uI;
     public UIGamePlay uiGamePlay;
     public UIMenu uiMenu;
+    public UIPause uiPause;
+    public GameObject keyObject;
     private void Awake()
     {
         uI = this;
@@ -20,6 +22,7 @@ public class UI : MonoBehaviour
     {
         uiGamePlay.Show(menuUI == MenuUI.gamePlay);
         uiMenu.Show(menuUI == MenuUI.menu);
+        uiPause.Show(menuUI == MenuUI.pause);
     }
 
 
@@ -27,7 +30,8 @@ public class UI : MonoBehaviour
     {
 
         gamePlay,
-        menu
+        menu,
+        pause
 
     }
 }

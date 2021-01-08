@@ -2,35 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class GameContro : MonoBehaviour
 {
-   
+    public static GameContro instance;
+    public GameObject itemInGameContro;
+    public GameObject EnemyInGameContro;
+    public float speedRunTime;
+    public int coutnTime;
+    public CloneItem clone;
     [SerializeField] private GameObject main;  
     [SerializeField] private CloneItem[] cloneItem;
-   
-
-private void Start()
+    [SerializeField] private Text textTime;
+    public bool runTime;
+    
+    private void Awake()
     {
-
-        //rigidMain.GetComponent<Rigidbody2D>();
-        //_MadeItem();
+        instance = this;
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-   
-        }
     }
-
-    private void _Reset()
+    public void _Reset()
     {   
         main.transform.DORotate(new Vector3(0, 0, 34.876f), 0.1f);
+        StartCoroutine(_Runtime());
+        coutnTime = 0;
+        textTime.text = "" + coutnTime;
+    }
+     private IEnumerator _Runtime()
+    {
+        if (runTime == false)
+        {
+            runTime = true;
+        }
+        while (runTime == true)
+        {
+            yield return new WaitForSeconds(speedRunTime);
+            coutnTime += 1;
+            textTime.text = "" + coutnTime;
+        }
+
+    }
+    public void _StopTime()
+    {
+        runTime = false;
+        StopCoroutine(_Runtime());
+    }
+   
+    public void _Pause()
+    {
+        UI.uI.ChangeUI(UI.MenuUI.pause);
+        UI.uI.keyObject.SetActive(false);
+        runTime = false;
+        StopCoroutine(_Runtime());
+        clone._StopMoving();
+        MakeEnemy.make._PauseSpawn();
+    }
+    public void _Resume()
+    {
+        runTime = true;
+        StartCoroutine(_Runtime());
+        clone._Moving();
+        UI.uI.ChangeUI(UI.MenuUI.gamePlay);
+        UI.uI.keyObject.SetActive(true);
+        MakeEnemy.make._ResuameSpawn();
+
     }
     
-}
+  
+ }

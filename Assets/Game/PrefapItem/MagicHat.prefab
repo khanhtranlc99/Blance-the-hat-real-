@@ -153,6 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rsprite: {fileID: 9193781768678063313}
   rigidbody2D: {fileID: 9193781768678063315}
+  moveX: 0
+  moveY: 0
+  timeLoopJump: 0
   wasJump: 0
 --- !u!212 &9193781768678063313
 SpriteRenderer:
