@@ -68,7 +68,7 @@
     <Compile Include="Assets\Game\Scrip\Core\CloneItem.cs" />
     <Compile Include="Assets\Game\Scrip\Core\GameContro.cs" />
     <Compile Include="Assets\Game\Scrip\Core\GameManager.cs" />
-    <Compile Include="Assets\Game\Scrip\Core\Test.cs" />
+    <Compile Include="Assets\Game\Scrip\Core\Player.cs" />
     <Compile Include="Assets\Game\Scrip\UI\ButtonUI.cs" />
     <Compile Include="Assets\Game\Scrip\UI\ControUI.cs" />
     <Compile Include="Assets\Game\Scrip\UI\UI.cs" />
