@@ -16,8 +16,7 @@ public class CloneItem : MonoBehaviour
         StartCoroutine(_Jump());
     }
     private IEnumerator _Jump()
-    {
-        
+    {  
         while (wasJump == true)
         {
             yield return new WaitForSeconds(timeLoopJump);

@@ -24,26 +24,15 @@ public class GameContro : MonoBehaviour
     private void Update()
     {
     }
-    public void _Reset()
-    {   
-        main.transform.DORotate(new Vector3(0, 0, 34.876f), 0.1f);
-        StartCoroutine(_Runtime());
-        coutnTime = 0;
-        textTime.text = "" + coutnTime;
-    }
+
      private IEnumerator _Runtime()
     {
-        if (runTime == false)
-        {
-            runTime = true;
-        }
         while (runTime == true)
         {
             yield return new WaitForSeconds(speedRunTime);
             coutnTime += 1;
             textTime.text = "" + coutnTime;
         }
-
     }
     public void _StopTime()
     {
@@ -70,6 +59,14 @@ public class GameContro : MonoBehaviour
         MakeEnemy.make._ResuameSpawn();
 
     }
-    
-  
- }
+    public void _Reset()
+    {
+        main.transform.DORotate(new Vector3(0, 0, 34.876f), 0.1f);
+        runTime = true;
+        coutnTime = 0;
+        textTime.text = "" + coutnTime;
+        StartCoroutine(_Runtime());     
+      
+    }
+
+}

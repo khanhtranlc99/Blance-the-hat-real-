@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class EnemyBom : MonoBehaviour
 {
-    [SerializeField] private GameObject explotion;
-    private void Start()
-    {
-
-    }
-  
-    public IEnumerator _Bom1()
-    {
-        yield return new WaitForSeconds(0.5f);
-        SimplePool.Despawn(this.gameObject);
-    }
+    [SerializeField] private GameObject explosion; 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        explotion.gameObject.SetActive(true);
-        StartCoroutine(_Bom1());
+        var a = Instantiate(explosion, new Vector3(this.transform.position.x, this.transform.position.y, 0), Quaternion.identity);
+        SimplePool.Despawn(this.gameObject);
     }
-  
 }

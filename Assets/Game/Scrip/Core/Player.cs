@@ -13,10 +13,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-    }
-    private void FixedUpdate()
-    {
         _Rotate();
     }
     public void _Rotate()
@@ -29,9 +25,6 @@ public class Player : MonoBehaviour
                 transform.DORotate(new Vector3(0, 0, post.x) * 60, 0.01f);
             }
          }
-        
-  
-
     }
 
 
