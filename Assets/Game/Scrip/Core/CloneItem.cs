@@ -22,7 +22,7 @@ public class CloneItem : MonoBehaviour
             yield return new WaitForSeconds(timeLoopJump);
             int a = Random.Range(-1, 2);
             rigidbody2D.AddForce(new Vector3(moveX * a, moveY, 0));
-            Debug.Log("j");       
+            //Debug.Log("j");       
         }    
     }
 
@@ -32,6 +32,7 @@ public class CloneItem : MonoBehaviour
         {
             GameContro.instance._StopTime();
             UI.uI.ChangeUI(UI.MenuUI.menu);
+            UI.uI._EffectPlusScore();
             Destroy(gameObject);
         }
     }

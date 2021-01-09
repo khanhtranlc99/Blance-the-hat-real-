@@ -11,22 +11,26 @@ public class GameContro : MonoBehaviour
     public GameObject EnemyInGameContro;
     public float speedRunTime;
     public int coutnTime;
+    public int plusScore;
+    public bool runTime;
     public CloneItem clone;
     [SerializeField] private GameObject main;  
     [SerializeField] private CloneItem[] cloneItem;
-    [SerializeField] private Text textTime;
-    public bool runTime;
-    
+    [SerializeField] private Text textTime; 
+    [SerializeField] private Text textScore;
+
     private void Awake()
     {
         instance = this;
     }
     private void Update()
     {
+        
     }
 
      private IEnumerator _Runtime()
     {
+        Debug.Log("RunTime");
         while (runTime == true)
         {
             yield return new WaitForSeconds(speedRunTime);
@@ -38,6 +42,7 @@ public class GameContro : MonoBehaviour
     {
         runTime = false;
         StopCoroutine(_Runtime());
+        MakeEnemy.make._PauseSpawn();
     }
    
     public void _Pause()
@@ -57,7 +62,6 @@ public class GameContro : MonoBehaviour
         UI.uI.ChangeUI(UI.MenuUI.gamePlay);
         UI.uI.keyObject.SetActive(true);
         MakeEnemy.make._ResuameSpawn();
-
     }
     public void _Reset()
     {
@@ -65,8 +69,15 @@ public class GameContro : MonoBehaviour
         runTime = true;
         coutnTime = 0;
         textTime.text = "" + coutnTime;
-        StartCoroutine(_Runtime());     
-      
+        if (StartCoroutine(_Runtime()) == null)
+        {
+            StartCoroutine(_Runtime());
+        }
+        MakeEnemy.make._ResuameSpawn();
     }
-
+    public void _PlusScore()
+    {
+        plusScore += 3;
+        textScore.text = "" + plusScore;
+    }    
 }

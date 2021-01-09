@@ -29,16 +29,14 @@ public class MakeEnemy : MonoBehaviour
             int a = Random.Range(0, 5);
             if (a == 2 || a == 3)
             {
-                int b = Random.Range(-1, 2);
+                float b = Random.Range(-1, 2);
                 SimplePool.Spawn(enemyBoom, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
             }
             else
             {
-                int i = Random.Range(-1, 2);
+                float i = Random.Range(-1, 2);
                 SimplePool.Spawn(enemy, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
-            }                
-         
-            //listEnemy.Add(enemy.gameObject);
+            }                     
         }
         StartCoroutine(_SpawnEnemy());
     }
@@ -55,7 +53,7 @@ public class MakeEnemy : MonoBehaviour
 
     public void _ResuameSpawn()
     {
-        wasBool = transform;
+        wasBool = true;
        
     }
 }

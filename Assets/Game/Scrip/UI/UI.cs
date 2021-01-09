@@ -9,6 +9,7 @@ public class UI : MonoBehaviour
     public UIMenu uiMenu;
     public UIPause uiPause;
     public GameObject keyObject;
+    public GameObject plusStar;
     private void Awake()
     {
         uI = this;
@@ -34,4 +35,11 @@ public class UI : MonoBehaviour
         pause
 
     }
+    public void _EffectPlusScore()
+    {
+        //if( plusStar.activeSelf == false)
+        //    {
+            plusStar.gameObject.SetActive(true);
+        //}
+    }    
 }
