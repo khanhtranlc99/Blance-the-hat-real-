@@ -4,8 +4,43 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - wall
+  - Miss
+  - Plane
   - Enemy
+  - Dead
+  - UICamera
+  - TouchCamera
+  - GameCamera
+  - Schedule
+  - FX
+  - Body
+  - Mission01-01
+  - Mission01-02
+  - Mission01-03
+  - Mission01-04
+  - Mission01-05
+  - Mission01-06
+  - Mission01-07
+  - Mission01-08
+  - Mission01-09
+  - Mission02-01
+  - Mission02-02
+  - Mission02-03
+  - Mission02-04
+  - Mission02-05
+  - Mission02-06
+  - Mission02-07
+  - Mission02-08
+  - Mission02-09
+  - Mission03-01
+  - Mission03-02
+  - Mission03-03
+  - Mission03-04
+  - Mission03-05
+  - Mission03-06
+  - Mission03-07
+  - Mission03-08
+  - Mission03-09
   layers:
   - Default
   - TransparentFX
@@ -15,10 +50,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - PostProcessing
+  - GameCore
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -42,4 +77,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Effect
+    uniqueID: 3810672129
     locked: 0

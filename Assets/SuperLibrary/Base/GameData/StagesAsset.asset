@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32df6f1ba1735ec499b0353c0db84214, type: 3}
+  m_Name: StagesAsset
+  m_EditorClassIdentifier: 
+  unlockCoinBase: 100
+  unlockCoinScale: 0.25
+  unlockCoinMax: 300
+  unlockAdsBase: 1
+  unlockAdsScale: 0.25
+  unlockAdsMax: 3
+  unlockLevelBase: 3
+  unlockLevelScale: 1
+  unlockStarBase: 1
+  unlockStarScale: 1.6
+  useRandom: 0
+  list:
+  - name: Stage 1
+    id: Stage_1
+    idThumb: Unity
+    index: 0
+    description: 
+    unlockType: 4
+    unlockPrice: 0
+    isUnlocked: 1
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    totalPlay: 0
+    star: 0
+    process: 0
+    score: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 2
+    id: Stage_2
+    idThumb: 
+    index: 1
+    description: 
+    unlockType: 4
+    unlockPrice: 3
+    isUnlocked: 0
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    totalPlay: 0
+    star: 0
+    process: 0
+    score: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 3
+    id: Stage_3
+    idThumb: 
+    index: 2
+    description: 
+    unlockType: 4
+    unlockPrice: 6
+    isUnlocked: 0
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    totalPlay: 0
+    star: 0
+    process: 0
+    score: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0

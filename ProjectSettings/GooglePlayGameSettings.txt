@@ -1,0 +1,9 @@
+lastUpgrade=01006
+proj.pluginVersion=0.10.06
+proj.AppId=944930508869
+and.BundleId=com.amanotes.pamabeatbatter
+proj.classDir=Assets
+proj.ConstantsClassName=GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--+app_id+--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e944930508869%3c%2fstring%3e%0d%0a++%3c%21--+package_name+--%3e%0d%0a++%3cstring+name%3d%22package_name%22+translatable%3d%22false%22%3ecom.amanotes.pamabeatbatter%3c%2fstring%3e%0d%0a++%3c%21--+achievement+5+STARS+--%3e%0d%0a++%3cstring+name%3d%22achievement_5_stars%22+translatable%3d%22false%22%3eCgkIxaD9kcAbEAIQAQ%3c%2fstring%3e%0d%0a++%3c%21--+achievement+10+STARS+--%3e%0d%0a++%3cstring+name%3d%22achievement_10_stars%22+translatable%3d%22false%22%3eCgkIxaD9kcAbEAIQAw%3c%2fstring%3e%0d%0a++%3c%21--+achievement+25+STARS+--%3e%0d%0a++%3cstring+name%3d%22achievement_25_stars%22+translatable%3d%22false%22%3eCgkIxaD9kcAbEAIQBA%3c%2fstring%3e%0d%0a++%3c%21--+leaderboard+Perfect+Batter+--%3e%0d%0a++%3cstring+name%3d%22leaderboard_perfect_batter%22+translatable%3d%22false%22%3eCgkIxaD9kcAbEAIQAg%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d%0a
+and.ClientId=944930508869-ntp3isd0ru5v0h7upn99hjpsh32e6hoq.apps.googleusercontent.com
+android.SetupDone=true
