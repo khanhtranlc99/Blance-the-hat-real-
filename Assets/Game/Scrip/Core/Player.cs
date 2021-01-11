@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public Vector3 postDown;
     float xBegin = 0;
     Vector3 rotBegin = Vector3.zero;
-
+    [SerializeField] private Camera cameGameCore;
 
     // Update is called once per frame
     void Update()
@@ -24,14 +24,15 @@ public class Player : MonoBehaviour
     {
          if(Input.GetMouseButtonDown(0))
         {
-            postDown = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+           
+            postDown = cameGameCore.ScreenToViewportPoint(Input.mousePosition);
             xBegin = postDown.x;
             rotBegin = transform.eulerAngles;
         }            
 
          if (Input.GetMouseButton(0))
          {  
-             post = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+             post = cameGameCore.ScreenToViewportPoint(Input.mousePosition);
         
             if (TestButton.instance.wasTouch == true && post != postDown)
             {

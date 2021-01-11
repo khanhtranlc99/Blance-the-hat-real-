@@ -17,7 +17,7 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        ChangeUI(MenuUI.menu);
+        //ChangeUI(MenuUI.menu);
     }
     public void ChangeUI(MenuUI menuUI)
     {

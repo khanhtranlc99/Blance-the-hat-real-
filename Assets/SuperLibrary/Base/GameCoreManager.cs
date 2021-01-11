@@ -45,6 +45,9 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         Debug.Log("Game Core goto InitGame");
 
+
+        /// vao game
+
         DOVirtual.DelayedCall(0.5f, () => GameStateManager.Ready(new MessageReadyGame { }));
     }
 
@@ -93,6 +96,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     protected override void ReadyGame(object data)
     {
         Debug.Log("Game Core goto ReadyGame");
+
     }
 
     protected override void RebornCheckPointGame(object data)

@@ -6,11 +6,15 @@ public class CloneItem : MonoBehaviour
 {
     [SerializeField] private  SpriteRenderer Rsprite;
     [SerializeField] private Rigidbody2D rigidbody2D;
-    public int moveX;
-    public int moveY;
-    public int timeLoopJump;
+    [SerializeField] private PhysicsMaterial2D physics;
+    public float friction;
+    public float bounciness;
+    public float mass;
     public bool itemCanJump;
-    public bool wasJump;
+    public bool wasJump;  
+    public float moveXJump;
+    public float moveYJump;
+    public float timeLoopJump;
     private void Start()
     {
         StartCoroutine(_Jump());
@@ -21,7 +25,7 @@ public class CloneItem : MonoBehaviour
         {
             yield return new WaitForSeconds(timeLoopJump);
             int a = Random.Range(-1, 2);
-            rigidbody2D.AddForce(new Vector3(moveX * a, moveY, 0));
+            rigidbody2D.AddForce(new Vector3(moveXJump * a * 50, moveYJump * 100, 0));
             //Debug.Log("j");       
         }    
     }
@@ -36,6 +40,12 @@ public class CloneItem : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void _LoadData()
+    {
+        physics.bounciness = bounciness;
+        physics.friction = friction;
+        rigidbody2D.mass = mass;
+    }    
     public void _StopMoving()
     {
         this.rigidbody2D.velocity = Vector3.zero;
@@ -54,4 +64,5 @@ public class CloneItem : MonoBehaviour
         this.rigidbody2D.gravityScale = 1;
         this.rigidbody2D.constraints = RigidbodyConstraints2D.None;
     }
+    
 }
