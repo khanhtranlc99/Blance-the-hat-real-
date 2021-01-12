@@ -14,7 +14,7 @@ public class GameContro : MonoBehaviour
     public int plusScore;
     public bool runTime;
     public CloneItem clone;
-    public LogicItem item;
+    public ObjectConfig item;
     [SerializeField] private GameObject main;  
     [SerializeField] private CloneItem[] cloneItem;
     [SerializeField] private Text textTime; 
@@ -24,6 +24,11 @@ public class GameContro : MonoBehaviour
     public PointEffector2D boom;
     public Rigidbody2D water;
     public Rigidbody2D ballSilicol;
+
+    private void OnEnable()
+    {
+        this.RegisterListener(EventID._Pause, ABCD);
+    }
     private void Awake()
     {
         instance = this;
@@ -45,7 +50,7 @@ public class GameContro : MonoBehaviour
             }
         }
     }
-     private void _LoadLogicItem()
+     public void _LoadLogicItem(object param)
     {
         for( int i = 0; i < item.listLogic.Count; i ++)
         {
@@ -57,9 +62,11 @@ public class GameContro : MonoBehaviour
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
             item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
             item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;
-            item.listLogic[i].cloneItem.boomForce = item.listLogic[i].boomForce;
-            item.listLogic[i].cloneItem.ballForce = item.listLogic[i].ballForce;
-            item.listLogic[i].cloneItem.waterForce = item.listLogic[i].waterForce;
+            //item.listLogic[i].cloneItem.boomForce = item.listLogic[i].boomForce;
+            //item.listLogic[i].cloneItem.ballForce = item.listLogic[i].ballForce;
+            //item.listLogic[i].cloneItem.waterForce = item.listLogic[i].waterForce;
+            //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
+
             item.listLogic[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
         }
@@ -110,10 +117,17 @@ public class GameContro : MonoBehaviour
     }    
     public void _LoadLogicEnemy()
     {
-        water.mass = clone.waterForce;
-        boom.forceMagnitude = clone.boomForce;
-        ballSilicol.mass = clone.ballForce;
+        water.mass = item.obtacles[0].force;
+        boom.forceMagnitude = item.obtacles[1].force;
+        ballSilicol.mass = item.obtacles[2].force;
         Debug.Log("LoadEnemy");
     }    
+
+    private void ABCD(object param)
+    {
+        
+
+
+    }
     
 }

@@ -37,9 +37,7 @@ public class UI : MonoBehaviour
     }
     public void _EffectPlusScore()
     {
-        //if( plusStar.activeSelf == false)
-        //    {
             plusStar.gameObject.SetActive(true);
-        //}
+
     }    
 }

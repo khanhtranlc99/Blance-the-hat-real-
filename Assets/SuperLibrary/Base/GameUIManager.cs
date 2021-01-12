@@ -30,6 +30,8 @@ public class GameUIManager : GameManagerBase<GameUIManager>
     private GameConfig gameConfig => DataManager.GameConfig;
     private UserData userData => DataManager.UserData;
 
+    UI asdfasfsf;
+
     protected override void Awake()
     {
         base.Awake();
@@ -153,6 +155,10 @@ public class GameUIManager : GameManagerBase<GameUIManager>
     public override void PauseGame(object data)
     {
         MusicManager.Pause();
+
+    
+
+
     }
 
     protected override void GameOver(object data)
