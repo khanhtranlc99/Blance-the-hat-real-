@@ -25,6 +25,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public PointEffector2D boom;
     public Rigidbody2D water;
     public Rigidbody2D ballSilicol;
+    public CloneItem[] allItem;
 
     protected override void Start()
     {
@@ -32,11 +33,8 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     private void OnEnable()
     {
-        //this.RegisterListener((int)EventID._Start, _LoadLogicItem);
-        //this.RegisterListener((int)EventID._Pause, _Pause);
-        //this.RegisterListener((int)EventID._ChangeMenu, _ChageMenu);
-        //this.RegisterListener((int)EventID._ChangeGamPlay, _ChageGamePlay);
-
+        this.RegisterListener((int)EventID._Start, LoadGame);
+  
 
 
     }
@@ -100,6 +98,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void RestartGame(object data)
     {
         Debug.Log("Game Core goto RestartGame");
+
     }
 
     public override void ResumeGame(object data)
@@ -170,7 +169,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             }
         }
     }
-    public void _LoadLogicItem(object param)
+    public void _LoadLogicItem()
     {
         for (int i = 0; i < item.listLogic.Count; i++)
         {
@@ -190,7 +189,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             Debug.Log("LoadDataItem");
         }
     }
-    public void _Pause(object param)
+    public void _Pause()
     {
         //UI.uI.ChangeUI(UI.MenuUI.pause);
         //UI.uI.keyObject.SetActive(false);
@@ -200,10 +199,10 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     public void _LoadLogicEnemy()
     {
-        water.mass = item.obtacles[0].force;
-        boom.forceMagnitude = item.obtacles[1].force;
-        ballSilicol.mass = item.obtacles[2].force;
-        Debug.Log("LoadEnemy");
+        //water.mass = item.obtacles[0].force;
+        //boom.forceMagnitude = item.obtacles[1].force;
+        //ballSilicol.mass = item.obtacles[2].force;
+        //Debug.Log("LoadEnemy");
     }
     public void _Reset()
     {
@@ -239,6 +238,22 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         isPause = false;
         StopCoroutine(_Runtime());
         MakeEnemy.make._PauseSpawn();
+    }
+
+    public void _CheckItem(int a)
+    {
+        for (int i = 0; i < allItem.Length; i++)
+        {
+
+            if(  i == a)
+            {
+                var b = Instantiate(allItem[i], new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
+                b.transform.SetParent(itemInGameContro.transform);
+                this.clone = b;
+                _LoadLogicEnemy();
+                _Reset();
+            }
+        }
     }
 }
 

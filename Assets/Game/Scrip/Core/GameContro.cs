@@ -62,11 +62,9 @@ public class GameContro : MonoBehaviour
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
             item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
             item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;
-            //item.listLogic[i].cloneItem.boomForce = item.listLogic[i].boomForce;
-            //item.listLogic[i].cloneItem.ballForce = item.listLogic[i].ballForce;
-            //item.listLogic[i].cloneItem.waterForce = item.listLogic[i].waterForce;
-            //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
-
+            item.listLogic[i].cloneItem.waterForce = item.listLogic[i].obtacles[0].force;
+            item.listLogic[i].cloneItem.boomForce = item.listLogic[i].obtacles[1].force;
+            item.listLogic[i].cloneItem.ballForce = item.listLogic[i].obtacles[2].force;
             item.listLogic[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
         }
@@ -117,10 +115,10 @@ public class GameContro : MonoBehaviour
     }    
     public void _LoadLogicEnemy()
     {
-        water.mass = item.obtacles[0].force;
-        boom.forceMagnitude = item.obtacles[1].force;
-        ballSilicol.mass = item.obtacles[2].force;
-        Debug.Log("LoadEnemy");
+        water.mass = clone.waterForce;
+        boom.forceMagnitude = clone.boomForce;
+        ballSilicol.mass = clone.ballForce;
+            Debug.Log("LoadEnemy");
     }    
 
     private void ABCD(object param)

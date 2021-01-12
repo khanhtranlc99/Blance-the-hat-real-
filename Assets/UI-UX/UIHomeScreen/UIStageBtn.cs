@@ -19,6 +19,12 @@ public class UIStageBtn : MonoBehaviour
     private GameObject[] starChildren = null;
 
     private StageData currStageData;
+    /// <summary>
+    /// /
+    public int id;
+
+
+
 
     public void FillData(StageData stageData)
     {
@@ -46,6 +52,7 @@ public class UIStageBtn : MonoBehaviour
 
     public void Ins_OnSelected()
     {
+
         if (currStageData.isUnlocked)
         {
             DataManager.CurrentStage = currStageData;
@@ -55,10 +62,6 @@ public class UIStageBtn : MonoBehaviour
         {
             UIToast.ShowNotice($"{currStageData.name} is locked!");
         }
-
-
-
-
-
+  
     }
 }

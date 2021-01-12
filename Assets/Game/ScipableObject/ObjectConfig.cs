@@ -5,13 +5,14 @@ using UnityEngine;
 public class ObjectConfig : ScriptableObject
 {
     public List<GameItem> listLogic; // đổi tên cái này thành items
-    public List<GameObtacle> obtacles;
+   
 
 }
 [System.Serializable]
 public struct GameItem
 {
     public CloneItem cloneItem;
+    public List<GameObtacle> obtacles;
     public float friction; //ok
     public float bounciness; //ok
     public float mass; // ok
