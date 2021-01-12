@@ -19,11 +19,11 @@ public class GameContro : MonoBehaviour
     [SerializeField] private CloneItem[] cloneItem;
     [SerializeField] private Text textTime; 
     [SerializeField] private Text textScore;
-
-
     Coroutine timeCoroutine = null;
     bool isPause = false;
-
+    public PointEffector2D boom;
+    public Rigidbody2D water;
+    public Rigidbody2D ballSilicol;
     private void Awake()
     {
         instance = this;
@@ -57,6 +57,9 @@ public class GameContro : MonoBehaviour
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
             item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
             item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;
+            item.listLogic[i].cloneItem.boomForce = item.listLogic[i].boomForce;
+            item.listLogic[i].cloneItem.ballForce = item.listLogic[i].ballForce;
+            item.listLogic[i].cloneItem.waterForce = item.listLogic[i].waterForce;
             item.listLogic[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
         }
@@ -104,6 +107,13 @@ public class GameContro : MonoBehaviour
     {
         plusScore += 3;
         textScore.text = "" + plusScore;
+    }    
+    public void _LoadLogicEnemy()
+    {
+        water.mass = clone.waterForce;
+        boom.forceMagnitude = clone.boomForce;
+        ballSilicol.mass = clone.ballForce;
+        Debug.Log("LoadEnemy");
     }    
     
 }

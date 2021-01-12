@@ -15,6 +15,9 @@ public class CloneItem : MonoBehaviour
     public float moveXJump;
     public float moveYJump;
     public float timeLoopJump;
+    public float waterForce;
+    public float ballForce;
+    public float boomForce;
     private void Start()
     {
         StartCoroutine(_Jump());

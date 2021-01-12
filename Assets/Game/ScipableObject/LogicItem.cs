@@ -19,5 +19,9 @@ public struct Logic
     public float moveXJump; //ok
     public float moveYJump; //ok
     public float timeLoopJump; //ok
+    public float waterForce;
+    public float boomForce;
+    public float ballForce;
+   
 }
 
