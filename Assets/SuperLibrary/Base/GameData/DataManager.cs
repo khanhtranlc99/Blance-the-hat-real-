@@ -17,7 +17,13 @@ public class DataManager : MonoBehaviour
         get => StagesAsset?.Current;
         set => StagesAsset.Current = value;
     }
+    public static ItemData CurrentItem
+    {
+        get => ItemsAsset?.Current;
+        set => ItemsAsset.Current = value;
+    }
     public static StagesAsset StagesAsset { get; private set; }
+    public static ItemsAsset ItemsAsset { get; private set; }
     public static GameData gameData { get; private set; }
     private static DataManager instance { get; set; }
 
@@ -29,6 +35,8 @@ public class DataManager : MonoBehaviour
     protected ConfigAsset configAsset = null;
     [SerializeField]
     protected StagesAsset stagesAsset = null;
+    [SerializeField]
+    protected ItemsAsset itemsAsset = null;
 
     public static bool IsFirstTime = false;
 
@@ -47,6 +55,7 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        ItemsAsset = itemsAsset;
     }
 
 
@@ -63,6 +72,7 @@ public class DataManager : MonoBehaviour
             var time = DateTime.Now;
             gameData.user.LastTimeUpdate = DateTime.Now;
             gameData.stages = StagesAsset.stageSaveList;
+            gameData.items = StagesAsset.itemSaveList;
 
             Debug.Log("ConvertData in " + (DateTime.Now - time).TotalMilliseconds + "ms");
             FileExtend.SaveData<GameData>("GameData", gameData);

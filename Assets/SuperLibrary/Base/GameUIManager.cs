@@ -74,7 +74,6 @@ public class GameUIManager : GameManagerBase<GameUIManager>
         }
         else
         {
-            yield return mainScreen.FillData();
 
             splashScreen?.Hide();
             mainScreen.Show(null, () =>
@@ -112,7 +111,6 @@ public class GameUIManager : GameManagerBase<GameUIManager>
     {
         UILoadGame.Hide();
         mainScreen.Show(null, ()=> {
-            StartCoroutine(mainScreen.FillData());
         });
         inGameScreen.Hide();
         gameOverScreen.Hide();
@@ -208,8 +206,8 @@ public class GameUIManager : GameManagerBase<GameUIManager>
 
         MusicManager.Stop(null);
         float timeWaitDie = .5f;
-        DOVirtual.Float(0.25f, 0.25f, 1, (t) => Time.timeScale = t).SetDelay(0.25f)
-            .OnComplete(() => Time.timeScale = 1);
+        //DOVirtual.Float(0.25f, 0.25f, 1, (t) => Time.timeScale = t).SetDelay(0.25f)
+        //    .OnComplete(() => Time.timeScale = 1);
         DOVirtual.DelayedCall(timeWaitDie, () =>
         {
             if (GameStateManager.CurrentState == GameState.WaitGameOver)

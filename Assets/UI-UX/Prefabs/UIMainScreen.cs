@@ -1,71 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 using DG.Tweening;
+using System;
 
 public class UIMainScreen : MonoBehaviour
 {
-    [SerializeField] RectTransform stagesRect = null;
-    [SerializeField] UIStageBtn uiStageBtnPrefab = null;
+    [SerializeField] Button btnPlay;
+    [SerializeField] ScrollRect scroll;
+    [SerializeField] Button btnInGame;
+    public int numbersOfItem;
+
+
+
+
+
 
     public UIAnimStatus Status => anim.Status;
 
     private UIAnimation anim;
-    private StagesAsset stages => DataManager.StagesAsset;
-    private List<UIStageBtn> allStages = new List<UIStageBtn>();
+
+    private ItemsAsset items => DataManager.ItemsAsset;
 
     private void Awake()
     {
         anim = GetComponent<UIAnimation>();
-        uiStageBtnPrefab.CreatePool(100);
-    }
+        btnPlay.onClick.AddListener(() => {  GameStateManager.LoadGame(null); });// goto loading game
+       
 
-
-    public IEnumerator FillData()
-    {
-
-        if (stages)
+        for (int i = 0; i < items.list.Count; i++)
         {
-            if (allStages.Count == stages.list.Count)
+            int index = i;
+            var btn = Instantiate(btnInGame, scroll.content);
+            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
+            btn.transform.localScale = new Vector3(1, 1, 1);
+            btn.onClick.AddListener(() => 
             {
-                for (int i = 0; i < allStages.Count; i++)
-                {
-                    var stageData = stages.list[i];
-                    var obj = allStages[i];
-                    obj.FillData(stageData);
-
-                    yield return null;
-                }
-            }
-            else
-            {
-                allStages.Clear();
-                uiStageBtnPrefab.RecycleAll();
-                for (int i = 0; i < stages.list.Count; i++)
-                {
-                    var stageData = stages.list[i];
-                    var obj = uiStageBtnPrefab.Spawn(stagesRect);
-                    obj.FillData(stageData);
-                    allStages.Add(obj);
-
-                    yield return null;
-                }
-            }
-        }
-
-        yield return null;
+                DataManager.CurrentItem.isSelected = false;
+                DataManager.CurrentItem = items.list[index];
+                DataManager.CurrentItem.isSelected = true;
+                GameStateManager.LoadGame(null);
+               
+            });
+        }    
     }
 
 
     public void Show(TweenCallback onStart = null, TweenCallback onCompleted = null)
     {
+        InitView();
         anim.Show(onStart, ()=> {
         });
+    }
+
+    private void InitView()
+    {
+
+
     }
 
     public void Hide()
     {
         anim.Hide();
+    }
+    public void _OnClickButton()
+    {
+   
     }
 }

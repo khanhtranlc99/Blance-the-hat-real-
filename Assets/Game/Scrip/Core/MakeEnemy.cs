@@ -77,11 +77,11 @@ public class MakeEnemy : MonoBehaviour
     private void _Water()
     {
         float b = Random.Range(-1, 2);
-        SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+        SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
     }
     private void _Boom()
     {
         float i = Random.Range(-1, 2);
-        SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+        SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
     }
 }

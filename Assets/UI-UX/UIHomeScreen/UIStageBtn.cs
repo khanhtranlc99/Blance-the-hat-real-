@@ -64,6 +64,7 @@ public class UIStageBtn : MonoBehaviour
         {
             UIToast.ShowNotice($"{currStageData.name} is locked!");
         }
+      
         
     }
 }

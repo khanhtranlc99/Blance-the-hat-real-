@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c735652e2c15234a9f3ae68fe3690a1, type: 3}
+  m_Name: ItemsAsset
+  m_EditorClassIdentifier: 
+  unlockCoinBase: 100
+  unlockCoinScale: 1
+  unlockCoinMax: 300
+  unlockAdsBase: 3
+  unlockAdsScale: 1
+  unlockAdsMax: 5
+  unlockLevelBase: 3
+  unlockLevelScale: 3
+  unlockStarBase: 1
+  unlockStarScale: 0.5
+  useRandom: 0
+  list:
+  - name: Alien
+    id: Alien
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 1
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 83efe7cbb047ea745a518ae6644bdfcb, type: 3}
+    prefab: {fileID: 3042446743588808898, guid: b2accba4de99c254686b4a326d686330,
+      type: 3}
+  - name: Anchor
+    id: Anchor
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: f50ec4eb79eda974c82350321b00e17e, type: 3}
+    prefab: {fileID: 7426097146173730143, guid: 89607047105a2f14f81b26bce2589d03,
+      type: 3}
+  - name: Balls
+    id: Balls
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: c1e03476711646e4db13222c7e284288, type: 3}
+    prefab: {fileID: 5076281709093211971, guid: e16ed822368c7494d8cb456ede008876,
+      type: 3}
+  - name: Car
+    id: Car
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 58b40f51625df994ca95e9cd3dfb721d, type: 3}
+    prefab: {fileID: 8983576055203936508, guid: 4baebddc145e59c4aae256e43d0b7625,
+      type: 3}
+  - name: Cup
+    id: Cup
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 5a34fdf7602509c449fff70e300a2fcd, type: 3}
+    prefab: {fileID: 1193087325684922704, guid: d3550fed59de184479f308ce00f35346,
+      type: 3}
+  - name: Donut
+    id: Donut
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: ae4ea7ba522cfc7489b27ee3124ccfc0, type: 3}
+    prefab: {fileID: 5290167529933278328, guid: 18baba147538d1f4f94f1e7a8df777d6,
+      type: 3}
+  - name: Flower
+    id: Flower
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 64261bc0313e59a46960bd2bef630f69, type: 3}
+    prefab: {fileID: 1035495174227099987, guid: 2f55570b5a532f043a093eb212dfe35f,
+      type: 3}
+  - name: Knight
+    id: Knight
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 776904e27c5d04b41b0a0b53d4a2ba9d, type: 3}
+    prefab: {fileID: 1204003933517279655, guid: 48fadff884be71445a7030e7e226a6ee,
+      type: 3}
+  - name: Lamp
+    id: Lamp
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: b8452dc882fd5d14f99e5c16f6217178, type: 3}
+    prefab: {fileID: 1175050535774526965, guid: 44454d9b19345ac4f860b5c9f8db1ade,
+      type: 3}
+  - name: MagicHat
+    id: MagicHat
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: b1b70d565afca754984459afe1ebeecd, type: 3}
+    prefab: {fileID: 1180093557663165828, guid: 013689c211576a9459ee1514d101e985,
+      type: 3}
+  - name: Robot
+    id: Robot
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 9da85aeeea392a44faf9477c7254544b, type: 3}
+    prefab: {fileID: 2982531400690905489, guid: 9130b08b80885e4488209376613c4d3d,
+      type: 3}
+  - name: SnowBall
+    id: SnowBall
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: fabac951dc82a6d46a7ea711cfe1c71e, type: 3}
+    prefab: {fileID: 1419042956818522941, guid: 956c22535d2ffde4fbec35fad8215a68,
+      type: 3}
+  - name: ThreeBox
+    id: ThreeBox
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 87c5a0f41b8754d4bb376dfcb0399ba4, type: 3}
+    prefab: {fileID: 3833177360079870153, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
+      type: 3}
+  - name: TriAnger
+    id: TriAnger
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 7929b06f53c943347ba087b05ffe70d4, type: 3}
+    prefab: {fileID: 7304531575942639968, guid: dff436f255c2471489cc7e1d6ef265ec,
+      type: 3}
+  - name: Ufo
+    id: Ufo
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 6eeb7a9f3e435444abab94a09883ac99, type: 3}
+    prefab: {fileID: 8930074484086589148, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
+      type: 3}
+  - name: WitchHat
+    id: WitchHat
+    idThumb: 
+    index: 0
+    description: 
+    unlockType: 0
+    unlockPrice: 0
+    isUnlocked: 0
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    thumbnail: {fileID: 21300000, guid: 9b45eb3c7d4af8d4886d889468b8a1f9, type: 3}
+    prefab: {fileID: 3372651370318428403, guid: f8dbdf5fb456d2d489eda3b86e38b698,
+      type: 3}

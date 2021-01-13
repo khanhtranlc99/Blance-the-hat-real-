@@ -28,7 +28,7 @@ public class CloneItem : MonoBehaviour
         {
             yield return new WaitForSeconds(timeLoopJump);
             int a = Random.Range(-1, 2);
-            rigidbody2D.AddForce(new Vector3(moveXJump * a * 50, moveYJump * 100, 0));
+            rigidbody2D.AddForce(new Vector3(moveXJump * a, moveYJump , 0));
             //Debug.Log("j");       
         }    
     }
@@ -37,10 +37,10 @@ public class CloneItem : MonoBehaviour
     {
         if( collision.gameObject.tag == "wall")
         {
-            GameContro.instance._StopTime();
-            UI.uI.ChangeUI(UI.MenuUI.menu);
-            UI.uI._EffectPlusScore();
+            //GameContro.instance._StopTime();
+            GameStateManager.WaitGameOver(null);
             Destroy(gameObject);
+
         }
     }
     public void _LoadData()

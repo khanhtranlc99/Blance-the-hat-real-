@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class GameCoreManager : GameManagerBase<GameCoreManager> 
 {
+    public static GameCoreManager coreManager;
     public ObjectConfig item;
     public GameObject itemInGameContro;
     public GameObject EnemyInGameContro;
@@ -26,7 +27,12 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public Rigidbody2D water;
     public Rigidbody2D ballSilicol;
     public CloneItem[] allItem;
-    public GameCoreManager instance;
+    public float angerFirst;
+
+    private void Awake()
+    {
+        coreManager = this;
+    }
     protected override void Start()
     {
         base.Start();
@@ -62,12 +68,28 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void IdleGame(object data)
     {
         Debug.Log("Game Core goto IdleGame");
+        main.SetActive(false);
+
+        if (clone != null)
+        {
+            Destroy(clone.gameObject);
+        }
     }
 
     public override void InitGame(object data)
     {
         Debug.Log("Game Core goto InitGame");
 
+
+        //Hien thi con main
+        main.SetActive(true);
+
+        //sinh ra con item
+        var b = Instantiate(DataManager.CurrentItem.prefab, new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
+        b.transform.SetParent(itemInGameContro.transform);
+        this.clone = b.GetComponent<CloneItem>();
+        _LoadLogicEnemy();
+        _Reset();
 
         /// vao game
 
@@ -77,6 +99,10 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void LoadGame(object data)
     {
         Debug.Log("Game Core goto LoadGame: " + DataManager.CurrentStage.name);
+
+
+
+
     }
 
     public override void NextGame(object data)
@@ -92,7 +118,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void PlayGame(object data)
     {
         Debug.Log("Game Core goto PlayGame");
-        UIPerfectToast.instance.Show("LET'S GO!!!");
+        //UIPerfectToast.instance.Show("LET'S GO!!!");
     }
 
     public override void RestartGame(object data)
@@ -141,6 +167,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     protected override void WaitingGameOver(object data)
     {
         Debug.Log("Game Core goto WaitingGameOver");
+        _StopTime();
     }
     public void _ChageMenu(object param)
     {
@@ -175,15 +202,11 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             item.listLogic[i].cloneItem.friction = item.listLogic[i].friction;
             item.listLogic[i].cloneItem.bounciness = item.listLogic[i].bounciness;
-            //item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
             item.listLogic[i].cloneItem.itemCanJump = item.listLogic[i].itemCanJump;
             item.listLogic[i].cloneItem.wasJump = item.listLogic[i].wasJump;
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
             item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
-            item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;
-            //item.listLogic[i].cloneItem.boomForce = item.listLogic[i].boomForce;
-            //item.listLogic[i].cloneItem.ballForce = item.listLogic[i].ballForce;
-            //item.listLogic[i].cloneItem.waterForce = item.listLogic[i].waterForce;
+            item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;   
             //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
             item.listLogic[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
@@ -206,7 +229,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     public void _Reset()
     {
-        main.transform.DORotate(new Vector3(0, 0, 0), 0.1f);
+        main.transform.DORotate(new Vector3(0, 0, angerFirst), 0.1f);
         runTime = true;
         isPause = false;
         coutnTime = 0;
@@ -240,20 +263,8 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         MakeEnemy.make._PauseSpawn();
     }
 
-    public void _CheckItem(int a)
+    public void _CheckItem()
     {
-        for (int i = 0; i < allItem.Length; i++)
-        {
-
-            if(  i == a)
-            {
-                var b = Instantiate(allItem[i], new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
-                b.transform.SetParent(itemInGameContro.transform);
-                this.clone = b;
-                _LoadLogicEnemy();
-                _Reset();
-            }
-        }
     }
 }
 

@@ -22,13 +22,13 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0
+    friction: 0.1
     bounciness: 0
     itemCanJump: 1
     wasJump: 1
-    moveXJump: 1
-    moveYJump: 1
-    timeLoopJump: 1
+    moveXJump: 0.01
+    moveYJump: 0.01
+    timeLoopJump: 0.01
   - cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
     obtacles:
