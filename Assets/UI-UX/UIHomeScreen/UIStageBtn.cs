@@ -55,13 +55,15 @@ public class UIStageBtn : MonoBehaviour
 
         if (currStageData.isUnlocked)
         {
-            DataManager.CurrentStage = currStageData;
+            //DataManager.CurrentStage = currStageData;
+
+            DataManager.CurrentStage = DataManager.Next();
             GameStateManager.LoadGame(null);
         }
         else
         {
             UIToast.ShowNotice($"{currStageData.name} is locked!");
         }
-  
+        
     }
 }

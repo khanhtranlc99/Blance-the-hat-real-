@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectConfig : ScriptableObject
 {
     public List<GameItem> listLogic; // đổi tên cái này thành items
-   
+
 
 }
 [System.Serializable]
@@ -15,7 +15,7 @@ public struct GameItem
     public List<GameObtacle> obtacles;
     public float friction; //ok
     public float bounciness; //ok
-    public float mass; // ok
+    //public float mass; // ok
     public bool itemCanJump;  //ok
     public bool wasJump; //ok
     public float moveXJump; //ok

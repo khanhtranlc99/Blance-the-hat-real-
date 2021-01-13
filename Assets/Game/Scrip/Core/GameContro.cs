@@ -24,10 +24,11 @@ public class GameContro : MonoBehaviour
     public PointEffector2D boom;
     public Rigidbody2D water;
     public Rigidbody2D ballSilicol;
-
+    public float angerFirst;
+   
     private void OnEnable()
     {
-        this.RegisterListener(EventID._Pause, ABCD);
+     
     }
     private void Awake()
     {
@@ -35,7 +36,8 @@ public class GameContro : MonoBehaviour
     }
     private void Start()
     {
-        //_LoadLogicItem();
+        _LoadLogicItem();
+
     }
     private IEnumerator _Runtime()
     {
@@ -50,13 +52,13 @@ public class GameContro : MonoBehaviour
             }
         }
     }
-     public void _LoadLogicItem(object param)
+     public void _LoadLogicItem()
     {
         for( int i = 0; i < item.listLogic.Count; i ++)
         {
             item.listLogic[i].cloneItem.friction = item.listLogic[i].friction;
             item.listLogic[i].cloneItem.bounciness = item.listLogic[i].bounciness;
-            item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
+            //item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
             item.listLogic[i].cloneItem.itemCanJump = item.listLogic[i].itemCanJump;
             item.listLogic[i].cloneItem.wasJump = item.listLogic[i].wasJump;
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
@@ -95,7 +97,7 @@ public class GameContro : MonoBehaviour
     }
     public void _Reset()
     {
-        main.transform.DORotate(new Vector3(0, 0, 0), 0.1f);
+        main.transform.DORotate(new Vector3(0, 0, angerFirst), 0.1f);
         runTime = true;
         isPause = false;
         coutnTime = 0;
@@ -118,14 +120,19 @@ public class GameContro : MonoBehaviour
         water.mass = clone.waterForce;
         boom.forceMagnitude = clone.boomForce;
         ballSilicol.mass = clone.ballForce;
-            Debug.Log("LoadEnemy");
+        Debug.Log("LoadEnemy");
     }    
 
-    private void ABCD(object param)
+    private void ABCD()
     {
         
-
+        for( int i = 0; i < item.listLogic.Count; i++)
+        {
+         
+        }    
+            
 
     }
     
 }
+

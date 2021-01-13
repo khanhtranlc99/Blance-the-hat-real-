@@ -21,30 +21,42 @@ public class MakeEnemy : MonoBehaviour
         wasBool = true;
         StartCoroutine(_SpawnEnemy());
     }
+    private void Update()
+    {
+        if( Input.GetKeyDown(KeyCode.W))
+        {
+            _Water();
+        }   
+        if(Input.GetKeyDown(KeyCode.B))
+        {
+            _Boom();
+        }    
+            
+    }
     private IEnumerator _SpawnEnemy()
     {
         yield return new WaitForSeconds(1);
-        
-        if (GameContro.instance.coutnTime % 2 == 0 && GameContro.instance.coutnTime > 3 && wasBool == true)
-        {
-            int a = Random.Range(0, 4);
-            if (a == 2 || a == 3)
-            {
-                float b = Random.Range(-1, 2);
-                SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
-            }
-            else if (a == 0 || a == 1)
-            {
-                float i = Random.Range(-1, 2);
-                SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
-            }
-            //else if (a == 4 || a == 5)
-            //{
-            //    float i = Random.Range(-1, 2);
-            //    SimplePool.Spawn(enemyWater, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
-            //}
-        }
-        StartCoroutine(_SpawnEnemy());
+
+        //if (GameContro.instance.coutnTime % 2 == 0 && GameContro.instance.coutnTime > 3 && wasBool == true)
+        //{
+        //    int a = Random.Range(0, 4);
+        //    if (a == 2 || a == 3)
+        //    {
+        //        float b = Random.Range(-1, 2);
+        //        SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+        //    }
+        //    else if (a == 0 || a == 1)
+        //    {
+        //        float i = Random.Range(-1, 2);
+        //        SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+        //    }
+        //    ////else if (a == 4 || a == 5)
+        //    ////{
+        //    ////    float i = Random.Range(-1, 2);
+        //    ////    SimplePool.Spawn(enemyWater, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+        //    ////}
+        //}
+        //StartCoroutine(_SpawnEnemy());
     }
 
     public void _PauseSpawn()
@@ -61,5 +73,15 @@ public class MakeEnemy : MonoBehaviour
     {
         wasBool = true;
        
+    }
+    private void _Water()
+    {
+        float b = Random.Range(-1, 2);
+        SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
+    }
+    private void _Boom()
+    {
+        float i = Random.Range(-1, 2);
+        SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameContro.instance.EnemyInGameContro.transform);
     }
 }

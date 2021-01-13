@@ -159,6 +159,10 @@ public class DataManager : MonoBehaviour
         OnLoaded?.Invoke(gameData);
     }
 
+    public static StageData Next()
+    {
+        return StagesAsset.Next();
+    }
     public static void Reset()
     {
         var path = FileExtend.FileNameToPath("GameData.gd");

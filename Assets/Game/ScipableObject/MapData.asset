@@ -13,24 +13,7 @@ MonoBehaviour:
   m_Name: MapData
   m_EditorClassIdentifier: 
   listLogic:
-  - cloneItem: {fileID: 6544372084942416275, guid: e16ed822368c7494d8cb456ede008876,
-      type: 3}
-    obtacles:
-    - name: water
-      force: 0
-    - name: Boom
-      force: 0
-    - name: Ball
-      force: 0
-    friction: 0.4
-    bounciness: 0.75
-    mass: 0
-    itemCanJump: 0
-    wasJump: 0
-    moveXJump: 0
-    moveYJump: 0
-    timeLoopJump: 0
-  - cloneItem: {fileID: 3782791467696940095, guid: b2accba4de99c254686b4a326d686330,
+  - cloneItem: {fileID: 3042446743588808911, guid: b2accba4de99c254686b4a326d686330,
       type: 3}
     obtacles:
     - name: Water
@@ -39,32 +22,30 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 1
+    friction: 0
     bounciness: 0
-    mass: 1
     itemCanJump: 1
     wasJump: 1
     moveXJump: 1
     moveYJump: 1
     timeLoopJump: 1
-  - cloneItem: {fileID: 9166512220985024074, guid: 013689c211576a9459ee1514d101e985,
+  - cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
     obtacles:
     - name: Water
-      force: 0
+      force: 0.5
     - name: Boom
-      force: 0
+      force: 0.1
     - name: Ball
       force: 0
-    friction: 0.01
+    friction: 0.5
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 5251060154767641564, guid: dff436f255c2471489cc7e1d6ef265ec,
+  - cloneItem: {fileID: 2298688374160701718, guid: e16ed822368c7494d8cb456ede008876,
       type: 3}
     obtacles:
     - name: Water
@@ -73,15 +54,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
-    bounciness: 0
-    mass: 0
+    friction: 0
+    bounciness: 1
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 5251060154767641564, guid: dff436f255c2471489cc7e1d6ef265ec,
+  - cloneItem: {fileID: 445789718448374184, guid: 4baebddc145e59c4aae256e43d0b7625,
       type: 3}
     obtacles:
     - name: Water
@@ -90,15 +70,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1706476002572366265, guid: 44454d9b19345ac4f860b5c9f8db1ade,
+  - cloneItem: {fileID: 1193087325684922717, guid: d3550fed59de184479f308ce00f35346,
       type: 3}
     obtacles:
     - name: Water
@@ -107,15 +86,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1021566498530201977, guid: 4baebddc145e59c4aae256e43d0b7625,
+  - cloneItem: {fileID: 3386271080923462235, guid: 18baba147538d1f4f94f1e7a8df777d6,
       type: 3}
     obtacles:
     - name: Water
@@ -124,15 +102,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 705343634219945640, guid: d3550fed59de184479f308ce00f35346,
+  - cloneItem: {fileID: 6065552703923653351, guid: 2f55570b5a532f043a093eb212dfe35f,
       type: 3}
     obtacles:
     - name: Water
@@ -141,15 +118,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1228152353044939348, guid: 18baba147538d1f4f94f1e7a8df777d6,
+  - cloneItem: {fileID: 3847250046368183567, guid: 48fadff884be71445a7030e7e226a6ee,
       type: 3}
     obtacles:
     - name: Water
@@ -158,15 +134,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 160661000702389452, guid: 2f55570b5a532f043a093eb212dfe35f,
+  - cloneItem: {fileID: 6271862193419512484, guid: 44454d9b19345ac4f860b5c9f8db1ade,
       type: 3}
     obtacles:
     - name: Water
@@ -175,15 +150,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 2448521620794799098, guid: 48fadff884be71445a7030e7e226a6ee,
+  - cloneItem: {fileID: 1180093557663165833, guid: 013689c211576a9459ee1514d101e985,
       type: 3}
     obtacles:
     - name: Water
@@ -192,15 +166,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 3836548432037750084, guid: 9130b08b80885e4488209376613c4d3d,
+  - cloneItem: {fileID: 2516731194176571960, guid: 9130b08b80885e4488209376613c4d3d,
       type: 3}
     obtacles:
     - name: Water
@@ -209,15 +182,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1190702221227393876, guid: 956c22535d2ffde4fbec35fad8215a68,
+  - cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
       type: 3}
     obtacles:
     - name: Water
@@ -226,15 +198,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 766161631443373586, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
+  - cloneItem: {fileID: 8444472147810260062, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
       type: 3}
     obtacles:
     - name: Water
@@ -243,15 +214,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1244155882890843638, guid: f8dbdf5fb456d2d489eda3b86e38b698,
+  - cloneItem: {fileID: 7304531575942639981, guid: dff436f255c2471489cc7e1d6ef265ec,
       type: 3}
     obtacles:
     - name: Water
@@ -260,15 +230,14 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 6333931399296051306, guid: 89607047105a2f14f81b26bce2589d03,
+  - cloneItem: {fileID: 4258784520372029971, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
       type: 3}
     obtacles:
     - name: Water
@@ -277,9 +246,24 @@ MonoBehaviour:
       force: 0
     - name: Ball
       force: 0
-    friction: 0.1
+    friction: 0
     bounciness: 0
-    mass: 1
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
+      type: 3}
+    obtacles:
+    - name: Water
+      force: 0
+    - name: Boom
+      force: 0
+    - name: Ball
+      force: 0
+    friction: 0
+    bounciness: 0
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0

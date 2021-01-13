@@ -26,7 +26,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public Rigidbody2D water;
     public Rigidbody2D ballSilicol;
     public CloneItem[] allItem;
-
+    public GameCoreManager instance;
     protected override void Start()
     {
         base.Start();
@@ -175,7 +175,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             item.listLogic[i].cloneItem.friction = item.listLogic[i].friction;
             item.listLogic[i].cloneItem.bounciness = item.listLogic[i].bounciness;
-            item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
+            //item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
             item.listLogic[i].cloneItem.itemCanJump = item.listLogic[i].itemCanJump;
             item.listLogic[i].cloneItem.wasJump = item.listLogic[i].wasJump;
             item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
