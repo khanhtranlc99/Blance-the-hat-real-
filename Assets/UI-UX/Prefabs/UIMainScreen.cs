@@ -51,8 +51,7 @@ public class UIMainScreen : MonoBehaviour
     public void Show(TweenCallback onStart = null, TweenCallback onCompleted = null)
     {
         InitView();
-        anim.Show(onStart, ()=> {
-        });
+        anim.Show(onStart, onCompleted);
     }
 
     private void InitView()

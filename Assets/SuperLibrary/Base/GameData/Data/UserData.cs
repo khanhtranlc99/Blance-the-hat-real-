@@ -130,6 +130,9 @@ public class UserData : UserAnalysic
     public int totalStarEarn = 0;
     public int totalStarSpend = 0;
 
+    [Header("Char Skin")]
+    public int skinIndex = 1;
+
 
     private int totalStageUnlocked = 1;
     public int TotalStageUnlocked
