@@ -8,10 +8,9 @@ using System;
 
 public class UIMainScreen : MonoBehaviour
 {
-    [SerializeField] Button btnPlay;
     [SerializeField] ScrollRect scroll;
     [SerializeField] Button btnInGame;
-    [SerializeField] Image imageHome;
+    [SerializeField] private ButtonSelect btnSelect;
     public int numbersOfItem;
     public UIAnimStatus Status => anim.Status;
     private UIAnimation anim;
@@ -21,8 +20,6 @@ public class UIMainScreen : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<UIAnimation>();
-        btnPlay.onClick.AddListener(() => {  GameStateManager.LoadGame(null); });// goto loading game
-       
 
         for (int i = 0; i < items.list.Count; i++)
         {
@@ -32,17 +29,10 @@ public class UIMainScreen : MonoBehaviour
             btn.transform.localScale = new Vector3(1, 1, 1);
             btn.onClick.AddListener(() => 
             {
-                DataManager.CurrentItem.isSelected = false;
-                DataManager.CurrentItem = items.list[index];
-                DataManager.CurrentItem.isSelected = true;
-                //GameStateManager.LoadGame(null);   
-                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
-                imageHome.sprite = DataManager.CurrentItem.thumbnail;
-                imageHome.SetNativeSize();
+                btnSelect.SetButton(items.list[index]);
             });
         }    
     }
-
 
     public void Show(TweenCallback onStart = null, TweenCallback onCompleted = null)
     {
