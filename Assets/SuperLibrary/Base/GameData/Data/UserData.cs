@@ -11,6 +11,8 @@ public class UserData : UserAnalysic
     public int liveCountDown;
     public float latencyUser = 0;
     public int level = 1;
+    public string [] userItem;
+
 
     private string lastTimeUpdate = new DateTime(1999, 1, 1).ToString();
     public DateTime LastTimeUpdate

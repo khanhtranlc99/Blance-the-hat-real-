@@ -5,8 +5,6 @@ using UnityEngine;
 public class ObjectConfig : ScriptableObject
 {
     public List<GameItem> listLogic; // đổi tên cái này thành items
-
-
 }
 [System.Serializable]
 public struct GameItem

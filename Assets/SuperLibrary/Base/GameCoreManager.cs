@@ -28,7 +28,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public Rigidbody2D ballSilicol;
     public CloneItem[] allItem;
     public float angerFirst;
-
+  
     private void Awake()
     {
         coreManager = this;

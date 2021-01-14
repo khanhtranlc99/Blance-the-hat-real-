@@ -11,15 +11,9 @@ public class UIMainScreen : MonoBehaviour
     [SerializeField] Button btnPlay;
     [SerializeField] ScrollRect scroll;
     [SerializeField] Button btnInGame;
+    [SerializeField] Image imageHome;
     public int numbersOfItem;
-
-
-
-
-
-
     public UIAnimStatus Status => anim.Status;
-
     private UIAnimation anim;
 
     private ItemsAsset items => DataManager.ItemsAsset;
@@ -41,8 +35,10 @@ public class UIMainScreen : MonoBehaviour
                 DataManager.CurrentItem.isSelected = false;
                 DataManager.CurrentItem = items.list[index];
                 DataManager.CurrentItem.isSelected = true;
-                GameStateManager.LoadGame(null);
-               
+                //GameStateManager.LoadGame(null);   
+                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+                imageHome.sprite = DataManager.CurrentItem.thumbnail;
+                imageHome.SetNativeSize();
             });
         }    
     }
