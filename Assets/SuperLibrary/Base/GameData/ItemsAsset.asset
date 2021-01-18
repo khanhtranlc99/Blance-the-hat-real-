@@ -32,7 +32,7 @@ MonoBehaviour:
     unlockType: 0
     unlockPrice: 0
     isUnlocked: 1
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
     index: 0
     description: 
     unlockType: 1
-    unlockPrice: 900
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -59,8 +59,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 3
-    unlockPrice: 900
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     index: 0
     description: 
     unlockType: 1
-    unlockPrice: 900
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -89,8 +89,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 1
     isSelected: 0
     count: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 1
     isSelected: 0
     count: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 1
     isSelected: 1
     count: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -164,9 +164,9 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
-    isUnlocked: 0
+    unlockType: 1
+    unlockPrice: 1
+    isUnlocked: 1
     isSelected: 1
     count: 0
     countHit: 0
@@ -179,8 +179,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -194,8 +194,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -209,10 +209,10 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
-    isUnlocked: 0
-    isSelected: 1
+    unlockType: 1
+    unlockPrice: 1
+    isUnlocked: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -239,8 +239,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
@@ -254,8 +254,8 @@ MonoBehaviour:
     idThumb: 
     index: 0
     description: 
-    unlockType: 0
-    unlockPrice: 0
+    unlockType: 1
+    unlockPrice: 1
     isUnlocked: 0
     isSelected: 1
     count: 0
