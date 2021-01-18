@@ -11,7 +11,7 @@ public class Explosion : MonoBehaviour
     }
     private IEnumerator _Destroy()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1);
         Destroy(this.gameObject);
     }    
 }

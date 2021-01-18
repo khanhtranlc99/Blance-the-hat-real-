@@ -7,6 +7,7 @@ public class CloneItem : MonoBehaviour
     [SerializeField] private  SpriteRenderer Rsprite;
     [SerializeField] private Rigidbody2D rigidbody2D;
     [SerializeField] private PhysicsMaterial2D physics;
+    //[SerializeField] private ParticleSystem effect;
     public float friction;
     public float bounciness;
     public float mass;
@@ -18,9 +19,11 @@ public class CloneItem : MonoBehaviour
     public float waterForce;
     public float ballForce;
     public float boomForce;
+    //public bool wasTouch;
     private void Start()
     {
         StartCoroutine(_Jump());
+        //effect.Stop(effect);
     }
     private IEnumerator _Jump()
     {  
@@ -38,10 +41,20 @@ public class CloneItem : MonoBehaviour
         if( collision.gameObject.tag == "wall")
         {
             //GameContro.instance._StopTime();
+            if (GameCoreManager.coreManager.wood != null)
+            {
+                SimplePool.Despawn(GameCoreManager.coreManager.wood.gameObject);
+            }
             GameStateManager.WaitGameOver(null);
             Destroy(gameObject);
-
         }
+        //if (collision.gameObject.tag == "Player")
+        //{
+        //    effect.Play(effect);
+        //    StartCoroutine(_StopParticle());
+
+        //}
+
     }
     public void _LoadData()
     {
@@ -68,4 +81,9 @@ public class CloneItem : MonoBehaviour
         this.rigidbody2D.constraints = RigidbodyConstraints2D.None;
     }
     
+    private IEnumerator _StopParticle()
+    {
+        yield return new WaitForSeconds(2);
+        //effect.Stop(effect);
+    }
 }

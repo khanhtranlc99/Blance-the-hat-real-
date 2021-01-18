@@ -32,21 +32,21 @@ MonoBehaviour:
     unlockType: 4
     unlockPrice: 0
     isUnlocked: 1
-    isSelected: 0
-    count: 0
+    isSelected: 1
+    count: 223
     countHit: 0
     unlockPay: 0
-    totalPlay: 0
+    totalPlay: 223
     star: 0
     process: 0
-    score: 0
+    score: 61
     combo: 0
-    time: 0
-    totalTimePlay: 0
-    totalRestart: 0
+    time: 1
+    totalTimePlay: 873
+    totalRestart: 50
     totalReborn: 0
     totalPass: 0
-    totalFail: 0
+    totalFail: 140
     totalComplete: 0
     unlockBy: 0
   - name: Stage 2
@@ -56,31 +56,6 @@ MonoBehaviour:
     description: 
     unlockType: 4
     unlockPrice: 3
-    isUnlocked: 0
-    isSelected: 0
-    count: 0
-    countHit: 0
-    unlockPay: 0
-    totalPlay: 0
-    star: 0
-    process: 0
-    score: 0
-    combo: 0
-    time: 0
-    totalTimePlay: 0
-    totalRestart: 0
-    totalReborn: 0
-    totalPass: 0
-    totalFail: 0
-    totalComplete: 0
-    unlockBy: 0
-  - name: Stage 3
-    id: Stage_3
-    idThumb: 
-    index: 2
-    description: 
-    unlockType: 4
-    unlockPrice: 6
     isUnlocked: 0
     isSelected: 0
     count: 0

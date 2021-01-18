@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58326b58741f074cb8209d7921af354, type: 3}
-  m_Name: MapData
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: water_Atlas
   m_EditorClassIdentifier: 
-  name: 
-  prive: 0
-  wasBought: 0
+  atlasFile: {fileID: 4900000, guid: 386227b7fa1a9bd4f92547ab1152b554, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 0395f7feb9b1a424ab382c6456cf7ed6, type: 2}

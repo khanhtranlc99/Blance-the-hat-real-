@@ -118,8 +118,8 @@ public abstract class UIGameOverBase<T> : MonoBehaviour where T : UIGameOverBase
             anim = GetComponent<UIAnimation>();
         instance = (T)this;
 
-        animResult.gameObject.SetActive(true);
-        animContinue.gameObject.SetActive(true);
+        //animResult.gameObject.SetActive(true);
+        //animContinue.gameObject.SetActive(true);
     }
 
     protected virtual void Start()
@@ -164,7 +164,7 @@ public abstract class UIGameOverBase<T> : MonoBehaviour where T : UIGameOverBase
         {
             anim.Show(() => { 
                 animResult.Show(null, () => OnShowResult()); 
-            });
+        });
         }
         else
         {

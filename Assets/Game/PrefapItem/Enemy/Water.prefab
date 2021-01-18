@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5099425621062240606}
   - component: {fileID: 2605906355356754633}
   - component: {fileID: 6215264136924710120}
-  - component: {fileID: 4114850528332248307}
+  - component: {fileID: -3916246399228108259}
   m_Layer: 9
   m_Name: Water
   m_TagString: Enemy
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 825d5c6866d2c324e80825a22cb98277, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9fd07b36beb24564e8b5eede377dfdb0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34375
---- !u!114 &4114850528332248307
+--- !u!114 &-3916246399228108259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,8 +130,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5099425621062240593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd4a82c4db5507c468424c967242393e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0db154a8a57ca1c4da90a4945ac8c202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 104668515436062074, guid: 44e82cf4d22fb7549b6a3c56a270d194,
+  explosion: {fileID: 1376291645956627167, guid: f4762714117843043889f5fc80692561,
     type: 3}

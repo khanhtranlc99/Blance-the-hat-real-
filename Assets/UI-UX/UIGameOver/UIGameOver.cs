@@ -105,10 +105,10 @@ public class UIGameOver : UIGameOverBase<UIGameOver>
         else
             scaleCoinValue = 2;
 
-        coin.text = "0";
-        scaleCoin.text = "0";
-        scaleCoinDetail.text = "x" + scaleCoinValue;
-        scaleCoinGroup.SetActive(false);
+        //coin.text = "0";
+        //scaleCoin.text = "0";
+        //scaleCoinDetail.text = "x" + scaleCoinValue;
+        //scaleCoinGroup.SetActive(false);
 
         backButton.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);

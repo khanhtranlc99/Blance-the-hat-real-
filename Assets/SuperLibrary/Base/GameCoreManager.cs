@@ -28,13 +28,19 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public Rigidbody2D ballSilicol;
     public CloneItem[] allItem;
     public float angerFirst;
-  
-    private void Awake()
+    public GameObject wood;
+    public GameObject tutorial;
+    protected override void Awake()
     {
+        base.Awake();
         coreManager = this;
+
+        TouchPanelEventScript.OnPointerDownHandle += OnPointerDownHandle;
     }
+    
     protected override void Start()
     {
+        //_LoadLogicItem();
         base.Start();
     }
     private void OnEnable()
@@ -83,14 +89,18 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
         //Hien thi con main
         main.SetActive(true);
-
+        tutorial.SetActive(true);
+        if (UIcontro.uIcontro.uiMode.wasPlusMode == true)
+        {
+            MakeEnemy.make._spawnWood();
+        }
         //sinh ra con item
         var b = Instantiate(DataManager.CurrentItem.prefab, new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
         b.transform.SetParent(itemInGameContro.transform);
         this.clone = b.GetComponent<CloneItem>();
         _LoadLogicEnemy();
         _Reset();
-
+        
         /// vao game
 
         DOVirtual.DelayedCall(0.5f, () => GameStateManager.Ready(new MessageReadyGame { }));
@@ -99,9 +109,6 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void LoadGame(object data)
     {
         Debug.Log("Game Core goto LoadGame: " + DataManager.CurrentStage.name);
-
-
-
 
     }
 
@@ -113,6 +120,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void PauseGame(object data)
     {
         Debug.Log("Game Core goto PauseGame");
+        _Pause();
     }
 
     public override void PlayGame(object data)
@@ -130,6 +138,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void ResumeGame(object data)
     {
         Debug.Log("Game Core goto ResumeGame");
+        _Resume();
     }
 
     protected override void CompleteGame(object data)
@@ -214,8 +223,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     public void _Pause()
     {
-        //UI.uI.ChangeUI(UI.MenuUI.pause);
-        //UI.uI.keyObject.SetActive(false);
+       
         isPause = true;
         clone._StopMoving();
         MakeEnemy.make._PauseSpawn();
@@ -241,6 +249,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         }
         timeCoroutine = StartCoroutine(_Runtime()); ;
         MakeEnemy.make._ResuameSpawn();
+        Debug.Log("Reset");
     }
     public void _PlusScore()
     {
@@ -251,9 +260,9 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         isPause = false;
         clone._Moving();
-        //UI.uI.ChangeUI(UI.MenuUI.gamePlay);
-        //UI.uI.keyObject.SetActive(true);
         MakeEnemy.make._ResuameSpawn();
+        
+        
     }
     public void _StopTime()
     {

@@ -36,7 +36,7 @@ public class GameContro : MonoBehaviour
     }
     private void Start()
     {
-        _LoadLogicItem();
+        //_LoadLogicItem();
 
     }
     private IEnumerator _Runtime()
@@ -108,7 +108,7 @@ public class GameContro : MonoBehaviour
             timeCoroutine = null;
         }
         timeCoroutine = StartCoroutine(_Runtime()); ;
-        MakeEnemy.make._ResuameSpawn();
+        //MakeEnemy.make._ResuameSpawn();
     }
     public void _PlusScore()
     {

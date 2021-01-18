@@ -21,26 +21,7 @@ public class UIMainScreen : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<UIAnimation>();
-        btnPlay.onClick.AddListener(() => {  GameStateManager.LoadGame(null); });// goto loading game
-       
-
-        for (int i = 0; i < items.list.Count; i++)
-        {
-            int index = i;
-            var btn = Instantiate(btnInGame, scroll.content);
-            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
-            btn.transform.localScale = new Vector3(1, 1, 1);
-            btn.onClick.AddListener(() => 
-            {
-                DataManager.CurrentItem.isSelected = false;
-                DataManager.CurrentItem = items.list[index];
-                DataManager.CurrentItem.isSelected = true;
-                //GameStateManager.LoadGame(null);   
-                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
-                imageHome.sprite = DataManager.CurrentItem.thumbnail;
-                imageHome.SetNativeSize();
-            });
-        }    
+        btnPlay.onClick.AddListener(() => {  GameStateManager.LoadGame(null); });// goto loading game 
     }
 
 
@@ -62,6 +43,22 @@ public class UIMainScreen : MonoBehaviour
     }
     public void _OnClickButton()
     {
-   
+        for (int i = 0; i < items.list.Count; i++)
+        {
+            int index = i;
+            var btn = Instantiate(btnInGame, scroll.content);
+            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
+            btn.transform.localScale = new Vector3(1, 1, 1);
+            btn.onClick.AddListener(() =>
+            {
+                DataManager.CurrentItem.isSelected = false;
+                DataManager.CurrentItem = items.list[index];
+                DataManager.CurrentItem.isSelected = true;
+                //GameStateManager.LoadGame(null);   
+                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+                imageHome.sprite = DataManager.CurrentItem.thumbnail;
+                imageHome.SetNativeSize();
+            });
+        }
     }
 }

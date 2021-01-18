@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float speed = 30;
+    [SerializeField] float speed = 100;
 
     public Vector3 post;
     public bool wasDrag;

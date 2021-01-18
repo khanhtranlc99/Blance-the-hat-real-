@@ -4,22 +4,43 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UiMode : ControUI
-{
-    [SerializeField] Button btnNormal;
-    [SerializeField] Button btnPlusMode;
-    [SerializeField] Button btnPlusCoin;
+{   
+    public bool wasPlusMode;
+    [SerializeField] private Button normalButton;
+    [SerializeField] private Button plusButton;
 
+    private void Start()
+    {
+        _NormalMode();
+    }
     public override void Show(bool value)
     {
         base.Show(value);
     }
-    private void Awake()
-    {
-        btnNormal.onClick.AddListener(() => _NormalMode());
-    }
-    private void _NormalMode()
-    {
+    public void _PlayButton()
+    { 
         GameStateManager.LoadGame(null);
         UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+    }    
+    public void _NormalMode()
+    {
+        wasPlusMode = false;
+        normalButton.transform.localScale = new Vector2(1.5f, 1.5f);
+        plusButton.transform.localScale = new Vector2(1, 1);
+    }
+    public void _OnPlusMode()
+    {
+        wasPlusMode = true;
+        normalButton.transform.localScale = new Vector2(1, 1);
+        plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
+    }
+    public void _OffMode()
+    {
+        wasPlusMode = false;
+        
+    }
+    private void _PlusCoin()
+    {
+
     }
 }

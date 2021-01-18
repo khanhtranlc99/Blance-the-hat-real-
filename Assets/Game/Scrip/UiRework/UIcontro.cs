@@ -12,13 +12,15 @@ public class UIcontro : MonoBehaviour
     [SerializeField] Button btnSelecItem;
     [SerializeField] Button btnMode;
     [SerializeField] Button btnHome;
+
+
     private void Awake()
     {
         uIcontro = this;
         ChangeUI(MenuUI.Home);
         btnSelecItem.onClick.AddListener(() => _BtnSeclectOnClick());
         btnMode.onClick.AddListener(() => _BtnModeOnClick());
-        btnHome.onClick.AddListener(() => _BtnHomeOnClick());
+        //btnHome.onClick.AddListener(() => _BtnHomeOnClick());
     }
     private void Start()
     {
