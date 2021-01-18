@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1180093557663165832}
   - component: {fileID: 1180093557663165834}
   - component: {fileID: 1397957738230212858}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: MagicHat
   m_TagString: Item
   m_Icon: {fileID: 0}

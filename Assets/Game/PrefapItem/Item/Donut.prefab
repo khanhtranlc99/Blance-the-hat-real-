@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 938466537020796158}
   - component: {fileID: 3378024145784346014}
   - component: {fileID: 3939451921205886330}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Donut
   m_TagString: Item
   m_Icon: {fileID: 0}

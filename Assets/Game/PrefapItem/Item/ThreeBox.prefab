@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 409414531638431776}
   - component: {fileID: 3553208046395693563}
   - component: {fileID: 2669649318894398708}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ThreeBox
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 3973547067926176913}
   - component: {fileID: 1120024245322636505}
   - component: {fileID: 5520079665866386903}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ThreeBox (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 7270113104387577680}
   - component: {fileID: 4739851440618098474}
   - component: {fileID: 5903535845806173668}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: ThreeBox (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
