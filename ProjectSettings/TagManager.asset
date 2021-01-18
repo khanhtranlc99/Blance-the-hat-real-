@@ -41,6 +41,8 @@ TagManager:
   - Mission03-07
   - Mission03-08
   - Mission03-09
+  - wall
+  - Item
   layers:
   - Default
   - TransparentFX

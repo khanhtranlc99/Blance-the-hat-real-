@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7304531575942639980}
   - component: {fileID: 7304531575942639982}
   - component: {fileID: 7304531575942639983}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: TriAnger
   m_TagString: Item
   m_Icon: {fileID: 0}
