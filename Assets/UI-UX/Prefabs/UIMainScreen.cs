@@ -21,17 +21,7 @@ public class UIMainScreen : MonoBehaviour
     {
         anim = GetComponent<UIAnimation>();
 
-        for (int i = 0; i < items.list.Count; i++)
-        {
-            int index = i;
-            var btn = Instantiate(btnInGame, scroll.content);
-            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
-            btn.transform.localScale = new Vector3(1, 1, 1);
-            btn.onClick.AddListener(() => 
-            {
-                btnSelect.SetButton(items.list[index]);
-            });
-        }    
+    
     }
 
     public void Show(TweenCallback onStart = null, TweenCallback onCompleted = null)
@@ -50,5 +40,18 @@ public class UIMainScreen : MonoBehaviour
     {
         anim.Hide();
     }
- 
+  public void _ShowItem()
+    {
+        for (int i = 0; i < items.list.Count; i++)
+        {
+            int index = i;
+            var btn = Instantiate(btnInGame, scroll.content);
+            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
+            btn.transform.localScale = new Vector3(1, 1, 1);
+            btn.onClick.AddListener(() =>
+            {
+                btnSelect.SetButton(items.list[index]);
+            });
+        }
+    }    
 }
