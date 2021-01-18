@@ -81,7 +81,7 @@ public class UIGameOver : UIGameOverBase<UIGameOver>
     {
         base.InitResultData();
 
-        stageName.text = DataManager.CurrentStage.name.ToUpper(); ;
+        stageName.text = /*DataManager.CurrentStage.name.ToUpper();*/"" ;
 
         if (starImages != null)
         {
