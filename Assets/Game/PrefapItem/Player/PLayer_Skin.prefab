@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3350701808546635028}
   - component: {fileID: 6761683300085281867}
   - component: {fileID: 6864686139840062381}
-  m_Layer: 9
+  - component: {fileID: 384392603}
+  m_Layer: 10
   m_Name: PLayer_Skin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: 1.17}
+  m_Offset: {x: -0.11, y: 1.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,6 +128,97 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 0.82}
   m_EdgeRadius: 0
+--- !u!60 &384392603
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422414904823686085}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.82, y: 3.205}
+    newSize: {x: 4.69, y: 4.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.155, y: -1.3525}
+      - {x: -0.145, y: -1.3175}
+      - {x: -0.13499999, y: -0.92749995}
+      - {x: 0, y: -0.92249995}
+      - {x: 0.049999997, y: -0.9325}
+      - {x: 0.049999997, y: -1.3475}
+      - {x: 0.099999994, y: -1.4425}
+      - {x: 0.22, y: -1.5375}
+      - {x: 0.33499998, y: -1.5875}
+      - {x: 0.39499998, y: -1.5975}
+      - {x: 0.41, y: -1.6025}
+      - {x: 0.71999997, y: -1.6025}
+      - {x: 0.82, y: -1.5725}
+      - {x: 0.885, y: -1.5324999}
+      - {x: 0.96999997, y: -1.4475}
+      - {x: 1.01, y: -1.3824999}
+      - {x: 1.02, y: -1.3375}
+      - {x: 1.045, y: -1.1675}
+      - {x: 1.0799999, y: -0.85249996}
+      - {x: 1.09, y: -0.6225}
+      - {x: 1.285, y: -0.6225}
+      - {x: 1.3249999, y: -0.6175}
+      - {x: 1.395, y: -0.5725}
+      - {x: 1.41, y: -0.5275}
+      - {x: 1.41, y: 0.42249998}
+      - {x: 1.4, y: 0.45749998}
+      - {x: 1.3349999, y: 0.5075}
+      - {x: 1.105, y: 0.5125}
+      - {x: 1.0799999, y: 0.7575}
+      - {x: 1.105, y: 0.8075}
+      - {x: 1.095, y: 1.1374999}
+      - {x: 1.0849999, y: 1.3625}
+      - {x: 1.095, y: 1.3625}
+      - {x: 1.0849999, y: 1.4725}
+      - {x: 1.045, y: 1.5324999}
+      - {x: 0.97999996, y: 1.5825}
+      - {x: 0.94, y: 1.6025}
+      - {x: -1.185, y: 1.6025}
+      - {x: -1.29, y: 1.5174999}
+      - {x: -1.31, y: 1.4375}
+      - {x: -1.3149999, y: 1.1474999}
+      - {x: -1.37, y: 1.1025}
+      - {x: -1.41, y: 1.0525}
+      - {x: -1.41, y: 0.9025}
+      - {x: -1.39, y: 0.86249995}
+      - {x: -1.3299999, y: 0.8025}
+      - {x: -1.255, y: 0.7475}
+      - {x: -1.1999999, y: 0.72749996}
+      - {x: -1.1899999, y: 0.6125}
+      - {x: -1.2049999, y: 0.4525}
+      - {x: -1.2099999, y: -0.0425}
+      - {x: -1.1999999, y: -0.2925}
+      - {x: -1.1899999, y: -0.5525}
+      - {x: -1.175, y: -0.8075}
+      - {x: -1.16, y: -0.9925}
+      - {x: -1.135, y: -1.2125}
+      - {x: -1.12, y: -1.3475}
+      - {x: -1.0749999, y: -1.4425}
+      - {x: -0.97999996, y: -1.5375}
+      - {x: -0.905, y: -1.5775}
+      - {x: -0.825, y: -1.5975}
+      - {x: -0.79999995, y: -1.6025}
+      - {x: -0.49499997, y: -1.6025}
+      - {x: -0.42999998, y: -1.5875}
+      - {x: -0.29999998, y: -1.5274999}
+      - {x: -0.185, y: -1.4175}
 --- !u!1 &4571492781165882038
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +232,7 @@ GameObject:
   - component: {fileID: 5884027461586742913}
   - component: {fileID: 5027488578467357354}
   - component: {fileID: 4342853985543547615}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880905611088428613}
   - component: {fileID: 7622692624678619128}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: SkinManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
