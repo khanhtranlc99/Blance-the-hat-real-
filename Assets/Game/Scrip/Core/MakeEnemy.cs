@@ -10,10 +10,12 @@ public class MakeEnemy : MonoBehaviour
     public GameObject enemyWater;
     public GameObject wood;
     public float timeSpawn;
-    public int numberOfEnemy2;
+
     public List<GameObject> listEnemy;
     public bool wasBool;
-    
+    private Coroutine boomCoroutine = null;
+    private Coroutine waterCoroutine = null;
+
     private void Awake()
     {
         make = this;
@@ -40,27 +42,44 @@ public class MakeEnemy : MonoBehaviour
     }
     private IEnumerator _SpawnWarter()
     {
-        yield return new WaitForSeconds(1);
-        if (GameCoreManager.coreManager.coutnTime % 2 == 0 && GameCoreManager.coreManager.coutnTime > 3 && wasBool == true)
+        yield return new WaitForSeconds(3.5f);
+    
+        if ( GameCoreManager.coreManager.coutnTime > 3 && wasBool == true)
         {
-            yield return new WaitForSeconds(3);
-
+         
             float b = Random.Range(-1, 2);
-              SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
-                 
+            SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+           
         }
-        StartCoroutine(_SpawnWarter());
+        if( wasBool == true)
+        {
+            waterCoroutine = StartCoroutine(_SpawnWarter());
+        }
+        else
+        {
+            StopCoroutine(waterCoroutine);
+        }
+     
+
     }
     private IEnumerator _SpawnBoom()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
+
         if ( GameCoreManager.coreManager.coutnTime > 8 && wasBool == true)
         {
-            yield return new WaitForSeconds(10);
+       
             float i = Random.Range(-1, 2);
             SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
         }
-        StartCoroutine(_SpawnBoom());
+        if ( wasBool == true)
+        {
+            boomCoroutine = StartCoroutine(_SpawnBoom());
+        }
+        else
+        {
+            StopCoroutine(boomCoroutine);
+        }
     }
 
         public void _spawnWood()
@@ -72,19 +91,33 @@ public class MakeEnemy : MonoBehaviour
     
     public void _PauseSpawn()
     {
+        StopAllCoroutines();
         wasBool = false;
         var a = GameObject.FindGameObjectsWithTag("Enemy");
         for (int i = 0; i < a.Length; i++)
         {
             SimplePool.Despawn(a[i]);
         }
+        
     }
-
+    
     public void _ResuameSpawn()
     {
         wasBool = true;
-        StartCoroutine(_SpawnWarter());
-        StartCoroutine(_SpawnBoom());
+        if (waterCoroutine != null)
+        {
+            StopCoroutine(waterCoroutine);
+            waterCoroutine = null;
+        }
+        if (boomCoroutine != null)
+        {
+            StopCoroutine(boomCoroutine);
+            boomCoroutine = null;
+        }
+
+        waterCoroutine =  StartCoroutine(_SpawnWarter());
+        boomCoroutine =  StartCoroutine(_SpawnBoom());
+   
     }
     private void _Water()
     {

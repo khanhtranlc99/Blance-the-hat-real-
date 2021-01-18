@@ -41,6 +41,8 @@ public class CloneItem : MonoBehaviour
         if( collision.gameObject.tag == "wall")
         {
             //GameContro.instance._StopTime();
+            StopAllCoroutines();
+            MakeEnemy.make.wasBool = false;
             if (GameCoreManager.coreManager.wood != null)
             {
                 SimplePool.Despawn(GameCoreManager.coreManager.wood.gameObject);
@@ -48,12 +50,7 @@ public class CloneItem : MonoBehaviour
             GameStateManager.WaitGameOver(null);
             Destroy(gameObject);
         }
-        //if (collision.gameObject.tag == "Player")
-        //{
-        //    effect.Play(effect);
-        //    StartCoroutine(_StopParticle());
-
-        //}
+       
 
     }
     public void _LoadData()
