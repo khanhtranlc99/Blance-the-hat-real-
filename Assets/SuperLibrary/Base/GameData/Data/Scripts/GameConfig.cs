@@ -8,6 +8,7 @@ public class GameConfig
     public RebornType rebornType = RebornType.Continue;
     public RebornBy rebornBy = RebornBy.Ads;
     public int suggestUpdateVersion = 1909090100;
+    public int coinPerStage = 3;
 }
 
 [Serializable]

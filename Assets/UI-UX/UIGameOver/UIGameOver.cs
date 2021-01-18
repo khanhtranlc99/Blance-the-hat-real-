@@ -131,6 +131,8 @@ public class UIGameOver : UIGameOverBase<UIGameOver>
         {
             Status = UIAnimStatus.IsShow;
         })));
+        
+        CoinManager.Add(DataManager.GameConfig.coinPerStage);
     }
 
     public void ShowButton()
