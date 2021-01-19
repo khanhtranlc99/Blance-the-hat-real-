@@ -8,14 +8,8 @@ using System;
 
 public class UIMainScreen : MonoBehaviour
 {
-    [SerializeField] ScrollRect scroll;
-    [SerializeField] Button btnInGame;
-    [SerializeField] private ButtonSelect btnSelect;
-    public int numbersOfItem;
     public UIAnimStatus Status => anim.Status;
     private UIAnimation anim;
-
-    private ItemsAsset items => DataManager.ItemsAsset;
 
     private void Awake()
     {
@@ -42,16 +36,16 @@ public class UIMainScreen : MonoBehaviour
     }
   public void _ShowItem()
     {
-        for (int i = 0; i < items.list.Count; i++)
-        {
-            int index = i;
-            var btn = Instantiate(btnInGame, scroll.content);
-            btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
-            btn.transform.localScale = new Vector3(1, 1, 1);
-            btn.onClick.AddListener(() =>
-            {
-                btnSelect.SetButton(items.list[index]);
-            });
-        }
+        // for (int i = 0; i < items.list.Count; i++)
+        // {
+        //     int index = i;
+        //     var btn = Instantiate(btnInGame, scroll.content);
+        //     btn.GetComponentInChildren<Image>().sprite = items.list[i].thumbnail;
+        //     btn.transform.localScale = new Vector3(1, 1, 1);
+        //     btn.onClick.AddListener(() =>
+        //     {
+        //         btnSelect.SetButton(items.list[index]);
+        //     });
+        // }
     }    
 }

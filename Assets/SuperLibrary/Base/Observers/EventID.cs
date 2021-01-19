@@ -5,8 +5,9 @@
     _Pause = 2,
     _Resuame = 3,
     _ChangeMenu = 4,
-    _ChangeGamPlay = 5
-
+    _ChangeGamPlay = 5,
+    
+    ItemScrollSelect = 100,
 }
 
 
