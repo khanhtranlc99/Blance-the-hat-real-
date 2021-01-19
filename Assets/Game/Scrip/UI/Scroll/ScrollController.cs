@@ -11,6 +11,9 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private EnhancedScroller.TweenType scrollerTweenType;
     [SerializeField] private float scrollerTweenTime = 2f;
     [SerializeField] private ButtonSelect btnSelect;
+
+    [SerializeField] private string itemAdsCoinName;
+    [SerializeField] private Sprite itemAdsCoinSprite;
     
     private ItemsAsset items => DataManager.ItemsAsset;
     private List<ItermScrollData> itemsData;
@@ -26,6 +29,12 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
 
     private void CreateItems()
     {
+        itemsData.Add(new ItermScrollData()
+        {
+            name = itemAdsCoinName,
+            sprite = itemAdsCoinSprite,
+        });
+        
         for (int i = 0; i < items.list.Count; i++)
         {
             itemsData.Add(new ItermScrollData()
@@ -56,12 +65,20 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         ItemScroll item = scroller.GetCellView(cellViewPrefab) as ItemScroll;
         item.name = itemsData[dataIndex].name;
         item.SetData(itemsData[dataIndex]);
-        item.SetAction(() =>
+        
+        if (itemsData[dataIndex].name.Equals(itemAdsCoinName))
         {
-            OnItemSelected(dataIndex);
-            btnSelect.SetButton(items.list[dataIndex]);
-            this.PostEvent((int) EventID.ItemScrollSelect, item);
-        });
+            
+        }
+        else
+        {
+            item.SetAction(() =>
+            {
+                OnItemSelected(dataIndex);
+                btnSelect.SetButton(items.list[dataIndex]);
+                this.PostEvent((int) EventID.ItemScrollSelect, item);
+            });
+        }
         return item;
     }
 }
