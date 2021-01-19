@@ -34,10 +34,10 @@ public class ButtonSelect : MonoBehaviour
                 DataManager.CurrentItem.isSelected = false;
                 DataManager.CurrentItem = itemData;
                 DataManager.CurrentItem.isSelected = true;
-                //GameStateManager.LoadGame(null);   
-                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
                 imageHome.sprite = DataManager.CurrentItem.thumbnail;
                 imageHome.SetNativeSize();
+                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+              
             });
         }
         else
