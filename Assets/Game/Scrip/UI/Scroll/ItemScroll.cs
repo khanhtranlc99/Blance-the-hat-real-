@@ -11,6 +11,8 @@ public class ItemScroll : EnhancedScrollerCellView
     [SerializeField] private Image itemImage;
     [SerializeField] private Button button;
 
+    private UnityAction onClickAction;
+
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.ItemScrollSelect, OnItemSelectHandler);
@@ -33,7 +35,12 @@ public class ItemScroll : EnhancedScrollerCellView
 
     public void SetAction(UnityAction action)
     {
-        button.onClick.AddListener(action);
+        if (onClickAction != null)
+        {
+            button.onClick.RemoveListener(onClickAction);
+        }
+        onClickAction = action;
+        button.onClick.AddListener(onClickAction);
     }
 
     private void OnItemSelectHandler(object param)
@@ -52,7 +59,5 @@ public class ItemScroll : EnhancedScrollerCellView
     private void OnDisable()
     {
         EventDispatcher.Instance?.RemoveListener((int) EventID.ItemScrollSelect, OnItemSelectHandler);
-        
-        button.onClick.RemoveAllListeners();
     }
 }
