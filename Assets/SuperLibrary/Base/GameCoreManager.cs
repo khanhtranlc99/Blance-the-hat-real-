@@ -207,17 +207,17 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     public void _LoadLogicItem()
     {
-        for (int i = 0; i < item.listLogic.Count; i++)
+        for (int i = 0; i < item.listLogicItems.Count; i++)
         {
-            item.listLogic[i].cloneItem.friction = item.listLogic[i].friction;
-            item.listLogic[i].cloneItem.bounciness = item.listLogic[i].bounciness;
-            item.listLogic[i].cloneItem.itemCanJump = item.listLogic[i].itemCanJump;
-            item.listLogic[i].cloneItem.wasJump = item.listLogic[i].wasJump;
-            item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
-            item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
-            item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;   
+            item.listLogicItems[i].cloneItem.friction = item.listLogicItems[i].friction;
+            item.listLogicItems[i].cloneItem.bounciness = item.listLogicItems[i].bounciness;
+            item.listLogicItems[i].cloneItem.itemCanJump = item.listLogicItems[i].itemCanJump;
+            item.listLogicItems[i].cloneItem.wasJump = item.listLogicItems[i].wasJump;
+            item.listLogicItems[i].cloneItem.moveXJump = item.listLogicItems[i].moveXJump;
+            item.listLogicItems[i].cloneItem.moveYJump = item.listLogicItems[i].moveYJump;
+            item.listLogicItems[i].cloneItem.timeLoopJump = item.listLogicItems[i].timeLoopJump;   
             //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
-            item.listLogic[i].cloneItem._LoadData();
+            item.listLogicItems[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
         }
     }
@@ -268,7 +268,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         runTime = false;
         isPause = false;
-        StopCoroutine(_Runtime());
+        StopCoroutine(timeCoroutine);
         MakeEnemy.make._PauseSpawn();
     }
 

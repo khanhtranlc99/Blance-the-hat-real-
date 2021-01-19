@@ -54,20 +54,20 @@ public class GameContro : MonoBehaviour
     }
      public void _LoadLogicItem()
     {
-        for( int i = 0; i < item.listLogic.Count; i ++)
+        for( int i = 0; i < item.listLogicItems.Count; i ++)
         {
-            item.listLogic[i].cloneItem.friction = item.listLogic[i].friction;
-            item.listLogic[i].cloneItem.bounciness = item.listLogic[i].bounciness;
-            //item.listLogic[i].cloneItem.mass = item.listLogic[i].mass;
-            item.listLogic[i].cloneItem.itemCanJump = item.listLogic[i].itemCanJump;
-            item.listLogic[i].cloneItem.wasJump = item.listLogic[i].wasJump;
-            item.listLogic[i].cloneItem.moveXJump = item.listLogic[i].moveXJump;
-            item.listLogic[i].cloneItem.moveYJump = item.listLogic[i].moveYJump;
-            item.listLogic[i].cloneItem.timeLoopJump = item.listLogic[i].timeLoopJump;
-            item.listLogic[i].cloneItem.waterForce = item.listLogic[i].obtacles[0].force;
-            item.listLogic[i].cloneItem.boomForce = item.listLogic[i].obtacles[1].force;
-            item.listLogic[i].cloneItem.ballForce = item.listLogic[i].obtacles[2].force;
-            item.listLogic[i].cloneItem._LoadData();
+            item.listLogicItems[i].cloneItem.friction = item.listLogicItems[i].friction;
+            item.listLogicItems[i].cloneItem.bounciness = item.listLogicItems[i].bounciness;
+            item.listLogicItems[i].cloneItem.mass = item.listLogicItems[i].mass;
+            item.listLogicItems[i].cloneItem.itemCanJump = item.listLogicItems[i].itemCanJump;
+            item.listLogicItems[i].cloneItem.wasJump = item.listLogicItems[i].wasJump;
+            item.listLogicItems[i].cloneItem.moveXJump = item.listLogicItems[i].moveXJump;
+            item.listLogicItems[i].cloneItem.moveYJump = item.listLogicItems[i].moveYJump;
+            item.listLogicItems[i].cloneItem.timeLoopJump = item.listLogicItems[i].timeLoopJump;
+            //item.listLogicItems[i].cloneItem.waterForce = item.listLogicItems[i].obtacles[0].force;
+            //item.listLogicItems[i].cloneItem.boomForce = item.listLogicItems[i].obtacles[1].force;
+            //item.listLogicItems[i].cloneItem.ballForce = item.listLogicItems[i].obtacles[2].force;
+            item.listLogicItems[i].cloneItem._LoadData();
             Debug.Log("LoadDataItem");
         }
     }
@@ -126,7 +126,7 @@ public class GameContro : MonoBehaviour
     private void ABCD()
     {
         
-        for( int i = 0; i < item.listLogic.Count; i++)
+        for( int i = 0; i < item.listLogicItems.Count; i++)
         {
          
         }    

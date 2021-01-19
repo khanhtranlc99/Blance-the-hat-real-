@@ -11,13 +11,15 @@ public class ButtonSelect : MonoBehaviour
     [SerializeField] private GameObject priceObject;
     [SerializeField] private Image priceIcon;
     [SerializeField] private Text priceNumber;
-
     [Header("Price Icon")]
     [SerializeField] private Sprite iconAds;
     [SerializeField] private Sprite iconGold;
     [SerializeField] private Sprite iconGem;
     [SerializeField] private Sprite iconStar;
-
+    private void Start()
+    {
+     
+    }
     public void SetButton(ItemData itemData)
     {
         button.onClick.RemoveAllListeners();

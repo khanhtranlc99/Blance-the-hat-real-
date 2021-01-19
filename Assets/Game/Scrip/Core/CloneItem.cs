@@ -47,7 +47,9 @@ public class CloneItem : MonoBehaviour
             {
                 SimplePool.Despawn(GameCoreManager.coreManager.wood.gameObject);
             }
+
             GameStateManager.WaitGameOver(null);
+            UIcontro.uIcontro.uiEndGame._PrinTime();
             Destroy(gameObject);
         }
        

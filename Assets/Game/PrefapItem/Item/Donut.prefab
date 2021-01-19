@@ -51,7 +51,7 @@ MonoBehaviour:
   physics: {fileID: 6200000, guid: 0c4ad0719f8c3374e8fa7fe12b63b5fb, type: 2}
   friction: 0
   bounciness: 0
-  mass: 0
+  mass: 1
   itemCanJump: 0
   wasJump: 0
   moveXJump: 0

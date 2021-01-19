@@ -9,6 +9,7 @@ public class UIcontro : MonoBehaviour
     public UiMode uiMode;
     public UiSelectItem uiSelectItem;
     public UiHomee uiHomee;
+    public UiEndGame uiEndGame;
     [SerializeField] Button btnSelecItem;
     [SerializeField] Button btnMode;
     [SerializeField] Button btnHome;
