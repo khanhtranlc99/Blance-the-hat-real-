@@ -215,6 +215,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             item.listLogicItems[i].cloneItem.friction = item.listLogicItems[i].friction;
             item.listLogicItems[i].cloneItem.bounciness = item.listLogicItems[i].bounciness;
+            item.listLogicItems[i].cloneItem.mass = item.listLogicItems[i].mass;
             item.listLogicItems[i].cloneItem.itemCanJump = item.listLogicItems[i].itemCanJump;
             item.listLogicItems[i].cloneItem.wasJump = item.listLogicItems[i].wasJump;
             item.listLogicItems[i].cloneItem.moveXJump = item.listLogicItems[i].moveXJump;
@@ -223,7 +224,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
             item.listLogicItems[i].cloneItem._LoadData();
             _LoadLogicEnemy();
-            Debug.Log("LoadDataItem");
+            Debug.Log("Chị Hà vừa LoadDataItem");
         }
     }
     public void _Pause()
@@ -243,8 +244,6 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             ballSilicol.mass = item.obtacles[2].force;
 
         }
-
-
         }
     public void _Reset()
     {

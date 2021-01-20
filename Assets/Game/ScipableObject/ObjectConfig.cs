@@ -10,6 +10,7 @@ public class ObjectConfig : ScriptableObject
 [System.Serializable]
 public struct GameItem
 {
+    public string name;
     public CloneItem cloneItem;
     public float friction; //ok
     public float bounciness; //ok

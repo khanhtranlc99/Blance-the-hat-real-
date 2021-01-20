@@ -38,6 +38,7 @@ public class CloneItem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if( collision.gameObject.tag == "wall")
         {
             //GameContro.instance._StopTime();

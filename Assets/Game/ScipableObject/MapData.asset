@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MapData
   m_EditorClassIdentifier: 
   listLogicItems:
-  - cloneItem: {fileID: 3042446743588808911, guid: b2accba4de99c254686b4a326d686330,
+  - name: Alien
+    cloneItem: {fileID: 3042446743588808911, guid: b2accba4de99c254686b4a326d686330,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -23,7 +24,8 @@ MonoBehaviour:
     moveXJump: 50
     moveYJump: 100
     timeLoopJump: 1
-  - cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
+  - name: Anchor
+    cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -33,7 +35,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 2298688374160701718, guid: e16ed822368c7494d8cb456ede008876,
+  - name: Balls
+    cloneItem: {fileID: 2298688374160701718, guid: e16ed822368c7494d8cb456ede008876,
       type: 3}
     friction: 0.0025
     bounciness: 1
@@ -43,7 +46,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 445789718448374184, guid: 4baebddc145e59c4aae256e43d0b7625,
+  - name: Car
+    cloneItem: {fileID: 445789718448374184, guid: 4baebddc145e59c4aae256e43d0b7625,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -53,7 +57,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1193087325684922717, guid: d3550fed59de184479f308ce00f35346,
+  - name: Cup
+    cloneItem: {fileID: 1193087325684922717, guid: d3550fed59de184479f308ce00f35346,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -63,7 +68,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 3386271080923462235, guid: 18baba147538d1f4f94f1e7a8df777d6,
+  - name: Donut
+    cloneItem: {fileID: 3386271080923462235, guid: 18baba147538d1f4f94f1e7a8df777d6,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -73,7 +79,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 6065552703923653351, guid: 2f55570b5a532f043a093eb212dfe35f,
+  - name: Flower
+    cloneItem: {fileID: 6065552703923653351, guid: 2f55570b5a532f043a093eb212dfe35f,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -83,7 +90,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 3847250046368183567, guid: 48fadff884be71445a7030e7e226a6ee,
+  - name: Knight
+    cloneItem: {fileID: 3847250046368183567, guid: 48fadff884be71445a7030e7e226a6ee,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -93,7 +101,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 6271862193419512484, guid: 44454d9b19345ac4f860b5c9f8db1ade,
+  - name: Lamp
+    cloneItem: {fileID: 6271862193419512484, guid: 44454d9b19345ac4f860b5c9f8db1ade,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -103,7 +112,19 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 1180093557663165833, guid: 013689c211576a9459ee1514d101e985,
+  - name: MagicHat
+    cloneItem: {fileID: 1180093557663165833, guid: 013689c211576a9459ee1514d101e985,
+      type: 3}
+    friction: 0.0025
+    bounciness: 0
+    mass: 1
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Robot
+    cloneItem: {fileID: 2516731194176571960, guid: 9130b08b80885e4488209376613c4d3d,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -113,7 +134,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 2516731194176571960, guid: 9130b08b80885e4488209376613c4d3d,
+  - name: SnowBall
+    cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -123,7 +145,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
+  - name: ThreeBox
+    cloneItem: {fileID: 8444472147810260062, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -133,7 +156,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 8444472147810260062, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
+  - name: TriAnger
+    cloneItem: {fileID: 7304531575942639981, guid: dff436f255c2471489cc7e1d6ef265ec,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -143,7 +167,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 7304531575942639981, guid: dff436f255c2471489cc7e1d6ef265ec,
+  - name: Ufo
+    cloneItem: {fileID: 4258784520372029971, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -153,17 +178,8 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
-  - cloneItem: {fileID: 4258784520372029971, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
-      type: 3}
-    friction: 0.0025
-    bounciness: 0
-    mass: 0.5
-    itemCanJump: 0
-    wasJump: 0
-    moveXJump: 0
-    moveYJump: 0
-    timeLoopJump: 0
-  - cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
+  - name: WithHat
+    cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
       type: 3}
     friction: 0.0025
     bounciness: 0
@@ -177,6 +193,6 @@ MonoBehaviour:
   - name: Water
     force: 0.5
   - name: Boom
-    force: 1
+    force: 5
   - name: Ball
     force: 0

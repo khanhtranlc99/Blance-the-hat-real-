@@ -51,7 +51,7 @@ MonoBehaviour:
   physics: {fileID: 6200000, guid: 5cbfb3650a252354397a762f722a00d2, type: 2}
   friction: 0.0025
   bounciness: 0
-  mass: 1
+  mass: 0.5
   itemCanJump: 0
   wasJump: 0
   moveXJump: 0
@@ -72,7 +72,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
