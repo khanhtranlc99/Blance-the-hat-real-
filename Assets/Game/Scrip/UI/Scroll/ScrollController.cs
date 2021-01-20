@@ -81,7 +81,10 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         
         if (itemsData[dataIndex].name.Equals(itemAdsCoinName))
         {
-            
+            item.SetAction(() =>
+            {
+                CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+            });
         }
         else
         {
