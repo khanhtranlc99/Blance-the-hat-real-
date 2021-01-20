@@ -1,0 +1,27 @@
+
+binh_hoa.png
+size: 164,64
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+binh_hoa_1
+  rotate: false
+  xy: 2, 10
+  size: 68, 50
+  orig: 68, 50
+  offset: 0, 0
+  index: -1
+binh_hoa_2
+  rotate: true
+  xy: 128, 2
+  size: 58, 33
+  orig: 58, 33
+  offset: 0, 0
+  index: -1
+binh_hoa_3
+  rotate: true
+  xy: 72, 3
+  size: 57, 54
+  orig: 57, 54
+  offset: 0, 0
+  index: -1

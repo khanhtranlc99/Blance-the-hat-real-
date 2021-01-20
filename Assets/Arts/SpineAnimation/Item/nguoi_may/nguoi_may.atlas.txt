@@ -1,0 +1,62 @@
+
+nguoi_may.png
+size: 356,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+nguoi_may_banh_xe_ph
+  rotate: false
+  xy: 170, 2
+  size: 57, 51
+  orig: 57, 51
+  offset: 0, 0
+  index: -1
+nguoi_may_banh_xe_tr
+  rotate: false
+  xy: 170, 2
+  size: 57, 51
+  orig: 57, 51
+  offset: 0, 0
+  index: -1
+nguoi_may_co
+  rotate: false
+  xy: 317, 6
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+nguoi_may_dau
+  rotate: false
+  xy: 170, 55
+  size: 166, 71
+  orig: 166, 71
+  offset: 0, 0
+  index: -1
+nguoi_may_mat_nham
+  rotate: true
+  xy: 338, 37
+  size: 89, 14
+  orig: 89, 14
+  offset: 0, 0
+  index: -1
+nguoi_may_mat_tr
+  rotate: false
+  xy: 229, 7
+  size: 86, 21
+  orig: 86, 21
+  offset: 0, 0
+  index: -1
+nguoi_may_mat_tron
+  rotate: false
+  xy: 229, 30
+  size: 86, 23
+  orig: 86, 23
+  offset: 0, 0
+  index: -1
+nguoi_may_than
+  rotate: false
+  xy: 2, 15
+  size: 166, 111
+  orig: 166, 111
+  offset: 0, 0
+  index: -1

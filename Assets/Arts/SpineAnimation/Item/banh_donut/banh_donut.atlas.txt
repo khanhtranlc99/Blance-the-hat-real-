@@ -1,0 +1,13 @@
+
+banh_donut.png
+size: 296,296
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+banh_donut
+  rotate: false
+  xy: 2, 2
+  size: 289, 289
+  orig: 289, 289
+  offset: 0, 0
+  index: -1
