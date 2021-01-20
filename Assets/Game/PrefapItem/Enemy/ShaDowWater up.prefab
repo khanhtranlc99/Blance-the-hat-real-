@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8391068576811582972}
-  - component: {fileID: 1748246870831375183}
   - component: {fileID: 1376291645956627139}
   - component: {fileID: 1376291645956627164}
   - component: {fileID: 1376291645956627165}
   - component: {fileID: 1376291645956627166}
+  - component: {fileID: -7916870670307460524}
   m_Layer: 9
   m_Name: ShaDowWater up
   m_TagString: Enemy
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1748246870831375183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376291645956627167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93559436ec6080a44b8eced62ae8dc96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1376291645956627139
 Animator:
   serializedVersion: 3
@@ -151,3 +139,15 @@ MonoBehaviour:
     useCustomMixMode: 1
     layerMixModes: 01000000
     layerBlendModes: 01000000
+--- !u!114 &-7916870670307460524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376291645956627167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99bd86d225e8a7648a72bc17aa7f2213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

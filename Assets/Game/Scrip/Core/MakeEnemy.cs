@@ -98,7 +98,7 @@ public class MakeEnemy : MonoBehaviour
         {
             SimplePool.Despawn(a[i]);
         }
-        
+
     }
     
     public void _ResuameSpawn()
