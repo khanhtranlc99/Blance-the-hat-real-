@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 384392603}
   m_Layer: 10
   m_Name: PLayer_Skin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11, y: 1.2}
+  m_Offset: {x: -0.01, y: 1.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -188,11 +188,11 @@ PolygonCollider2D:
       - {x: 1.095, y: 1.3625}
       - {x: 1.0849999, y: 1.4725}
       - {x: 1.045, y: 1.5324999}
-      - {x: 0.97999996, y: 1.5825}
-      - {x: 0.94, y: 1.6025}
-      - {x: -1.185, y: 1.6025}
-      - {x: -1.29, y: 1.5174999}
-      - {x: -1.31, y: 1.4375}
+      - {x: 0.97999996, y: 1.48}
+      - {x: 0.94, y: 1.48}
+      - {x: -1.185, y: 1.48}
+      - {x: -1.06, y: 1.5174999}
+      - {x: -1.19, y: 1.4375}
       - {x: -1.3149999, y: 1.1474999}
       - {x: -1.37, y: 1.1025}
       - {x: -1.41, y: 1.0525}

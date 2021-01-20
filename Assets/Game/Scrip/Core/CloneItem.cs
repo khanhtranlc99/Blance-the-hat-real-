@@ -1,12 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CloneItem : MonoBehaviour
 {
     [SerializeField] private  SpriteRenderer Rsprite;
     [SerializeField] private Rigidbody2D rigidbody2D;
     [SerializeField] private PhysicsMaterial2D physics;
+
+    [SerializeField] private ItemAnimManager itemAnimManager;
     //[SerializeField] private ParticleSystem effect;
     public float friction;
     public float bounciness;
@@ -20,6 +24,19 @@ public class CloneItem : MonoBehaviour
     public float ballForce;
     public float boomForce;
     //public bool wasTouch;
+
+    private bool isLanded;
+
+    private void OnEnable()
+    {
+        isLanded = false;
+    }
+
+    private void OnDisable()
+    {
+        isLanded = true;
+    }
+
     private void Start()
     {
         StartCoroutine(_Jump());
@@ -38,6 +55,12 @@ public class CloneItem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        if (collision.gameObject.tag == "Player" && !isLanded)
+        {
+            isLanded = true;
+            itemAnimManager?.PlayLandAnim();
+        }
 
         if( collision.gameObject.tag == "wall")
         {
