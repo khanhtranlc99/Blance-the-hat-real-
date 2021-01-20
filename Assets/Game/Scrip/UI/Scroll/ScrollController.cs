@@ -81,6 +81,8 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         
         if (itemsData[dataIndex].name.Equals(itemAdsCoinName))
         {
+            item.SetText($"+{DataManager.GameConfig.coinAdsReward}");
+            item.ActiveText(true);
             item.SetAction(() =>
             {
                 CoinManager.Add(DataManager.GameConfig.coinAdsReward);
@@ -88,6 +90,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         }
         else
         {
+            item.ActiveText(false);
             item.SetAction(() =>
             {
                 OnItemSelected(dataIndex);

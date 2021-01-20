@@ -10,6 +10,7 @@ public class ItemScroll : EnhancedScrollerCellView
 {
     [SerializeField] private Image itemImage;
     [SerializeField] private Button button;
+    [SerializeField] private Text text;
 
     private UnityAction onClickAction;
 
@@ -31,6 +32,16 @@ public class ItemScroll : EnhancedScrollerCellView
             // this slot has an image so set its sprite
             itemImage.sprite = data.sprite;
         }
+    }
+
+    public void SetText(string value)
+    {
+        text.text = value;
+    }
+
+    public void ActiveText(bool isActive)
+    {
+        text.gameObject.SetActive(isActive);
     }
 
     public void SetAction(UnityAction action)
