@@ -9,6 +9,7 @@ public class GameConfig
     public RebornBy rebornBy = RebornBy.Ads;
     public int suggestUpdateVersion = 1909090100;
     public int coinPerStage = 3;
+    public int coinAdsReward = 10;
 }
 
 [Serializable]

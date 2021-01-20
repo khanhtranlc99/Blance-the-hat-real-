@@ -10,6 +10,9 @@ public class ItemScroll : EnhancedScrollerCellView
 {
     [SerializeField] private Image itemImage;
     [SerializeField] private Button button;
+    [SerializeField] private Text text;
+
+    private UnityAction onClickAction;
 
     private void OnEnable()
     {
@@ -31,9 +34,24 @@ public class ItemScroll : EnhancedScrollerCellView
         }
     }
 
+    public void SetText(string value)
+    {
+        text.text = value;
+    }
+
+    public void ActiveText(bool isActive)
+    {
+        text.gameObject.SetActive(isActive);
+    }
+
     public void SetAction(UnityAction action)
     {
-        button.onClick.AddListener(action);
+        if (onClickAction != null)
+        {
+            button.onClick.RemoveListener(onClickAction);
+        }
+        onClickAction = action;
+        button.onClick.AddListener(onClickAction);
     }
 
     private void OnItemSelectHandler(object param)
@@ -52,7 +70,5 @@ public class ItemScroll : EnhancedScrollerCellView
     private void OnDisable()
     {
         EventDispatcher.Instance?.RemoveListener((int) EventID.ItemScrollSelect, OnItemSelectHandler);
-        
-        button.onClick.RemoveAllListeners();
     }
 }

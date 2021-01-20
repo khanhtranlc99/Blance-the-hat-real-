@@ -1,0 +1,27 @@
+
+oto.png
+size: 144,92
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+oto
+  rotate: false
+  xy: 2, 2
+  size: 112, 87
+  orig: 112, 87
+  offset: 0, 0
+  index: -1
+oto_ph
+  rotate: false
+  xy: 116, 66
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1
+oto_tr
+  rotate: false
+  xy: 116, 66
+  size: 23, 23
+  orig: 23, 23
+  offset: 0, 0
+  index: -1

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using EnhancedUI.EnhancedScroller;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private EnhancedScroller scroller;
     [SerializeField] private EnhancedScrollerCellView cellViewPrefab;
     [SerializeField] private EnhancedScroller.TweenType scrollerTweenType;
-    [SerializeField] private float scrollerTweenTime = 2f;
+    [SerializeField] private float scrollerTweenTime = 0.2f;
     [SerializeField] private ButtonSelect btnSelect;
 
     [SerializeField] private string itemAdsCoinName;
@@ -25,6 +26,18 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         itemsData = new List<ItermScrollData>();
         CreateItems();
         scroller.ReloadData();
+
+        var currentItem = DataManager.CurrentItem;
+        if (currentItem != null && !currentItem.name.Equals(itemAdsCoinName))
+        {
+            var itemData = itemsData.FirstOrDefault(_ => _.name.Equals(currentItem.name));
+            var currentItemIndex = itemsData.IndexOf(itemData);
+            OnItemSelected(currentItemIndex, () =>
+            {
+                var item = scroller.GetCellViewAtDataIndex(currentItemIndex);
+                item.transform.localScale = new Vector2(1.5f, 1.5f);
+            });
+        }
     }
 
     private void CreateItems()
@@ -45,9 +58,9 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
 
-    private void OnItemSelected(int index)
+    private void OnItemSelected(int index, Action actionComplete = null)
     {
-        scroller.JumpToDataIndex(index, 0.5f, 0.5f, true, scrollerTweenType, scrollerTweenTime);
+        scroller.JumpToDataIndex(index, 0.5f, 0.5f, true, scrollerTweenType, scrollerTweenTime, actionComplete);
     }
 
     public int GetNumberOfCells(EnhancedScroller scroller)
@@ -68,14 +81,20 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         
         if (itemsData[dataIndex].name.Equals(itemAdsCoinName))
         {
-            
+            item.SetText($"+{DataManager.GameConfig.coinAdsReward}");
+            item.ActiveText(true);
+            item.SetAction(() =>
+            {
+                CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+            });
         }
         else
         {
+            item.ActiveText(false);
             item.SetAction(() =>
             {
                 OnItemSelected(dataIndex);
-                btnSelect.SetButton(items.list[dataIndex]);
+                btnSelect.SetButton(items.list[dataIndex - 1]);
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
         }

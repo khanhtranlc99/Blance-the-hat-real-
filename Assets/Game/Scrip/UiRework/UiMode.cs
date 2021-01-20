@@ -34,6 +34,11 @@ public class UiMode : ControUI
         normalButton.transform.localScale = new Vector2(1, 1);
         plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
     }
+
+    public void OnCoinAdsButtonClick()
+    {
+        CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+    }
     public void _OffMode()
     {
         wasPlusMode = false;

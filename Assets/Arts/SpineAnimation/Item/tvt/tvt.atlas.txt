@@ -1,0 +1,83 @@
+
+tvt.png
+size: 184,132
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tvt
+  rotate: false
+  xy: 2, 33
+  size: 161, 97
+  orig: 161, 97
+  offset: 0, 0
+  index: -1
+tvt_1
+  rotate: false
+  xy: 165, 61
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+tvt_2
+  rotate: false
+  xy: 165, 114
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+tvt_3
+  rotate: false
+  xy: 165, 44
+  size: 15, 15
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
+tvt_4
+  rotate: false
+  xy: 165, 96
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+tvt_5
+  rotate: false
+  xy: 165, 78
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+tvt_ligt_1
+  rotate: false
+  xy: 2, 2
+  size: 29, 29
+  orig: 30, 30
+  offset: 0, 1
+  index: -1
+tvt_ligt_2
+  rotate: false
+  xy: 33, 2
+  size: 29, 29
+  orig: 30, 30
+  offset: 0, 1
+  index: -1
+tvt_ligt_3
+  rotate: false
+  xy: 64, 2
+  size: 29, 29
+  orig: 30, 30
+  offset: 0, 1
+  index: -1
+tvt_ligt_4
+  rotate: false
+  xy: 95, 2
+  size: 29, 29
+  orig: 30, 30
+  offset: 0, 1
+  index: -1
+tvt_ligt_5
+  rotate: false
+  xy: 126, 2
+  size: 29, 29
+  orig: 30, 30
+  offset: 0, 1
+  index: -1
