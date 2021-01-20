@@ -49,9 +49,9 @@ MonoBehaviour:
   Rsprite: {fileID: 1180093557663165834}
   rigidbody2D: {fileID: 1180093557663165832}
   physics: {fileID: 6200000, guid: 15e49c165a4bede4b86ff45b5718b2ae, type: 2}
-  friction: 0
+  friction: 0.0025
   bounciness: 0
-  mass: 1
+  mass: 0
   itemCanJump: 0
   wasJump: 0
   moveXJump: 0

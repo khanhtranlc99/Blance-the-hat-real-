@@ -56,6 +56,10 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
     private void Update()
     {
+        if ( Input.GetKeyDown(KeyCode.Space))
+        {
+            _LoadLogicItem();
+        }
     }
 
     private void LateUpdate()
@@ -218,6 +222,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             item.listLogicItems[i].cloneItem.timeLoopJump = item.listLogicItems[i].timeLoopJump;   
             //khi nào item va chạm với obstacle thì lấy dữ liệu force từ obstacle
             item.listLogicItems[i].cloneItem._LoadData();
+            _LoadLogicEnemy();
             Debug.Log("LoadDataItem");
         }
     }
@@ -230,11 +235,17 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     }
     public void _LoadLogicEnemy()
     {
-        //water.mass = item.obtacles[0].force;
-        //boom.forceMagnitude = item.obtacles[1].force;
-        //ballSilicol.mass = item.obtacles[2].force;
-        //Debug.Log("LoadEnemy");
-    }
+
+        for (int i = 0; i < item.obtacles.Count; i++)
+        {
+            water.mass = item.obtacles[0].force;
+            boom.forceMagnitude = item.obtacles[1].force;
+            ballSilicol.mass = item.obtacles[2].force;
+
+        }
+
+
+        }
     public void _Reset()
     {
         main.transform.DORotate(new Vector3(0, 0, angerFirst), 0.1f);
@@ -261,7 +272,6 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         isPause = false;
         clone._Moving();
         MakeEnemy.make._ResuameSpawn();
-        
         
     }
     public void _StopTime()

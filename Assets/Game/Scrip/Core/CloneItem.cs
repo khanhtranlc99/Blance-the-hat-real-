@@ -32,7 +32,7 @@ public class CloneItem : MonoBehaviour
             yield return new WaitForSeconds(timeLoopJump);
             int a = Random.Range(-1, 2);
             rigidbody2D.AddForce(new Vector3(moveXJump * a, moveYJump , 0));
-            //Debug.Log("j");       
+            Debug.Log("j");
         }    
     }
 
