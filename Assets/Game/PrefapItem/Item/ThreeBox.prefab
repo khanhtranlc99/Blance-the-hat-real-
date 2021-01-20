@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 3973547067926176913}
   - component: {fileID: 1120024245322636505}
   - component: {fileID: 5520079665866386903}
+  - component: {fileID: 30705327721712157}
   m_Layer: 10
   m_Name: ThreeBox (1)
   m_TagString: Untagged
@@ -204,7 +205,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -289,6 +290,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5042373, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &30705327721712157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685014238908230310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d03b264a4c7934e8194f207908f14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7487147198401129992
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +314,7 @@ GameObject:
   - component: {fileID: 7270113104387577680}
   - component: {fileID: 4739851440618098474}
   - component: {fileID: 5903535845806173668}
+  - component: {fileID: 7969747616616420984}
   m_Layer: 10
   m_Name: ThreeBox (2)
   m_TagString: Untagged
@@ -334,7 +348,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -419,3 +433,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5042373, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &7969747616616420984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487147198401129992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d03b264a4c7934e8194f207908f14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

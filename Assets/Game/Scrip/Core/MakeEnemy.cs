@@ -44,7 +44,7 @@ public class MakeEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(3.5f);
     
-        if ( GameCoreManager.coreManager.coutnTime > 3 && wasBool == true)
+        if ( /*GameCoreManager.coreManager.coutnTime > 3 && */wasBool == true)
         {
          
             float b = Random.Range(1, 2);
@@ -66,7 +66,7 @@ public class MakeEnemy : MonoBehaviour
     {
         yield return new WaitForSeconds(10);
 
-        if ( GameCoreManager.coreManager.coutnTime > 8 && wasBool == true)
+        if ( /*GameCoreManager.coreManager.coutnTime > 8 &&*/ wasBool == true)
         {
        
             float i = Random.Range(-1, 2);
