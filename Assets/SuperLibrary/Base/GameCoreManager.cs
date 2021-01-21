@@ -30,6 +30,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public float angerFirst;
     public GameObject wood;
     public GameObject tutorial;
+    public ParticleSystem effect;
     protected override void Awake()
     {
         base.Awake();

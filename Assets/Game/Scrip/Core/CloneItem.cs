@@ -9,9 +9,8 @@ public class CloneItem : MonoBehaviour
     [SerializeField] private  SpriteRenderer Rsprite;
     [SerializeField] private Rigidbody2D rigidbody2D;
     [SerializeField] private PhysicsMaterial2D physics;
-
     [SerializeField] private ItemAnimManager itemAnimManager;
-    //[SerializeField] private ParticleSystem effect;
+   
     public float friction;
     public float bounciness;
     public float mass;
@@ -60,6 +59,7 @@ public class CloneItem : MonoBehaviour
         {
             isLanded = true;
             itemAnimManager?.PlayLandAnim();
+            _SpawnSmoke();
         }
 
         if( collision.gameObject.tag == "wall")
@@ -109,4 +109,8 @@ public class CloneItem : MonoBehaviour
         yield return new WaitForSeconds(2);
         //effect.Stop(effect);
     }
+    private void _SpawnSmoke()
+    {
+        SimplePool.Spawn(GameCoreManager.coreManager.effect.gameObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+    }    
 }

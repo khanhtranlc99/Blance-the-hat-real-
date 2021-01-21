@@ -51,6 +51,7 @@ MonoBehaviour:
   rigidbody2D: {fileID: 3042446743588808910}
   physics: {fileID: 6200000, guid: 31f9cd08f1c71354ea27efee9e24b93d, type: 2}
   itemAnimManager: {fileID: 7584051985924704799}
+  effect: {fileID: 0}
   friction: 0.0025
   bounciness: 0
   mass: 0.5
