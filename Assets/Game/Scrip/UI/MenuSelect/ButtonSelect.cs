@@ -46,29 +46,42 @@ public class ButtonSelect : MonoBehaviour
             
             playObject.SetActive(false);
             priceObject.SetActive(true);
-            priceNumber.text = itemData.unlockPrice.ToString();
+
+            int unlockRequire = 0;
 
             switch (itemData.unlockType)
             {
                 case UnlockType.Ads:
                     priceIcon.sprite = iconAds;
+                    unlockRequire = (itemData.unlockPrice - itemData.unlockPay);
                     break;
                 case UnlockType.Gem:
                     priceIcon.sprite = iconGem;
                     break;
                 case UnlockType.Gold:
                     priceIcon.sprite = iconGold;
+                    unlockRequire = itemData.unlockPrice;
                     break;
                 case UnlockType.Star:
                     priceIcon.sprite = iconStar;
                     break;
             }
+
+            priceNumber.text = unlockRequire.ToString();
             
             button.onClick.AddListener(() =>
             {
                 switch (itemData.unlockType)
                 {
                     case UnlockType.Ads:
+                        var unlockPlayed = itemData.unlockPay++;
+                        if (unlockPlayed >= itemData.unlockPrice - 1)
+                        { 
+                            itemData.isUnlocked = true;
+                        }
+                        
+                        SetButton(itemData);
+                       
                         break;
                     case UnlockType.Gem:
                         break;
@@ -77,13 +90,14 @@ public class ButtonSelect : MonoBehaviour
                         { 
                             CoinManager.Add(- itemData.unlockPrice);
                             itemData.isUnlocked = true;
-
-                            SetButton(itemData);
                         }
                         else
                         {
                             Debug.Log("Not enought coin");
                         }
+                        
+                        SetButton(itemData);
+                        
                         break;
                     case UnlockType.Star:
                         break;
