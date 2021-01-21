@@ -14,7 +14,7 @@ public class UiEndGame : MonoBehaviour
     
     public void _PrinTime()
     {
-        textTimeEndGame.text = "" + GameCoreManager.coreManager.coutnTime;
+        textTimeEndGame.text = "" + GameCoreManager.coreManager.coutnTime + "s";
         imageItem.sprite = DataManager.CurrentItem.thumbnail;
         imageItem.SetNativeSize();
     }
