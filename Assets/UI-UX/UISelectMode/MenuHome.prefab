@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5290366730750449468}
   - component: {fileID: 5290366730750449466}
   - component: {fileID: 5290366730750449469}
+  - component: {fileID: 282025374567692472}
+  - component: {fileID: 4626362081473659655}
   m_Layer: 5
   m_Name: DecorHuman
   m_TagString: Untagged
@@ -74,6 +76,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &282025374567692472
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366730750449471}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4cf4f51784de32d4793485c37033b5c0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4cf4f51784de32d4793485c37033b5c0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &4626362081473659655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366730750449471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9e297eecc8a594e919d461f2c100aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5290366730808626909
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,8 +495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 0}
-  m_SizeDelta: {x: 394.49155, y: 753.3899}
+  m_AnchoredPosition: {x: 1.5001, y: 0.000068665}
+  m_SizeDelta: {x: 473.54312, y: 862.25024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5290366731551679222
 CanvasRenderer:
@@ -516,6 +546,7 @@ GameObject:
   - component: {fileID: 5290366731975086437}
   - component: {fileID: 5290366731975086435}
   - component: {fileID: 5290366731975086434}
+  - component: {fileID: 708201360457915056}
   m_Layer: 5
   m_Name: DecorHuman4
   m_TagString: Untagged
@@ -579,6 +610,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &708201360457915056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366731975086436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9e297eecc8a594e919d461f2c100aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5290366732038941652
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +838,7 @@ GameObject:
   - component: {fileID: 5290366732201662907}
   - component: {fileID: 5290366732201662905}
   - component: {fileID: 5290366732201662904}
+  - component: {fileID: 4678392553644109853}
   m_Layer: 5
   m_Name: DecorHuman3
   m_TagString: Untagged
@@ -858,6 +902,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4678392553644109853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366732201662906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9e297eecc8a594e919d461f2c100aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5290366732364973013
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,6 +1020,8 @@ GameObject:
   - component: {fileID: 5290366732470969459}
   - component: {fileID: 5290366732470969457}
   - component: {fileID: 5290366732470969456}
+  - component: {fileID: 2346726883754255629}
+  - component: {fileID: 1695465127052920634}
   m_Layer: 5
   m_Name: DecorHuman1
   m_TagString: Untagged
@@ -1027,6 +1085,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &2346726883754255629
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366732470969458}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &1695465127052920634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290366732470969458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf9e297eecc8a594e919d461f2c100aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8850987910078886484
 GameObject:
   m_ObjectHideFlags: 0

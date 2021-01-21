@@ -46,12 +46,12 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 1
-    isUnlocked: 0
+    isUnlocked: 1
     isSelected: 1
     count: 0
     countHit: 0
     unlockPay: 0
-    thumbnail: {fileID: 21300000, guid: f50ec4eb79eda974c82350321b00e17e, type: 3}
+    thumbnail: {fileID: 21300000, guid: 5099baeaad29884489acf944784b1bd1, type: 3}
     prefab: {fileID: 7426097146173730143, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
   - name: Balls
@@ -122,7 +122,7 @@ MonoBehaviour:
     unlockType: 1
     unlockPrice: 1
     isUnlocked: 1
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
     unlockType: 1
     unlockPrice: 1
     isUnlocked: 1
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -196,8 +196,8 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 1
-    isUnlocked: 0
-    isSelected: 1
+    isUnlocked: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
     count: 0
     countHit: 0
     unlockPay: 0
-    thumbnail: {fileID: 21300000, guid: 87c5a0f41b8754d4bb376dfcb0399ba4, type: 3}
+    thumbnail: {fileID: 21300000, guid: d1465a2cc15d794438f1dbd010d0727d, type: 3}
     prefab: {fileID: 3833177360079870153, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
       type: 3}
   - name: TriAnger
@@ -226,8 +226,8 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 1
-    isUnlocked: 0
-    isSelected: 1
+    isUnlocked: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -241,8 +241,8 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 1
-    isUnlocked: 0
-    isSelected: 1
+    isUnlocked: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -256,8 +256,8 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 1
-    isUnlocked: 0
-    isSelected: 1
+    isUnlocked: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
