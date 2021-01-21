@@ -119,12 +119,12 @@ public class MakeEnemy : MonoBehaviour
         boomCoroutine =  StartCoroutine(_SpawnBoom());
    
     }
-    private void _Water()
+    public void _Water()
     {
         float b = Random.Range(-1, 2);
         SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
     }
-    private void _Boom()
+    public void _Boom()
     {
         float i = Random.Range(-1, 2);
         SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
