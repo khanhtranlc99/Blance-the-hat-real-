@@ -8,6 +8,8 @@
     _ChangeGamPlay = 5,
     
     ItemScrollSelect = 100,
+    
+    GameLose = 200,
 }
 
 

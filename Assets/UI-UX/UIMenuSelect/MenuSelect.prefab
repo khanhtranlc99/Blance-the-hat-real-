@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.8, y: -30}
+  m_AnchoredPosition: {x: -29.8, y: -34}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4649200686509977172
@@ -332,7 +332,6 @@ MonoBehaviour:
   scrollerTweenType: 16
   scrollerTweenTime: 0.2
   btnSelect: {fileID: 4230602346799601923}
-  itemAdsCoinName: AdsCoin
   itemAdsCoinSprite: {fileID: 21300000, guid: 8e36b9a1b8b5d6244b7980a601b443e8, type: 3}
 --- !u!1 &4230602345620529428
 GameObject:
@@ -516,7 +515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.4, y: 0}
+  m_AnchoredPosition: {x: 38.3, y: 0}
   m_SizeDelta: {x: 80.549164, y: 74.343994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4230602346147166605
@@ -904,8 +903,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.1, y: 0}
-  m_SizeDelta: {x: 64.4444, y: 57.834717}
+  m_AnchoredPosition: {x: -25.3, y: 1.41}
+  m_SizeDelta: {x: 55.33409, y: 60.65882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4230602346886527645
 CanvasRenderer:

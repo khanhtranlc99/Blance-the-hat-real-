@@ -11,6 +11,12 @@ public class ItemScroll : EnhancedScrollerCellView
     [SerializeField] private Image itemImage;
     [SerializeField] private Button button;
     [SerializeField] private Text text;
+    
+    public Image ItemImage
+    {
+        get => itemImage;
+        set => itemImage = value;
+    }
 
     private UnityAction onClickAction;
 

@@ -52,7 +52,11 @@ MonoBehaviour:
   rigidbody2D: {fileID: 409414531638431776}
   physics: {fileID: 6200000, guid: 74bdac69eb38ac24b88e80b33c57d1c4, type: 2}
   itemAnimManager: {fileID: 0}
+<<<<<<< HEAD
   friction: 0.003
+=======
+  friction: 0.0025
+>>>>>>> ee3778d23708e4063fe62b91e0c730e7828a1a5f
   bounciness: 0
   mass: 0.0015
   itemCanJump: 0
@@ -175,7 +179,7 @@ GameObject:
   - component: {fileID: 30705327721712157}
   m_Layer: 10
   m_Name: ThreeBox (1)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -318,7 +322,7 @@ GameObject:
   - component: {fileID: 7969747616616420984}
   m_Layer: 10
   m_Name: ThreeBox (2)
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

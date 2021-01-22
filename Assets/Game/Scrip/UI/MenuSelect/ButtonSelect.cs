@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class ButtonSelect : MonoBehaviour
 {
@@ -105,5 +107,21 @@ public class ButtonSelect : MonoBehaviour
 
             });
         }
+    }
+
+    public void SetRandomItem()
+    {
+        playObject.SetActive(true);
+        priceObject.SetActive(false);
+        button.onClick.AddListener(() =>
+        {
+            DataManager.CurrentItem.isSelected = false;
+            DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(0, DataManager.ItemsAsset.list.Count)];
+            DataManager.CurrentItem.isSelected = true;
+            imageHome.sprite = DataManager.CurrentItem.thumbnail;
+            imageHome.SetNativeSize();
+            UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+              
+        });
     }
 }

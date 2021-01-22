@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MakeEnemy : MonoBehaviour
 {
@@ -17,6 +19,16 @@ public class MakeEnemy : MonoBehaviour
     private Coroutine waterCoroutine = null;
     [SerializeField] float timeDropWater;
     [SerializeField] float timeDropBoom;
+
+    private void OnEnable()
+    {
+        this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
+    }
+
+    private void OnDisable()
+    {
+        EventDispatcher.Instance?.RemoveListener((int) EventID.GameLose, OnGameLoseHandler);
+    }
 
     private void Awake()
     {
@@ -134,5 +146,10 @@ public class MakeEnemy : MonoBehaviour
     {
         float i = Random.Range(-1, 2);
         SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+    }
+
+    private void OnGameLoseHandler(object param)
+    {
+        make.wasBool = false;
     }
 }
