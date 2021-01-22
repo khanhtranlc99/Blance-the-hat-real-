@@ -14,10 +14,10 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private ButtonSelect btnSelect;
 
     [SerializeField] private Sprite itemAdsCoinSprite;
-    
+
     private ItemsAsset items => DataManager.ItemsAsset;
     private List<ItermScrollData> itemsData;
-    
+
 
     private void Start()
     {
@@ -26,16 +26,27 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         CreateItems();
         scroller.ReloadData();
 
-        var currentItem = DataManager.CurrentItem;
-        if (currentItem != null && !currentItem.name.Equals(Constant.COIN_ADS))
+        if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
         {
-            var itemData = itemsData.FirstOrDefault(_ => _.name.Equals(currentItem.name));
-            var currentItemIndex = itemsData.IndexOf(itemData);
-            OnItemSelected(currentItemIndex, () =>
+            OnItemSelected(2, () =>
             {
-                var item = scroller.GetCellViewAtDataIndex(currentItemIndex);
+                var item = scroller.GetCellViewAtDataIndex(2);
                 item.transform.localScale = new Vector2(1.5f, 1.5f);
             });
+        }
+        else
+        {
+            var currentItem = DataManager.CurrentItem;
+            if (currentItem != null && !currentItem.name.Equals(Constant.COIN_ADS))
+            {
+                var itemData = itemsData.FirstOrDefault(_ => _.name.Equals(currentItem.name));
+                var currentItemIndex = itemsData.IndexOf(itemData);
+                OnItemSelected(currentItemIndex, () =>
+                {
+                    var item = scroller.GetCellViewAtDataIndex(currentItemIndex);
+                    item.transform.localScale = new Vector2(1.5f, 1.5f);
+                });
+            }
         }
     }
 
@@ -46,7 +57,15 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             name = Constant.COIN_ADS,
             sprite = itemAdsCoinSprite,
         });
-        
+
+        var randomeItem = new ItermScrollData()
+        {
+            name = Constant.RANDOM_ITEM,
+            sprite = itemAdsCoinSprite,
+        };
+
+        itemsData.Add(randomeItem);
+
         for (int i = 0; i < items.list.Count; i++)
         {
             itemsData.Add(new ItermScrollData()
@@ -77,14 +96,27 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         ItemScroll item = scroller.GetCellView(cellViewPrefab) as ItemScroll;
         item.name = itemsData[dataIndex].name;
         item.SetData(itemsData[dataIndex]);
+
+        var randomItem = item.GetComponent<RandomItemScroll>();
+        if (randomItem)
+        {
+            Destroy(randomItem);
+        }
         
         if (itemsData[dataIndex].name.Equals(Constant.COIN_ADS))
         {
             item.SetText($"+{DataManager.GameConfig.coinAdsReward}");
             item.ActiveText(true);
+            item.SetAction(() => { CoinManager.Add(DataManager.GameConfig.coinAdsReward); });
+        }
+        else if (itemsData[dataIndex].name.Equals(Constant.RANDOM_ITEM))
+        {
+            item.gameObject.AddComponent<RandomItemScroll>().ItemImage = item.ItemImage;
             item.SetAction(() =>
             {
-                CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
+                btnSelect.SetRandomItem();
+                this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
         }
         else
@@ -92,11 +124,13 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             item.ActiveText(false);
             item.SetAction(() =>
             {
+                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 0);
                 OnItemSelected(dataIndex);
-                btnSelect.SetButton(items.list[dataIndex - 1]);
+                btnSelect.SetButton(items.list[dataIndex - 2]);
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
         }
+
         return item;
     }
 }

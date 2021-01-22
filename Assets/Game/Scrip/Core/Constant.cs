@@ -7,4 +7,6 @@
 
     public const string COIN_ADS = "AdsCoin";
     public const string RANDOM_ITEM = "RandomItem";
+
+    public const string IS_RANDOM_ITEM_PREFS = "IsRandomItem";
 }
