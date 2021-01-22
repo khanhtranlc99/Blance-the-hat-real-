@@ -28,11 +28,13 @@ public class CloneItem : MonoBehaviour
 
     private void OnEnable()
     {
+        this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
         isLanded = false;
     }
 
     private void OnDisable()
     {
+        EventDispatcher.Instance?.RemoveListener((int) EventID.GameLose, OnGameLoseHandler);
         isLanded = true;
     }
 
@@ -62,23 +64,6 @@ public class CloneItem : MonoBehaviour
             itemAnimManager?.PlayLandAnim();
             _SpawnSmoke();
         }
-
-        if( collision.gameObject.tag == "wall")
-        {
-            //GameContro.instance._StopTime();
-            StopAllCoroutines();
-            MakeEnemy.make.wasBool = false;
-            if (GameCoreManager.coreManager.wood != null)
-            {
-                SimplePool.Despawn(GameCoreManager.coreManager.wood.gameObject);
-            }
-
-            GameStateManager.WaitGameOver(null);
-            UIcontro.uIcontro.uiEndGame._PrinTime();
-            Destroy(gameObject);
-        }
-       
-
     }
     public void _LoadData()
     {
@@ -113,5 +98,11 @@ public class CloneItem : MonoBehaviour
     private void _SpawnSmoke()
     {
         SimplePool.Spawn(GameCoreManager.coreManager.effect.gameObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
-    }    
+    }
+
+    private void OnGameLoseHandler(object param)
+    {
+        StopAllCoroutines();
+        Destroy(gameObject);
+    }
 }

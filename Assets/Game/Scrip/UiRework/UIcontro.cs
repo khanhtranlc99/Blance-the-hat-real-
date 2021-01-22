@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,15 @@ public class UIcontro : MonoBehaviour
     [SerializeField] Button btnMode;
     [SerializeField] Button btnHome;
 
+    private void OnEnable()
+    {
+        this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
+    }
+
+    private void OnDisable()
+    {
+        EventDispatcher.Instance?.RemoveListener((int) EventID.GameLose, OnGameLoseHandler);
+    }
 
     private void Awake()
     {
@@ -54,5 +64,10 @@ public class UIcontro : MonoBehaviour
     {
         ChangeUI(MenuUI.SelectItem);
         Debug.Log("Seclect0");
+    }
+
+    private void OnGameLoseHandler(object param)
+    {
+        uIcontro.uiEndGame._PrinTime();
     }
 }

@@ -47,12 +47,14 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     private void OnEnable()
     {
         this.RegisterListener((int)EventID._Start, LoadGame);
-  
+        this.RegisterListener((int)EventID.GameLose, OnGameLoseHandler);
 
 
     }
     private void OnDisable()
     {
+        EventDispatcher.Instance?.RemoveListener((int)EventID._Start, LoadGame);
+        EventDispatcher.Instance?.RemoveListener((int)EventID.GameLose, OnGameLoseHandler);
     }
 
     private void Update()
@@ -270,7 +272,10 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public void _Resume()
     {
         isPause = false;
-        clone._Moving();
+        if (clone)
+        {
+            clone._Moving();
+        }
         MakeEnemy.make._ResuameSpawn();
         
     }
@@ -284,6 +289,14 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
     public void _CheckItem()
     {
+    }
+
+    private void OnGameLoseHandler(object param)
+    {
+        if (coreManager.wood != null)
+        {
+            SimplePool.Despawn(coreManager.wood.gameObject);
+        }
     }
 }
 
