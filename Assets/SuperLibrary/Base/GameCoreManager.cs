@@ -91,7 +91,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         Debug.Log("Game Core goto InitGame: "  + DataManager.CurrentItem.score);
         GameStatisticsManager.Score = 0;
-     
+
         //Hien thi con main
         main.SetActive(true);
         tutorial.SetActive(true);

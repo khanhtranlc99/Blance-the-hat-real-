@@ -15,7 +15,16 @@ public class UiEndGame : MonoBehaviour
     public void _PrinTime()
     {   
         textTimeEndGame.text = "" + GameCoreManager.coreManager.coutnTime + "s";
-        textHightScore.text = "" + DataManager.CurrentItem.score;
+        if (GameCoreManager.coreManager.coutnTime > DataManager.CurrentItem.score)
+        {
+            textHightScore.text = "" + GameCoreManager.coreManager.coutnTime + "s";
+            DataManager.CurrentItem.score = GameCoreManager.coreManager.coutnTime;
+        }
+        else
+        {
+            textHightScore.text = "" + DataManager.CurrentItem.score + "s";
+          
+        }  
         imageItem.sprite = DataManager.CurrentItem.thumbnail;
         imageItem.SetNativeSize();
     }

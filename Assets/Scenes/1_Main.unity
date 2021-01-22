@@ -498,7 +498,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 543869967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.27002, y: 0.56204545, z: 0}
+  m_LocalPosition: {x: -24.1, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -679,6 +679,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db15723a783aa7a47b531ce8e3473810, type: 3}
+--- !u!114 &638192203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2196283049296987877, guid: 5c8abaa26d2724b428e9c3533d7d2340,
+    type: 3}
+  m_PrefabInstance: {fileID: 6778226656370356333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &711995579
 GameObject:
   m_ObjectHideFlags: 0
@@ -4681,7 +4693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 58, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224961304747606341
@@ -8903,6 +8915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 3291681734551594349, guid: 5c8abaa26d2724b428e9c3533d7d2340,
+        type: 3}
+      propertyPath: textHightScore
+      value: 
+      objectReference: {fileID: 638192203}
     - target: {fileID: 4901035137480552517, guid: 5c8abaa26d2724b428e9c3533d7d2340,
         type: 3}
       propertyPath: m_ShowCompletedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
