@@ -68,6 +68,8 @@ public class StageData : SaveData
 {
     [Header("StageData")]
     public int totalPlay = 0;
+    public GameMode gameMode = GameMode.Normal;
+
     [HideInInspector]
     public int star;
     [HideInInspector]
@@ -105,5 +107,12 @@ public class StageCloud
     public int unlockPrice = 1;
     [HideInInspector]
     public UnlockType unlockType = UnlockType.Star;
+}
+
+[Serializable]
+public enum GameMode
+{
+    Normal = 0,
+    Wood = 1,
 }
 

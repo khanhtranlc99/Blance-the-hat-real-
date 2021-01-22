@@ -82,28 +82,7 @@ public class LoadGameContent : MonoBehaviour
         //Init game object
         elapsedTime = 0f;
         loadMidiStatus = FileStatus.Download;
-        yield return FileExtend.DOLoadRes<TextAsset>((result, status) => {
-            currStageColorData = JsonUtility.FromJson<StageColorData>(result.text);
-            loadMidiStatus = status;
-        }, currentMode + "/level_" + (stage.index + 1));
-        while (loadMidiStatus == FileStatus.Download || UILoadGame.currentProcess < 0.70f)
-        {
-            if (GameStateManager.CurrentState != GameState.Idle && elapsedTime < 5)
-            {
-                UILoadGame.Process();
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            else
-            {
-                yield return UILoadGame.DoRollBack(() =>
-                {
-                    UIToast.Hide();
-                    actionOnDone(false);
-                });
-                yield break;
-            }
-        }
+        loadMidiStatus = FileStatus.Success;
 
         GameStateManager.Init(null);
 
