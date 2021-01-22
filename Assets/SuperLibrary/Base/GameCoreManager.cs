@@ -91,8 +91,8 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
     public override void InitGame(object data)
     {
-        Debug.Log("Game Core goto InitGame");
-
+        Debug.Log("Game Core goto InitGame: "  + DataManager.CurrentItem.score);
+        GameStatisticsManager.Score = 0;
 
         //Hien thi con main
         main.SetActive(true);
@@ -287,8 +287,13 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         MakeEnemy.make._PauseSpawn();
     }
 
-    public void _CheckItem()
+    public void _CheckHightScore()
     {
+
+
+    
+        
+
     }
 
     private void OnGameLoseHandler(object param)
