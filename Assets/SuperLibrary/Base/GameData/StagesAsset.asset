@@ -33,20 +33,21 @@ MonoBehaviour:
     unlockPrice: 0
     isUnlocked: 1
     isSelected: 1
-    count: 223
+    count: 252
     countHit: 0
     unlockPay: 0
-    totalPlay: 223
+    totalPlay: 252
+    gameMode: 0
     star: 0
     process: 0
     score: 61
     combo: 0
     time: 1
-    totalTimePlay: 873
-    totalRestart: 50
+    totalTimePlay: 1163
+    totalRestart: 68
     totalReborn: 0
     totalPass: 0
-    totalFail: 140
+    totalFail: 163
     totalComplete: 0
     unlockBy: 0
   - name: Stage 2
@@ -62,6 +63,7 @@ MonoBehaviour:
     countHit: 0
     unlockPay: 0
     totalPlay: 0
+    gameMode: 1
     star: 0
     process: 0
     score: 0

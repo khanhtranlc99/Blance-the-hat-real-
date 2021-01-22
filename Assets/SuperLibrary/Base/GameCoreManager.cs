@@ -95,7 +95,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         //Hien thi con main
         main.SetActive(true);
         tutorial.SetActive(true);
-        if (UIcontro.uIcontro.uiMode.wasPlusMode == true)
+        if (DataManager.CurrentStage.gameMode == GameMode.Wood)
         {
             MakeEnemy.make._spawnWood();
         }
