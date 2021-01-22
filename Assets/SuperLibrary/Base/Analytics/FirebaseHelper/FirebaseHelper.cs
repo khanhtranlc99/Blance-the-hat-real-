@@ -6,7 +6,7 @@ using FalconSDK;
 using Firebase;
 using Firebase.Analytics;
 //using Firebase.Messaging;
-using Firebase.RemoteConfig;
+// using Firebase.RemoteConfig;
 #endif
 using System;
 using System.Collections;
@@ -247,20 +247,20 @@ public class FirebaseHelper : MonoBehaviour
 
                 try
                 {
-                    if (initRemote)
-                    {
-                        if (defaultRemoteConfig != null && defaultRemoteConfig.Count > 0)
-                        {
-                            FirebaseRemoteConfig.SetDefaults(defaultRemoteConfig);
-                            ConfigSettings remoteSettings = FirebaseRemoteConfig.Settings;
-                            remoteSettings.IsDeveloperMode = isDebugMode;
-                            Debug.Log("[Firebase] RemoteConfig " + "Initialized");
-                        }
-                        else
-                        {
-                            Debug.LogError("defaultRemoteConfig NULL or EMPTY! Please set defaultRemoteConfig befor call Init");
-                        }
-                    }
+                    // if (initRemote)
+                    // {
+                    //     if (defaultRemoteConfig != null && defaultRemoteConfig.Count > 0)
+                    //     {
+                    //         FirebaseRemoteConfig.SetDefaults(defaultRemoteConfig);
+                    //         ConfigSettings remoteSettings = FirebaseRemoteConfig.Settings;
+                    //         remoteSettings.IsDeveloperMode = isDebugMode;
+                    //         Debug.Log("[Firebase] RemoteConfig " + "Initialized");
+                    //     }
+                    //     else
+                    //     {
+                    //         Debug.LogError("defaultRemoteConfig NULL or EMPTY! Please set defaultRemoteConfig befor call Init");
+                    //     }
+                    // }
                 }
                 catch (FirebaseException ex)
                 {
@@ -430,73 +430,73 @@ public class FirebaseHelper : MonoBehaviour
             if (isDebugMode)
                 cacheExpirationHours = 0;
 
-            FirebaseRemoteConfig.FetchAsync(TimeSpan.FromHours(cacheExpirationHours)).ContinueWith((fetchTask) =>
-            {
-                try
-                {
-                    if (fetchTask.IsCanceled)
-                    {
-                        Debug.LogError("Fetch canceled.");
-                        status?.Invoke(FirebaseStatus.Canceled);
-                        return;
-                    }
-                    else if (fetchTask.IsFaulted)
-                    {
-                        Debug.LogError("Fetch encountered an error.");
-                        status?.Invoke(FirebaseStatus.Faulted);
-                        return;
-                    }
-                    else if (fetchTask.IsCompleted)
-                    {
-                        Debug.Log("Fetch completed successfully!");
-                    }
-
-                    var info = FirebaseRemoteConfig.Info;
-                    switch (info.LastFetchStatus)
-                    {
-                        case LastFetchStatus.Success:
-                            FirebaseRemoteConfig.ActivateFetched();
-                            Debug.Log(string.Format("[Firebase] DoFetchRemoteData Remote data loaded and ready (last fetch time {0}).", info.FetchTime));
-
-                            string remoteData = "[Firebase] DoFetchRemoteData";
-                            foreach (var i in FirebaseRemoteConfig.Keys)
-                            {
-                                string key = i;
-                                remoteData += "\n" + key + ": " + FirebaseRemoteConfig.GetValue(key).StringValue;
-                            }
-                            Debug.Log(remoteData);
-                            status?.Invoke(FirebaseStatus.Completed);
-                            break;
-                        case LastFetchStatus.Failure:
-                            switch (info.LastFetchFailureReason)
-                            {
-                                case FetchFailureReason.Error:
-                                    Debug.LogError("[Firebase] DoFetchRemoteData Fetch failed for unknown reason");
-                                    status?.Invoke(FirebaseStatus.UnkownError);
-                                    break;
-                                case FetchFailureReason.Throttled:
-                                    Debug.LogError("[Firebase] DoFetchRemoteData Fetch throttled until " + info.ThrottledEndTime);
-                                    status?.Invoke(FirebaseStatus.TimeOut);
-                                    break;
-                            }
-                            break;
-                        case LastFetchStatus.Pending:
-                            Debug.LogError("[Firebase] DoFetchRemoteData Latest Fetch call still pending.");
-                            status?.Invoke(FirebaseStatus.Getting);
-                            break;
-                    }
-                }
-                catch (FirebaseException ex)
-                {
-                    Debug.LogError("[Firebase] DoFetchRemoteData FirebaseException: " + ex.Message);
-                    status?.Invoke(FirebaseStatus.UnkownError);
-                }
-                catch (Exception ex)
-                {
-                    Debug.LogError("[Firebase] DoFetchRemoteData Exception: " + ex.Message);
-                    status?.Invoke(FirebaseStatus.UnkownError);
-                }
-            });
+            // FirebaseRemoteConfig.FetchAsync(TimeSpan.FromHours(cacheExpirationHours)).ContinueWith((fetchTask) =>
+            // {
+            //     try
+            //     {
+            //         if (fetchTask.IsCanceled)
+            //         {
+            //             Debug.LogError("Fetch canceled.");
+            //             status?.Invoke(FirebaseStatus.Canceled);
+            //             return;
+            //         }
+            //         else if (fetchTask.IsFaulted)
+            //         {
+            //             Debug.LogError("Fetch encountered an error.");
+            //             status?.Invoke(FirebaseStatus.Faulted);
+            //             return;
+            //         }
+            //         else if (fetchTask.IsCompleted)
+            //         {
+            //             Debug.Log("Fetch completed successfully!");
+            //         }
+            //
+            //         var info = FirebaseRemoteConfig.Info;
+            //         switch (info.LastFetchStatus)
+            //         {
+            //             case LastFetchStatus.Success:
+            //                 FirebaseRemoteConfig.ActivateFetched();
+            //                 Debug.Log(string.Format("[Firebase] DoFetchRemoteData Remote data loaded and ready (last fetch time {0}).", info.FetchTime));
+            //
+            //                 string remoteData = "[Firebase] DoFetchRemoteData";
+            //                 foreach (var i in FirebaseRemoteConfig.Keys)
+            //                 {
+            //                     string key = i;
+            //                     remoteData += "\n" + key + ": " + FirebaseRemoteConfig.GetValue(key).StringValue;
+            //                 }
+            //                 Debug.Log(remoteData);
+            //                 status?.Invoke(FirebaseStatus.Completed);
+            //                 break;
+            //             case LastFetchStatus.Failure:
+            //                 switch (info.LastFetchFailureReason)
+            //                 {
+            //                     case FetchFailureReason.Error:
+            //                         Debug.LogError("[Firebase] DoFetchRemoteData Fetch failed for unknown reason");
+            //                         status?.Invoke(FirebaseStatus.UnkownError);
+            //                         break;
+            //                     case FetchFailureReason.Throttled:
+            //                         Debug.LogError("[Firebase] DoFetchRemoteData Fetch throttled until " + info.ThrottledEndTime);
+            //                         status?.Invoke(FirebaseStatus.TimeOut);
+            //                         break;
+            //                 }
+            //                 break;
+            //             case LastFetchStatus.Pending:
+            //                 Debug.LogError("[Firebase] DoFetchRemoteData Latest Fetch call still pending.");
+            //                 status?.Invoke(FirebaseStatus.Getting);
+            //                 break;
+            //         }
+            //     }
+            //     catch (FirebaseException ex)
+            //     {
+            //         Debug.LogError("[Firebase] DoFetchRemoteData FirebaseException: " + ex.Message);
+            //         status?.Invoke(FirebaseStatus.UnkownError);
+            //     }
+            //     catch (Exception ex)
+            //     {
+            //         Debug.LogError("[Firebase] DoFetchRemoteData Exception: " + ex.Message);
+            //         status?.Invoke(FirebaseStatus.UnkownError);
+            //     }
+            // });
         }
         else
         {
@@ -508,12 +508,12 @@ public class FirebaseHelper : MonoBehaviour
     public static string RemoteGetValueString(string title)
     {
 #if USE_FIREBASE
-        if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
-        {
-            var data = FirebaseRemoteConfig.GetValue(title).StringValue;
-            Debug.Log(title + " " + data);
-            return data;
-        }
+        // if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
+        // {
+        //     var data = FirebaseRemoteConfig.GetValue(title).StringValue;
+        //     Debug.Log(title + " " + data);
+        //     return data;
+        // }
 #endif
         return "";
     }
@@ -521,12 +521,12 @@ public class FirebaseHelper : MonoBehaviour
     public static int RemoteGetValueInt(string title)
     {
 #if USE_FIREBASE
-        if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
-        {
-            var data = (int)FirebaseRemoteConfig.GetValue(title).LongValue;
-            Debug.Log(title + " " + data);
-            return data;
-        }
+        // if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
+        // {
+        //     var data = (int)FirebaseRemoteConfig.GetValue(title).LongValue;
+        //     Debug.Log(title + " " + data);
+        //     return data;
+        // }
 #endif
         return -9999;
     }
@@ -534,18 +534,18 @@ public class FirebaseHelper : MonoBehaviour
     public static float RemoteGetValueFloat(string title)
     {
 #if USE_FIREBASE
-        if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
-        {
-            var style = NumberStyles.AllowDecimalPoint;
-            var culture = CultureInfo.CreateSpecificCulture("en-US");
-            float data = -9999f;
-
-            if (float.TryParse(FirebaseRemoteConfig.GetValue(title).StringValue, style, culture, out data))
-            {
-                Debug.Log(title + " " + data);
-                return data;
-            }
-        }
+        // if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
+        // {
+        //     var style = NumberStyles.AllowDecimalPoint;
+        //     var culture = CultureInfo.CreateSpecificCulture("en-US");
+        //     float data = -9999f;
+        //
+        //     if (float.TryParse(FirebaseRemoteConfig.GetValue(title).StringValue, style, culture, out data))
+        //     {
+        //         Debug.Log(title + " " + data);
+        //         return data;
+        //     }
+        // }
 #endif
         return -9999;
     }
@@ -553,10 +553,10 @@ public class FirebaseHelper : MonoBehaviour
     public static byte[] RemoteGetValueArray(string title)
     {
 #if USE_FIREBASE
-        if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
-        {
-            return (byte[])FirebaseRemoteConfig.GetValue(title).ByteArrayValue;
-        }
+        // if (FirebaseRemoteConfig.Keys != null && FirebaseRemoteConfig.Keys.Contains(title))
+        // {
+        //     return (byte[])FirebaseRemoteConfig.GetValue(title).ByteArrayValue;
+        // }
 #endif
         return null;
     }
