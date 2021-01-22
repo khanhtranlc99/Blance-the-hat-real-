@@ -1774,7 +1774,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textTimeEndGame: {fileID: 6778226656789291379}
   imageItem: {fileID: 6778226656344941148}
-  textHightScore: {fileID: 0}
+  textHightScore: {fileID: 2196283049296987877}
 --- !u!1 &3309025722066519715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,10 +2750,10 @@ RectTransform:
   m_Father: {fileID: 6546203795784154489}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: 252}
-  m_SizeDelta: {x: -402.64407, y: 81.35593}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -222}
+  m_SizeDelta: {x: 81.35593, y: 81.35596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6778226656458617660
 CanvasRenderer:
@@ -6655,7 +6655,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
@@ -6665,7 +6665,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
@@ -6720,7 +6720,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
