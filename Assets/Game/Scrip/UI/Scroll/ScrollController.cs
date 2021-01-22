@@ -13,7 +13,6 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private float scrollerTweenTime = 0.2f;
     [SerializeField] private ButtonSelect btnSelect;
 
-    [SerializeField] private string itemAdsCoinName;
     [SerializeField] private Sprite itemAdsCoinSprite;
     
     private ItemsAsset items => DataManager.ItemsAsset;
@@ -28,7 +27,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         scroller.ReloadData();
 
         var currentItem = DataManager.CurrentItem;
-        if (currentItem != null && !currentItem.name.Equals(itemAdsCoinName))
+        if (currentItem != null && !currentItem.name.Equals(Constant.COIN_ADS))
         {
             var itemData = itemsData.FirstOrDefault(_ => _.name.Equals(currentItem.name));
             var currentItemIndex = itemsData.IndexOf(itemData);
@@ -44,7 +43,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     {
         itemsData.Add(new ItermScrollData()
         {
-            name = itemAdsCoinName,
+            name = Constant.COIN_ADS,
             sprite = itemAdsCoinSprite,
         });
         
@@ -79,7 +78,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         item.name = itemsData[dataIndex].name;
         item.SetData(itemsData[dataIndex]);
         
-        if (itemsData[dataIndex].name.Equals(itemAdsCoinName))
+        if (itemsData[dataIndex].name.Equals(Constant.COIN_ADS))
         {
             item.SetText($"+{DataManager.GameConfig.coinAdsReward}");
             item.ActiveText(true);

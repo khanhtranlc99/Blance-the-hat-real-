@@ -58,7 +58,7 @@ public class CloneItem : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.tag == "Player" && !isLanded)
+        if (collision.gameObject.tag.Equals(Constant.PLAYER_TAG) && !isLanded)
         {
             isLanded = true;
             itemAnimManager?.PlayLandAnim();
