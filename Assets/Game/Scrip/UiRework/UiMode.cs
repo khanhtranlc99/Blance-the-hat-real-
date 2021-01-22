@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UiMode : ControUI
 {   
-    public bool wasPlusMode;
     [SerializeField] private Button normalButton;
     [SerializeField] private Button plusButton;
 
@@ -24,13 +23,15 @@ public class UiMode : ControUI
     }    
     public void _NormalMode()
     {
-        wasPlusMode = false;
+        if(DataManager.StagesAsset.list.Count > 0)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[0];
         normalButton.transform.localScale = new Vector2(1.5f, 1.5f);
         plusButton.transform.localScale = new Vector2(1, 1);
     }
     public void _OnPlusMode()
     {
-        wasPlusMode = true;
+        if (DataManager.StagesAsset.list.Count > 1)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[1];
         normalButton.transform.localScale = new Vector2(1, 1);
         plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
     }
@@ -41,8 +42,7 @@ public class UiMode : ControUI
     }
     public void _OffMode()
     {
-        wasPlusMode = false;
-        
+        DataManager.CurrentStage = DataManager.StagesAsset.list[0];
     }
     private void _PlusCoin()
     {

@@ -26,7 +26,20 @@ public class UserData : UserAnalysic
         get => DateTimeConverter.ToDateTime(fistTimeOpen);
         set => fistTimeOpen = value.ToString();
     }
-    public int isRemovedAds;
+    private bool _isRemovedAds;
+    public bool isRemovedAds
+    {
+        get => _isRemovedAds;
+        set
+        {
+            if (value != _isRemovedAds)
+            {
+                _isRemovedAds = value;
+
+                AdsManager.UpdateBannerArea();
+            }
+        }
+    }
     public double limitedPassTimeCountDown;
 
     [Header("Money")]
