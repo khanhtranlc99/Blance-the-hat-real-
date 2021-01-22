@@ -2383,6 +2383,8 @@ MonoBehaviour:
   timeSpawn: 0
   listEnemy: []
   wasBool: 1
+  timeDropWater: 3.5
+  timeDropBoom: 10
 --- !u!114 &1242514907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4679,7 +4681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 58, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224961304747606341
@@ -4874,6 +4876,31 @@ PrefabInstance:
     - target: {fileID: 2390403620489707930, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2931248253250103862, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971375661127529814, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971471050747544364, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972003187638052742, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149746538742591360, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7029257124680859957, guid: 2e53852f7cee11b48ba77cec41fd0eb4,

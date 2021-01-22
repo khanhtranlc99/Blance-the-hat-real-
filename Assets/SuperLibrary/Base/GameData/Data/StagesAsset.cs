@@ -73,8 +73,6 @@ public class StageData : SaveData
     [HideInInspector]
     public int process;
     [HideInInspector]
-    public int score;
-    [HideInInspector]
     public int combo;
     [HideInInspector]
     public float time;

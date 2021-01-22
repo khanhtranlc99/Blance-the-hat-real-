@@ -8,6 +8,7 @@ public class GameStatisticsManager : MonoBehaviour
     #region GameState
     private StagesAsset stageDatas => DataManager.StagesAsset;
     private StageData currentStage => DataManager.CurrentStage;
+    private ItemData currentItem => DataManager.CurrentItem;
     private UserData userData => DataManager.UserData;
 
     private static GameStatisticsManager instance = null;
@@ -68,8 +69,10 @@ public class GameStatisticsManager : MonoBehaviour
             if (currentStage.star < Stars)
                 currentStage.star = Stars;
 
-            if (currentStage.score < TimePlayInGameEnd)
-                currentStage.score = (int)TimePlayInGameEnd;
+            if (currentStage.score < Score)
+                currentStage.score = Score;
+            if (currentItem.score < Score)
+                currentItem.score = Score;
             if (currentStage.time <= 0 || currentStage.time > TimePlayInGameEnd)
                 currentStage.time = TimePlayInGameEnd;
 

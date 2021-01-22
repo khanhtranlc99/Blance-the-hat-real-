@@ -15,6 +15,8 @@ public class MakeEnemy : MonoBehaviour
     public bool wasBool;
     private Coroutine boomCoroutine = null;
     private Coroutine waterCoroutine = null;
+    [SerializeField] float timeDropWater;
+    [SerializeField] float timeDropBoom;
 
     private void Awake()
     {
@@ -23,7 +25,11 @@ public class MakeEnemy : MonoBehaviour
     private void Start()
     {
         wasBool = true;
-        //StartCoroutine(_SpawnEnemy());
+
+        timeDropWater = 3.5f;
+        timeDropBoom = 10;
+
+
     }
     private void Update()
     {
@@ -42,9 +48,9 @@ public class MakeEnemy : MonoBehaviour
     }
     private IEnumerator _SpawnWarter()
     {
-        yield return new WaitForSeconds(3.5f);
+        yield return new WaitForSeconds(timeDropWater);
     
-        if ( /*GameCoreManager.coreManager.coutnTime > 3 && */wasBool == true)
+        if (wasBool == true)
         {
          
             float b = Random.Range(1, 2);
@@ -64,9 +70,9 @@ public class MakeEnemy : MonoBehaviour
     }
     private IEnumerator _SpawnBoom()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(timeDropWater);
 
-        if ( /*GameCoreManager.coreManager.coutnTime > 8 &&*/ wasBool == true)
+        if (  wasBool == true)
         {
        
             float i = Random.Range(-1, 2);

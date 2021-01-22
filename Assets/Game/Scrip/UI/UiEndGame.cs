@@ -7,14 +7,15 @@ public class UiEndGame : MonoBehaviour
 {
     [SerializeField] private Text textTimeEndGame;
     [SerializeField] private Image imageItem;
+    [SerializeField] private Text textHightScore;
     private void Awake()
     {
        
     }
-    
     public void _PrinTime()
-    {
+    {   
         textTimeEndGame.text = "" + GameCoreManager.coreManager.coutnTime + "s";
+        textHightScore.text = "" + DataManager.CurrentItem.score;
         imageItem.sprite = DataManager.CurrentItem.thumbnail;
         imageItem.SetNativeSize();
     }

@@ -23,6 +23,8 @@ public class SaveData
     public int countHit = 0;
     [HideInInspector]
     public int unlockPay = 0;
+    [HideInInspector]
+    public int score;
     public bool isCanUnlock => this.IsCanUnlock();
 
     public SaveData()
