@@ -102,12 +102,21 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         {
             Destroy(randomItem);
         }
-        
+
         if (itemsData[dataIndex].name.Equals(Constant.COIN_ADS))
         {
             item.SetText($"+{DataManager.GameConfig.coinAdsReward}");
             item.ActiveText(true);
-            item.SetAction(() => { CoinManager.Add(DataManager.GameConfig.coinAdsReward); });
+            item.SetAction(() =>
+            {
+                AdsManager.ShowVideoReward((s) =>
+                {
+                    if (s == AdEvent.Success)
+                    {
+                        CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+                    }
+                }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
+            });
         }
         else if (itemsData[dataIndex].name.Equals(Constant.RANDOM_ITEM))
         {
