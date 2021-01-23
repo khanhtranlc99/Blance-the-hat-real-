@@ -14,7 +14,7 @@ public class UIcontro : MonoBehaviour
     [SerializeField] Button btnSelecItem;
     [SerializeField] Button btnMode;
     [SerializeField] Button btnHome;
-
+    public bool backtoLoadgame;
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);

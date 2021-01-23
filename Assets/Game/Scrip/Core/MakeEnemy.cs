@@ -37,7 +37,6 @@ public class MakeEnemy : MonoBehaviour
     private void Start()
     {
         wasBool = true;
-
         timeDropWater = 3.5f;
         timeDropBoom = 10;
 
@@ -82,7 +81,7 @@ public class MakeEnemy : MonoBehaviour
     }
     private IEnumerator _SpawnBoom()
     {
-        yield return new WaitForSeconds(timeDropWater);
+        yield return new WaitForSeconds(timeDropBoom);
 
         if (  wasBool == true)
         {

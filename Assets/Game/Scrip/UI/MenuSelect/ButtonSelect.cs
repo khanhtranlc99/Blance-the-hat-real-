@@ -38,7 +38,17 @@ public class ButtonSelect : MonoBehaviour
                 DataManager.CurrentItem.isSelected = true;
                 imageHome.sprite = DataManager.CurrentItem.thumbnail;
                 imageHome.SetNativeSize();
-                UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+                if ( UIcontro.uIcontro.backtoLoadgame == true)
+                {
+                    GameStateManager.LoadGame(null);
+                    UIcontro.uIcontro.backtoLoadgame = false;
+                    UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+                }    
+                else
+                {
+                    UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
+                }                    
+               
               
             });
         }

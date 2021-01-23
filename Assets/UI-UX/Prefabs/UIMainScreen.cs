@@ -48,4 +48,9 @@ public class UIMainScreen : MonoBehaviour
         //     });
         // }
     }    
+   public void _BackToSelecItemButAfterThatWeGotoLoadGame()
+    {
+        UIcontro.uIcontro.backtoLoadgame = true;
+    }    
+
 }

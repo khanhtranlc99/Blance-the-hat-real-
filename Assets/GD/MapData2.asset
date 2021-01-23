@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 201af19062490bd409cdcc2dccb1dc09, type: 3}
-  m_Name: MapData
+  m_Name: MapData2
   m_EditorClassIdentifier: 
   listLogicItems:
   - name: Alien
     cloneItem: {fileID: 3042446743588808911, guid: b2accba4de99c254686b4a326d686330,
       type: 3}
-    friction: 0.02
+    friction: 0.0025
     bounciness: 0
     mass: 0.45
     itemCanJump: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
   - name: Anchor
     cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
-    friction: 0
+    friction: 0.0025
     bounciness: 0
     mass: 0.7
     itemCanJump: 0
@@ -38,8 +38,8 @@ MonoBehaviour:
   - name: Balls
     cloneItem: {fileID: 2298688374160701718, guid: e16ed822368c7494d8cb456ede008876,
       type: 3}
-    friction: 0.0015
-    bounciness: 1
+    friction: 0.0025
+    bounciness: 0.8
     mass: 0.25
     itemCanJump: 0
     wasJump: 0
@@ -49,7 +49,7 @@ MonoBehaviour:
   - name: Car
     cloneItem: {fileID: 445789718448374184, guid: 4baebddc145e59c4aae256e43d0b7625,
       type: 3}
-    friction: 0.001
+    friction: 0.0025
     bounciness: 0
     mass: 0.1
     itemCanJump: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   - name: Cup
     cloneItem: {fileID: 1193087325684922717, guid: d3550fed59de184479f308ce00f35346,
       type: 3}
-    friction: 0.0015
+    friction: 0.0025
     bounciness: 0
     mass: 0.25
     itemCanJump: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   - name: Donut
     cloneItem: {fileID: 3386271080923462235, guid: 18baba147538d1f4f94f1e7a8df777d6,
       type: 3}
-    friction: 0.001
+    friction: 0.0025
     bounciness: 0
     mass: 0.1
     itemCanJump: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   - name: Flower
     cloneItem: {fileID: 6065552703923653351, guid: 2f55570b5a532f043a093eb212dfe35f,
       type: 3}
-    friction: 0.0035
+    friction: 0.0025
     bounciness: 0
     mass: 0.35
     itemCanJump: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   - name: Knight
     cloneItem: {fileID: 3847250046368183567, guid: 48fadff884be71445a7030e7e226a6ee,
       type: 3}
-    friction: 0.001
+    friction: 0.0025
     bounciness: 0
     mass: 0.15
     itemCanJump: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   - name: Lamp
     cloneItem: {fileID: 6271862193419512484, guid: 44454d9b19345ac4f860b5c9f8db1ade,
       type: 3}
-    friction: 0.003
+    friction: 0.0025
     bounciness: 0
     mass: 0.35
     itemCanJump: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   - name: MagicHat
     cloneItem: {fileID: 1180093557663165833, guid: 013689c211576a9459ee1514d101e985,
       type: 3}
-    friction: 0.002
+    friction: 0.0025
     bounciness: 0
     mass: 0.15
     itemCanJump: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   - name: SnowBall
     cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
       type: 3}
-    friction: 0.0015
+    friction: 0.0025
     bounciness: 0
     mass: 0.35
     itemCanJump: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   - name: ThreeBox
     cloneItem: {fileID: 8444472147810260062, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
       type: 3}
-    friction: 0.003
+    friction: 0.05
     bounciness: 0
-    mass: 0.0015
+    mass: 1
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   - name: Ufo
     cloneItem: {fileID: 4258784520372029971, guid: 1f7432cfdf1c4594ca0cd35b7f314af2,
       type: 3}
-    friction: 0
+    friction: 0.0025
     bounciness: 0
     mass: 0.8
     itemCanJump: 1
@@ -181,9 +181,9 @@ MonoBehaviour:
   - name: WithHat
     cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
       type: 3}
-    friction: 0.025
+    friction: 0.0025
     bounciness: 0
-    mass: 10
+    mass: 2
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
     timeLoopJump: 0
   obtacles:
   - name: Water
-    force: 0.2
+    force: 0.1
   - name: Boom
-    force: 4
+    force: 2
   - name: Ball
     force: 0

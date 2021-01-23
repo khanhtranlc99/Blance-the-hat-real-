@@ -50,9 +50,9 @@ MonoBehaviour:
   rigidbody2D: {fileID: 8469958784965464775}
   physics: {fileID: 6200000, guid: 5cbfb3650a252354397a762f722a00d2, type: 2}
   itemAnimManager: {fileID: 0}
-  friction: 0.005
+  friction: 0.0025
   bounciness: 0
-  mass: 0.5
+  mass: 2
   itemCanJump: 0
   wasJump: 0
   moveXJump: 0
@@ -73,7 +73,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

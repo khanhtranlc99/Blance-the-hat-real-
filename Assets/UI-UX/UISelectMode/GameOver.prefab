@@ -160,9 +160,10 @@ Animation:
   m_GameObject: {fileID: 710001821425028604}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ee3c34266a7663e4cb3cc5be46b5f9f9, type: 2}
+  m_Animation: {fileID: 7400000, guid: 4edc414fa9239fc42bd7b384cbdb0be5, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: ee3c34266a7663e4cb3cc5be46b5f9f9, type: 2}
+  - {fileID: 7400000, guid: 4edc414fa9239fc42bd7b384cbdb0be5, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -2752,7 +2753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -222}
+  m_AnchoredPosition: {x: 0, y: -149}
   m_SizeDelta: {x: 81.35593, y: 81.35596}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6778226656458617660
@@ -6655,7 +6656,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
@@ -6665,7 +6666,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
@@ -6720,7 +6721,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
