@@ -115,11 +115,7 @@ public class ButtonSelect : MonoBehaviour
         priceObject.SetActive(false);
         button.onClick.AddListener(() =>
         {
-            DataManager.CurrentItem.isSelected = false;
-            DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(0, DataManager.ItemsAsset.list.Count)];
-            DataManager.CurrentItem.isSelected = true;
-            imageHome.sprite = DataManager.CurrentItem.thumbnail;
-            imageHome.SetNativeSize();
+            
             UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
               
         });
