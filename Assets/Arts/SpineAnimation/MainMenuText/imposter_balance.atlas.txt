@@ -1,0 +1,111 @@
+
+imposter_balance.png
+size: 572,152
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Layer 39
+  rotate: false
+  xy: 431, 7
+  size: 34, 140
+  orig: 34, 140
+  offset: 0, 0
+  index: -1
+Layer 40
+  rotate: false
+  xy: 539, 7
+  size: 28, 140
+  orig: 28, 140
+  offset: 0, 0
+  index: -1
+Layer 41
+  rotate: false
+  xy: 2, 8
+  size: 57, 139
+  orig: 57, 139
+  offset: 0, 0
+  index: -1
+Layer 42
+  rotate: false
+  xy: 467, 7
+  size: 34, 140
+  orig: 34, 140
+  offset: 0, 0
+  index: -1
+Layer 43
+  rotate: false
+  xy: 166, 10
+  size: 50, 137
+  orig: 50, 137
+  offset: 0, 0
+  index: -1
+Layer 46
+  rotate: false
+  xy: 166, 10
+  size: 50, 137
+  orig: 50, 137
+  offset: 0, 0
+  index: -1
+Layer 44
+  rotate: false
+  xy: 350, 2
+  size: 39, 145
+  orig: 39, 145
+  offset: 0, 0
+  index: -1
+Layer 45
+  rotate: false
+  xy: 263, 8
+  size: 42, 139
+  orig: 42, 139
+  offset: 0, 0
+  index: -1
+Layer 47
+  rotate: false
+  xy: 307, 6
+  size: 41, 141
+  orig: 41, 141
+  offset: 0, 0
+  index: -1
+Layer 48
+  rotate: false
+  xy: 503, 8
+  size: 34, 139
+  orig: 34, 139
+  offset: 0, 0
+  index: -1
+Layer 49
+  rotate: false
+  xy: 61, 7
+  size: 52, 140
+  orig: 52, 140
+  offset: 0, 0
+  index: -1
+Layer 51
+  rotate: false
+  xy: 61, 7
+  size: 52, 140
+  orig: 52, 140
+  offset: 0, 0
+  index: -1
+Layer 50
+  rotate: false
+  xy: 218, 6
+  size: 43, 141
+  orig: 43, 141
+  offset: 0, 0
+  index: -1
+Layer 52
+  rotate: false
+  xy: 115, 4
+  size: 49, 143
+  orig: 49, 144
+  offset: 0, 1
+  index: -1
+Layer 53
+  rotate: false
+  xy: 391, 6
+  size: 38, 141
+  orig: 38, 141
+  offset: 0, 0
+  index: -1
