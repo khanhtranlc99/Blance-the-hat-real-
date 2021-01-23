@@ -199,6 +199,7 @@ public class DataManager : MonoBehaviour
         {
             stagesAsset.ResetData();
             stagesAsset.UpdateCost();
+            itemsAsset.ResetData();
             Reset();
             Debug.Log("Reset and Update data to BUILD!!!");
         }

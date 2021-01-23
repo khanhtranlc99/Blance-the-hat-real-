@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConfigData
   gameConfig:
     timePlayToShowAds: 30
-    timePlayReduceToShowAds: 15
     rebornType: 0
     rebornBy: 3
-    suggestUpdateVersion: 1909090100
+    suggestUpdateVersion: 190909100
+    coinPerStage: 3
+    coinAdsReward: 10
+    autoRewardToInter: 1
+    autoInterToReward: 1

@@ -10,16 +10,14 @@ public class UiHomee : ControUI
     [SerializeField] private Image image;
 
     private Sprite[] itemsSprite;
-    
 
     private void Awake()
     {
-        itemsSprite = DataManager.ItemsAsset.list.Select(_ => _.thumbnail).ToArray();
-    }
-
-    private void OnEnable()
-    {
-        SetHomeImage();
+        DataManager.OnLoaded += (d) =>
+        {
+            itemsSprite = DataManager.ItemsAsset.list.Select(_ => _.thumbnail).ToArray();
+            SetHomeImage();
+        };
     }
 
     private void SetHomeImage()
