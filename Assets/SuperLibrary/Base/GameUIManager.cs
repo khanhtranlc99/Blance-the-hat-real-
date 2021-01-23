@@ -55,7 +55,9 @@ public class GameUIManager : GameManagerBase<GameUIManager>
             DebugMode.Log("Load game data...");
             yield return null;
         }
-
+        
+        yield return FirebaseHelper.DoCheckStatus(null, true);
+        
         if (userData.VersionInstall == 0)
             userData.VersionInstall = UIManager.BundleVersion;
         userData.VersionCurrent = UIManager.BundleVersion;

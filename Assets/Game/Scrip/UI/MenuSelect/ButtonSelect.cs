@@ -33,6 +33,8 @@ public class ButtonSelect : MonoBehaviour
             
             button.onClick.AddListener(() =>
             {
+                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 0);
+                
                 DataManager.CurrentItem.isSelected = false;
                 DataManager.CurrentItem = itemData;
                 DataManager.CurrentItem.isSelected = true;
@@ -125,7 +127,7 @@ public class ButtonSelect : MonoBehaviour
         priceObject.SetActive(false);
         button.onClick.AddListener(() =>
         {
-            
+            PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
             UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
               
         });

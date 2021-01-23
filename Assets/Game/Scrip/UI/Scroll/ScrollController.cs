@@ -128,7 +128,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             item.gameObject.AddComponent<RandomItemScroll>().ItemImage = item.ItemImage;
             item.SetAction(() =>
             {
-                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
+                
                 OnItemSelected(dataIndex);
                 btnSelect.SetRandomItem();
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
@@ -139,7 +139,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             item.ActiveText(false);
             item.SetAction(() =>
             {
-                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 0);
+                
                 OnItemSelected(dataIndex);
                 btnSelect.SetButton(items.list[dataIndex - 2]);
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
