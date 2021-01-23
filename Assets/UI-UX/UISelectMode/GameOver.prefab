@@ -5273,7 +5273,7 @@ PrefabInstance:
     - target: {fileID: 6462044987008275573, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6462044987008275573, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
@@ -6676,7 +6676,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}

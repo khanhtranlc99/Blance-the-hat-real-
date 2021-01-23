@@ -153,6 +153,8 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void ResumeGame(object data)
     {
         Debug.Log("Game Core goto ResumeGame");
+
+
         _Resume();
     }
 
@@ -239,10 +241,12 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         }
     }
     public void _Pause()
-    {
-       
+    {    
         isPause = true;
-        clone._StopMoving();
+        if( clone != null )
+        {
+            clone._StopMoving();
+        }       
         MakeEnemy.make._PauseSpawn();
     }
     public void _LoadLogicEnemy()
@@ -285,7 +289,10 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             clone._Moving();
         }
         MakeEnemy.make._ResuameSpawn();
-        
+        if( clone == null)
+        {
+            GameStateManager.LoadGame(null);
+        }    
     }
     public void _StopTime()
     {
