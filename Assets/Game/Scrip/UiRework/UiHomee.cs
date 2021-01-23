@@ -20,10 +20,18 @@ public class UiHomee : ControUI
         };
     }
 
+    private void OnEnable()
+    {
+        SetHomeImage();
+    }
+
     private void SetHomeImage()
     {
+        if (itemsSprite == null || itemsSprite.Length <= 0) return;
+
         if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
         {
+            if (!this.gameObject.activeSelf) return;
             StartCoroutine(ChangeItemSpriteRandomly(itemsSprite));
         }
         else
