@@ -183,7 +183,7 @@ MonoBehaviour:
       type: 3}
     friction: 0.0025
     bounciness: 0
-    mass: 2
+    mass: 0.5
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
