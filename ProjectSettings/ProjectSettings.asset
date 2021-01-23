@@ -174,7 +174,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.abi.game.fun.impostor.balance
   buildNumber: {}
-  AndroidBundleVersionCode: 210123002
+  AndroidBundleVersionCode: 210123003
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
@@ -252,15 +252,15 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Job/Project/BeatBatter/Assets/com.amanotes.pamabeatbatter.keystore
-  AndroidKeyaliasName: pamabeatbatter
+  AndroidKeystoreName: '{inproject}: Keystore/balance.keystore'
+  AndroidKeyaliasName: 20210123
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 1
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
