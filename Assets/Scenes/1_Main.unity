@@ -2444,11 +2444,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48fe32258dddae47a7337828e9cf498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bundleVersion: 2012100001
+  bundleVersion: 210123002
   versionBuildTexts:
   - {fileID: 0}
   - {fileID: 3387507984553763548}
-  appIdDROI: com.mihn.test
+  appIdDROI: com.abi.game.fun.impostor.balance
   appIdIOS: 1234567890
   email: mihn.studio.vn@gmail.com
   emailCC: thinhpt2712@gmail.com
