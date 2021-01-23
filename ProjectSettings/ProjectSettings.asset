@@ -252,7 +252,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 2
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: Keystore/balance.keystore'
+  AndroidKeystoreName: '{inproject}: KeyStore/balance.keystore'
   AndroidKeyaliasName: 20210123
   AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 1
