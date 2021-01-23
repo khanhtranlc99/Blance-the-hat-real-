@@ -18,36 +18,41 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private ItemsAsset items => DataManager.ItemsAsset;
     private List<ItermScrollData> itemsData;
 
-
-    private void Start()
+    private void Awake()
     {
+        DataManager.OnLoaded += DataManager_OnLoaded;
+    }
+
+    private void OnEnable()
+    {
+        InitScroll();
+    }
+
+    private void OnDisable()
+    {
+        scroller.ClearAll();
+    }
+
+    private void DataManager_OnLoaded(GameData gameData)
+    {
+        InitScroll();
+    }
+
+    private void InitScroll()
+    {
+        if (items == null || items.list.Count < 0) return;
+        
         scroller.Delegate = this;
         itemsData = new List<ItermScrollData>();
         CreateItems();
         scroller.ReloadData();
 
-        if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
+        btnSelect.SetRandomItem();
+        OnItemSelected(1, () =>
         {
-            OnItemSelected(2, () =>
-            {
-                var item = scroller.GetCellViewAtDataIndex(2);
-                item.transform.localScale = new Vector2(1.5f, 1.5f);
-            });
-        }
-        else
-        {
-            var currentItem = DataManager.CurrentItem;
-            if (currentItem != null && !currentItem.name.Equals(Constant.COIN_ADS))
-            {
-                var itemData = itemsData.FirstOrDefault(_ => _.name.Equals(currentItem.name));
-                var currentItemIndex = itemsData.IndexOf(itemData);
-                OnItemSelected(currentItemIndex, () =>
-                {
-                    var item = scroller.GetCellViewAtDataIndex(currentItemIndex);
-                    item.transform.localScale = new Vector2(1.5f, 1.5f);
-                });
-            }
-        }
+            var item = scroller.GetCellViewAtDataIndex(1);
+            item.transform.localScale = new Vector2(1.5f, 1.5f);
+        });
     }
 
     private void CreateItems()
@@ -124,6 +129,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             item.SetAction(() =>
             {
                 PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
+                OnItemSelected(dataIndex);
                 btnSelect.SetRandomItem();
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
