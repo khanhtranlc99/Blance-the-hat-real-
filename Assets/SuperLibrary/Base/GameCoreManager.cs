@@ -102,6 +102,14 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             MakeEnemy.make._spawnWood();
         }
         //sinh ra con item
+        
+        if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
+        {
+            DataManager.CurrentItem.isSelected = false;
+            DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(0, DataManager.ItemsAsset.list.Count)];
+            DataManager.CurrentItem.isSelected = true;
+        }
+        
         var b = Instantiate(DataManager.CurrentItem.prefab, new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
         b.transform.SetParent(itemInGameContro.transform);
         this.clone = b.GetComponent<CloneItem>();

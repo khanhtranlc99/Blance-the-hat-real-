@@ -48,7 +48,7 @@ public class CloneItem : MonoBehaviour
         while (wasJump == true)
         {
             yield return new WaitForSeconds(timeLoopJump);
-            itemAnimManager.PlayJumpAnim();
+            itemAnimManager?.PlayJumpAnim();
             int a = Random.Range(-1, 2);
             rigidbody2D.AddForce(new Vector3(moveXJump * a, moveYJump , 0));
             Debug.Log("j");

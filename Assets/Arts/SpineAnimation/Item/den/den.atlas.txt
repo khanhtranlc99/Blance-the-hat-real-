@@ -1,0 +1,48 @@
+
+den.png
+size: 316,528
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+den1
+  rotate: true
+  xy: 141, 157
+  size: 172, 171
+  orig: 172, 171
+  offset: 0, 0
+  index: -1
+den2
+  rotate: false
+  xy: 141, 39
+  size: 114, 116
+  orig: 114, 116
+  offset: 0, 0
+  index: -1
+den3
+  rotate: false
+  xy: 2, 2
+  size: 59, 59
+  orig: 59, 59
+  offset: 0, 0
+  index: -1
+den4
+  rotate: false
+  xy: 2, 63
+  size: 137, 203
+  orig: 137, 203
+  offset: 0, 0
+  index: -1
+den5
+  rotate: true
+  xy: 127, 331
+  size: 195, 183
+  orig: 195, 183
+  offset: 0, 0
+  index: -1
+den6
+  rotate: true
+  xy: 2, 268
+  size: 258, 123
+  orig: 258, 123
+  offset: 0, 0
+  index: -1
