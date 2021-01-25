@@ -31,6 +31,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public GameObject wood;
     public GameObject tutorial;
     public ParticleSystem effect;
+    [SerializeField] GameObject toucPause;
     protected override void Awake()
     {
         base.Awake();
@@ -115,7 +116,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         this.clone = b.GetComponent<CloneItem>();
         _LoadLogicEnemy();
         _Reset();
-        
+         toucPause.SetActive(false); 
         /// vao game
 
         DOVirtual.DelayedCall(0.5f, () => GameStateManager.Ready(new MessageReadyGame { }));
@@ -124,7 +125,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void LoadGame(object data)
     {
         Debug.Log("Game Core goto LoadGame: " + DataManager.CurrentStage.name);
-
+     
     }
 
     public override void NextGame(object data)
@@ -135,6 +136,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void PauseGame(object data)
     {
         Debug.Log("Game Core goto PauseGame");
+        toucPause.SetActive(true);
         _Pause();
     }
 
@@ -156,6 +158,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
 
         _Resume();
+        toucPause.SetActive(false);
     }
 
     protected override void CompleteGame(object data)

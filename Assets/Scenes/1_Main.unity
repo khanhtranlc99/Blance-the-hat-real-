@@ -2549,6 +2549,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c77f4dec36a3e34786f3c4262c72dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1171932897 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2260511462629132596, guid: 2e53852f7cee11b48ba77cec41fd0eb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 286375333494998685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1222061544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,6 +2682,7 @@ MonoBehaviour:
   wood: {fileID: 0}
   tutorial: {fileID: 979168311}
   effect: {fileID: 6037811250764436955, guid: f8936a8bd57b14240b7782a73c0049c5, type: 3}
+  toucPause: {fileID: 1171932897}
 --- !u!4 &1242514909
 Transform:
   m_ObjectHideFlags: 0
@@ -10446,7 +10453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2033235058, guid: 820d490ba30e1df40abe162407cd5636, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 404.45584
+      value: 404.4838
       objectReference: {fileID: 0}
     - target: {fileID: 2033235058, guid: 820d490ba30e1df40abe162407cd5636, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10454,7 +10461,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2033235058, guid: 820d490ba30e1df40abe162407cd5636, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 202.22792
+      value: 202.2419
       objectReference: {fileID: 0}
     - target: {fileID: 2033235058, guid: 820d490ba30e1df40abe162407cd5636, type: 3}
       propertyPath: m_AnchoredPosition.y

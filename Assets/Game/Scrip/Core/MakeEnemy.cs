@@ -64,7 +64,7 @@ public class MakeEnemy : MonoBehaviour
         if (wasBool == true)
         {
          
-            float b = Random.Range(1, 2);
+            float b = Random.Range(-1, 2);
             SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
            
         }
