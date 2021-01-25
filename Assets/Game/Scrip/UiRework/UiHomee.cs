@@ -36,8 +36,18 @@ public class UiHomee : ControUI
         }
         else
         {
-            image.sprite = DataManager.CurrentItem.thumbnail;
-            image.SetNativeSize();
+            var currentItem = DataManager.CurrentItem;
+
+            if (currentItem.index == 0)
+            {
+                if (!this.gameObject.activeSelf) return;
+                StartCoroutine(ChangeItemSpriteRandomly(itemsSprite));
+            }
+            else
+            {
+                image.sprite = DataManager.CurrentItem.thumbnail;
+                image.SetNativeSize();
+            }
         }
     }
 

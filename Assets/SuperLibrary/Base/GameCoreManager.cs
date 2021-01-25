@@ -106,7 +106,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
         {
             DataManager.CurrentItem.isSelected = false;
-            DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(0, DataManager.ItemsAsset.list.Count)];
+            DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(1, DataManager.ItemsAsset.list.Count)];
             DataManager.CurrentItem.isSelected = true;
         }
         

@@ -24,14 +24,30 @@ MonoBehaviour:
   unlockStarScale: 0.5
   useRandom: 0
   list:
-  - name: Alien
-    id: Alien
+  - name: fake
+    id: fake
     idThumb: 
     index: 0
     description: 
     unlockType: 3
     unlockPrice: 3
     isUnlocked: 1
+    isSelected: 1
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    score: 0
+    thumbnail: {fileID: 21300000, guid: 83efe7cbb047ea745a518ae6644bdfcb, type: 3}
+    prefab: {fileID: 3042446743588808898, guid: b2accba4de99c254686b4a326d686330,
+      type: 3}
+  - name: Alien
+    id: Alien
+    idThumb: 
+    index: 1
+    description: 
+    unlockType: 3
+    unlockPrice: 3
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -43,11 +59,11 @@ MonoBehaviour:
   - name: Anchor
     id: Anchor
     idThumb: 
-    index: 0
+    index: 2
     description: 
     unlockType: 1
     unlockPrice: 60
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -59,12 +75,12 @@ MonoBehaviour:
   - name: Balls
     id: Balls
     idThumb: 
-    index: 0
+    index: 3
     description: 
     unlockType: 1
     unlockPrice: 60
     isUnlocked: 0
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -75,12 +91,12 @@ MonoBehaviour:
   - name: Car
     id: Car
     idThumb: 
-    index: 0
+    index: 4
     description: 
     unlockType: 3
     unlockPrice: 5
     isUnlocked: 0
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -91,11 +107,11 @@ MonoBehaviour:
   - name: Cup
     id: Cup
     idThumb: 
-    index: 0
+    index: 5
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -107,11 +123,11 @@ MonoBehaviour:
   - name: Donut
     id: Donut
     idThumb: 
-    index: 0
+    index: 6
     description: 
     unlockType: 1
     unlockPrice: 40
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -123,11 +139,11 @@ MonoBehaviour:
   - name: Flower
     id: Flower
     idThumb: 
-    index: 0
+    index: 7
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -139,12 +155,12 @@ MonoBehaviour:
   - name: Knight
     id: Knight
     idThumb: 
-    index: 0
+    index: 8
     description: 
     unlockType: 1
     unlockPrice: 50
     isUnlocked: 0
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -155,11 +171,11 @@ MonoBehaviour:
   - name: Lamp
     id: Lamp
     idThumb: 
-    index: 0
+    index: 9
     description: 
     unlockType: 1
     unlockPrice: 60
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -171,11 +187,11 @@ MonoBehaviour:
   - name: MagicHat
     id: MagicHat
     idThumb: 
-    index: 0
+    index: 10
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -187,12 +203,12 @@ MonoBehaviour:
   - name: Robot
     id: Robot
     idThumb: 
-    index: 0
+    index: 11
     description: 
     unlockType: 3
     unlockPrice: 5
     isUnlocked: 0
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
@@ -203,11 +219,11 @@ MonoBehaviour:
   - name: SnowBall
     id: SnowBall
     idThumb: 
-    index: 0
+    index: 12
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -219,11 +235,11 @@ MonoBehaviour:
   - name: ThreeBox
     id: ThreeBox
     idThumb: 
-    index: 0
+    index: 13
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -235,11 +251,11 @@ MonoBehaviour:
   - name: TriAnger
     id: TriAnger
     idThumb: 
-    index: 0
+    index: 14
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -251,11 +267,11 @@ MonoBehaviour:
   - name: Ufo
     id: Ufo
     idThumb: 
-    index: 0
+    index: 15
     description: 
     unlockType: 3
     unlockPrice: 4
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
@@ -267,11 +283,11 @@ MonoBehaviour:
   - name: WitchHat
     id: WitchHat
     idThumb: 
-    index: 0
+    index: 16
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0

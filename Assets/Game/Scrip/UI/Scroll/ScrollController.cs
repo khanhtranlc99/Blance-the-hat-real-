@@ -71,7 +71,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
 
         itemsData.Add(randomeItem);
 
-        for (int i = 0; i < items.list.Count; i++)
+        for (int i = 1; i < items.list.Count; i++)
         {
             itemsData.Add(new ItermScrollData()
             {
@@ -141,7 +141,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             {
                 
                 OnItemSelected(dataIndex);
-                btnSelect.SetButton(items.list[dataIndex - 2]);
+                btnSelect.SetButton(items.list[dataIndex - 1]);
                 this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
         }
