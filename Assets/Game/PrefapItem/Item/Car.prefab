@@ -68,7 +68,7 @@ MonoBehaviour:
   rigidbody2D: {fileID: 3283750149874061796}
   physics: {fileID: 6200000, guid: 069fe147bf430d34c92616e68518c73a, type: 2}
   itemAnimManager: {fileID: 6704804514989294962}
-  friction: 0.0025
+  friction: 0
   bounciness: 0
   mass: 0.1
   itemCanJump: 0
