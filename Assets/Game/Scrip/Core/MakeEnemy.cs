@@ -8,7 +8,7 @@ public class MakeEnemy : MonoBehaviour
 {
     public static MakeEnemy make;
     public GameObject enemy;
-    public GameObject enemyBoom;
+    public EnemyBom enemyBoom;
     public GameObject enemyWater;
     public GameObject wood;
     public float timeSpawn;
@@ -66,7 +66,7 @@ public class MakeEnemy : MonoBehaviour
         {
          
             float b = Random.Range(-1, 2);
-            SimplePool.Spawn(postE, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+            
             SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
       
         }
@@ -92,13 +92,15 @@ public class MakeEnemy : MonoBehaviour
             var b = Random.Range(0, 2);
             if(b == 0)
             {
-                SimplePool.Spawn(postE, new Vector3(a + 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+               
                 SimplePool.Spawn(enemyBoom, new Vector3(a + 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+                enemyBoom.valua = -1;
             }
             else
             {
-                SimplePool.Spawn(postE, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+               
                 SimplePool.Spawn(enemyBoom, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+                enemyBoom.valua = 1;
             }
            
         }
@@ -156,8 +158,23 @@ public class MakeEnemy : MonoBehaviour
     }
     public void _Boom()
     {
-        var a = GameCoreManager.coreManager.clone.transform.position.x;  
-         SimplePool.Spawn(enemyBoom, new Vector3(a, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+
+        var a = GameCoreManager.coreManager.clone.transform.position.x;
+        var b = Random.Range(0, 2);
+        if (b == 0)
+        {
+
+            SimplePool.Spawn(enemyBoom, new Vector3(a + 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+            enemyBoom.valua = -1;
+            Debug.Log("-1");
+        }
+        else if(b == 1 || b == 2)
+        {
+
+            SimplePool.Spawn(enemyBoom, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+            enemyBoom.valua = 1;
+            Debug.Log("1");
+        }
     }
 
     private void OnGameLoseHandler(object param)

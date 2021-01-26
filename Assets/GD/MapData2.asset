@@ -18,7 +18,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.45
+    mass: 2
     itemCanJump: 1
     wasJump: 1
     moveXJump: 15
@@ -193,6 +193,6 @@ MonoBehaviour:
   - name: Water
     force: 0.1
   - name: Boom
-    force: 0.65
+    force: 80
   - name: Ball
     force: 0
