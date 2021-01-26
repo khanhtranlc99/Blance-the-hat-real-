@@ -193,6 +193,6 @@ MonoBehaviour:
   - name: Water
     force: 0.1
   - name: Boom
-    force: 2
+    force: 0.65
   - name: Ball
     force: 0

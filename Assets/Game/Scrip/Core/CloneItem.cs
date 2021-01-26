@@ -103,6 +103,7 @@ public class CloneItem : MonoBehaviour
     private void OnGameLoseHandler(object param)
     {
         StopAllCoroutines();
+        GameCoreManager.coreManager.earthWake = false;
         Destroy(gameObject);
     }
 }

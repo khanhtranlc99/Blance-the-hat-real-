@@ -19,6 +19,7 @@ public class MakeEnemy : MonoBehaviour
     private Coroutine waterCoroutine = null;
     [SerializeField] float timeDropWater;
     [SerializeField] float timeDropBoom;
+    [SerializeField] GameObject postE;
 
     private void OnEnable()
     {
@@ -65,8 +66,9 @@ public class MakeEnemy : MonoBehaviour
         {
          
             float b = Random.Range(-1, 2);
+            SimplePool.Spawn(postE, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
             SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
-           
+      
         }
         if( wasBool == true)
         {
@@ -85,9 +87,20 @@ public class MakeEnemy : MonoBehaviour
 
         if (  wasBool == true)
         {
-       
-            float i = Random.Range(-1, 2);
-            SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+
+            var a = GameCoreManager.coreManager.clone.transform.position.x;
+            var b = Random.Range(0, 2);
+            if(b == 0)
+            {
+                SimplePool.Spawn(postE, new Vector3(a + 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+                SimplePool.Spawn(enemyBoom, new Vector3(a + 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+            }
+            else
+            {
+                SimplePool.Spawn(postE, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+                SimplePool.Spawn(enemyBoom, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+            }
+           
         }
         if ( wasBool == true)
         {
@@ -143,8 +156,8 @@ public class MakeEnemy : MonoBehaviour
     }
     public void _Boom()
     {
-        float i = Random.Range(-1, 2);
-        SimplePool.Spawn(enemyBoom, new Vector3(i, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
+        var a = GameCoreManager.coreManager.clone.transform.position.x;  
+         SimplePool.Spawn(enemyBoom, new Vector3(a, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
     }
 
     private void OnGameLoseHandler(object param)

@@ -11,7 +11,8 @@ public class Explosion : MonoBehaviour
     }
     private IEnumerator _Destroy()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
+        GameCoreManager.coreManager.earthWake = false; 
         Destroy(this.gameObject);
     }    
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 using DG.Tweening;
 using System;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class GameCoreManager : GameManagerBase<GameCoreManager> 
 {
@@ -32,11 +33,12 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public GameObject tutorial;
     public ParticleSystem effect;
     [SerializeField] GameObject toucPause;
+    public GameObject backGround;
+    public bool earthWake;
     protected override void Awake()
     {
         base.Awake();
         coreManager = this;
-
         TouchPanelEventScript.OnPointerDownHandle += OnPointerDownHandle;
     }
     
@@ -64,6 +66,19 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             _LoadLogicItem();
         }
+       if(earthWake == true)
+        {
+            _EarthWake();
+        }
+        else
+        {
+            backGround.transform.DOMoveX(0, 0.5f);
+
+
+        }
+
+        //}
+
     }
 
     private void LateUpdate()
@@ -305,11 +320,11 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         MakeEnemy.make._PauseSpawn();
     }
 
-    public void _CheckHightScore()
+    public void _EarthWake()
     {
-
-
-    
+        var a = Random.Range(-0.69f, 0.6f);
+        backGround.transform.DOMoveX( a,0.5f);
+      
         
 
     }

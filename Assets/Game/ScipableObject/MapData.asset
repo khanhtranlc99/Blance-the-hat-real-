@@ -191,7 +191,7 @@ MonoBehaviour:
     timeLoopJump: 0
   obtacles:
   - name: Water
-    force: 0.2
+    force: 0.1
   - name: Boom
     force: 4
   - name: Ball
