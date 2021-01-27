@@ -56,9 +56,9 @@ MonoBehaviour:
   mass: 2
   itemCanJump: 1
   wasJump: 1
-  moveXJump: 15
-  moveYJump: 30
-  timeLoopJump: 2
+  moveXJump: 30
+  moveYJump: 200
+  timeLoopJump: 1
   waterForce: 0
   ballForce: 0
   boomForce: 0

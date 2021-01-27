@@ -25,7 +25,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     Coroutine timeCoroutine = null;
     bool isPause = false;
     public Explosion boom;
-    public Rigidbody2D water;
+    public EnemyWater water;
     public Rigidbody2D ballSilicol;
     public CloneItem[] allItem;
     public float angerFirst;
@@ -272,7 +272,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
         for (int i = 0; i < item.obtacles.Count; i++)
         {
-            water.mass = item.obtacles[0].force;
+            water.forceWater = item.obtacles[0].force;
             boom.forceEplositon = item.obtacles[1].force;
             ballSilicol.mass = item.obtacles[2].force;
 

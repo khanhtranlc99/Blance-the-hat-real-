@@ -21,9 +21,9 @@ MonoBehaviour:
     mass: 2
     itemCanJump: 1
     wasJump: 1
-    moveXJump: 15
-    moveYJump: 30
-    timeLoopJump: 2
+    moveXJump: 30
+    moveYJump: 200
+    timeLoopJump: 1
   - name: Anchor
     cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
@@ -51,7 +51,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.1
+    mass: 2
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.25
+    mass: 1.25
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
       type: 3}
     friction: 0.0025
     bounciness: 0
-    mass: 0.1
+    mass: 1.1
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.35
+    mass: 1.35
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -95,7 +95,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.15
+    mass: 1.15
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.35
+    mass: 1.35
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.15
+    mass: 1.5
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -128,18 +128,18 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.5
+    mass: 2
     itemCanJump: 1
     wasJump: 1
     moveXJump: 15
-    moveYJump: 40
+    moveYJump: 100
     timeLoopJump: 2.5
   - name: SnowBall
     cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.35
+    mass: 1.35
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -161,7 +161,7 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.35
+    mass: 1.35
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -172,18 +172,18 @@ MonoBehaviour:
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.8
+    mass: 1.08
     itemCanJump: 1
     wasJump: 1
     moveXJump: 15
-    moveYJump: 50
+    moveYJump: 200
     timeLoopJump: 2
   - name: WithHat
     cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.5
+    mass: 1.5
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
     timeLoopJump: 0
   obtacles:
   - name: Water
-    force: 0.1
+    force: 0.3
   - name: Boom
-    force: 80
+    force: 1
   - name: Ball
     force: 0

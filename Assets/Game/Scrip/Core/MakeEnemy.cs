@@ -9,7 +9,7 @@ public class MakeEnemy : MonoBehaviour
     public static MakeEnemy make;
     public GameObject enemy;
     public EnemyBom enemyBoom;
-    public GameObject enemyWater;
+    public EnemyWater enemyWater;
     public GameObject wood;
     public float timeSpawn;
 
