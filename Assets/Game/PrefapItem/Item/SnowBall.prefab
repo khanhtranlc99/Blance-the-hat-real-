@@ -64,6 +64,7 @@ MonoBehaviour:
   ballForce: 0
   boomForce: 0
   ball: 0
+  inheath: 0
 --- !u!50 &5469941288945952848
 Rigidbody2D:
   serializedVersion: 4

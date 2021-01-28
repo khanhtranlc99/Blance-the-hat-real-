@@ -66,14 +66,14 @@ public class CloneItem : MonoBehaviour
             itemAnimManager?.PlayLandAnim();
      
         }
-        if( ball == true)
+        if (ball == true)
         {
 
-            rigidbody2D.AddForce(new Vector2(0, 400));
+            rigidbody2D.AddForce(new Vector2(0, 150));
 
         }
-      
-}
+
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         //inheath = false;
@@ -108,10 +108,7 @@ public class CloneItem : MonoBehaviour
         yield return new WaitForSeconds(2);
         //effect.Stop(effect);
     }
-    private void _SpawnSmoke()
-    {
-        SimplePool.Spawn(GameCoreManager.coreManager.effect.gameObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
-    }
+ 
 
     private void OnGameLoseHandler(object param)
     {

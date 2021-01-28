@@ -38,9 +38,9 @@ MonoBehaviour:
   - name: Balls
     cloneItem: {fileID: 2298688374160701718, guid: e16ed822368c7494d8cb456ede008876,
       type: 3}
-    friction: 0.0025
+    friction: 0
     bounciness: 0
-    mass: 2.2
+    mass: 1
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0

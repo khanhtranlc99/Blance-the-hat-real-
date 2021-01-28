@@ -45,8 +45,11 @@ public class Player : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-     
-        _SpawnSmoke();
+       if(collision.gameObject.tag == "Item")
+        {
+            _SpawnSmoke();
+        }
+       
 
     } 
     private void _SpawnSmoke()

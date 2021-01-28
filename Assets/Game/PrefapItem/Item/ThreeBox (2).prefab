@@ -400,6 +400,7 @@ MonoBehaviour:
   ballForce: 0
   boomForce: 0
   ball: 0
+  inheath: 0
 --- !u!1 &7233653244770646254
 GameObject:
   m_ObjectHideFlags: 0
