@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 201af19062490bd409cdcc2dccb1dc09, type: 3}
-  m_Name: MapData2
+  m_Name: MapData3
   m_EditorClassIdentifier: 
   listLogicItems:
   - name: Alien
     cloneItem: {fileID: 3042446743588808911, guid: b2accba4de99c254686b4a326d686330,
       type: 3}
-    friction: 0
+    friction: 0.003
     bounciness: 0
     mass: 2
     itemCanJump: 1
     wasJump: 1
     moveXJump: 30
     moveYJump: 200
-    timeLoopJump: 1
+    timeLoopJump: 2
   - name: Anchor
     cloneItem: {fileID: 1558737434563988612, guid: 89607047105a2f14f81b26bce2589d03,
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 0.7
+    mass: 2.2
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   - name: Donut
     cloneItem: {fileID: 3386271080923462235, guid: 18baba147538d1f4f94f1e7a8df777d6,
       type: 3}
-    friction: 0.0025
+    friction: 0.0015
     bounciness: 0
     mass: 1.1
     itemCanJump: 0
@@ -131,9 +131,9 @@ MonoBehaviour:
     mass: 2
     itemCanJump: 1
     wasJump: 1
-    moveXJump: 15
-    moveYJump: 100
-    timeLoopJump: 2.5
+    moveXJump: 20
+    moveYJump: 150
+    timeLoopJump: 2
   - name: SnowBall
     cloneItem: {fileID: 5140200172293621849, guid: 956c22535d2ffde4fbec35fad8215a68,
       type: 3}
@@ -146,11 +146,11 @@ MonoBehaviour:
     moveYJump: 0
     timeLoopJump: 0
   - name: ThreeBox
-    cloneItem: {fileID: 8444472147810260062, guid: 62ac7a3efd650d847b0bdf21f6499f2b,
+    cloneItem: {fileID: 7034480332111191487, guid: 760df14a6b077134c8ec9cbf9a2616c3,
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 1
+    mass: 2
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -176,14 +176,14 @@ MonoBehaviour:
     itemCanJump: 1
     wasJump: 1
     moveXJump: 15
-    moveYJump: 200
+    moveYJump: 100
     timeLoopJump: 2
   - name: WithHat
     cloneItem: {fileID: 6656711671423179048, guid: f8dbdf5fb456d2d489eda3b86e38b698,
       type: 3}
     friction: 0
     bounciness: 0
-    mass: 1.8
+    mass: 1.5
     itemCanJump: 0
     wasJump: 0
     moveXJump: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
     timeLoopJump: 0
   obtacles:
   - name: Water
-    force: 0.2
+    force: 0.1
   - name: Boom
-    force: 1
+    force: 0.8
   - name: Ball
     force: 0

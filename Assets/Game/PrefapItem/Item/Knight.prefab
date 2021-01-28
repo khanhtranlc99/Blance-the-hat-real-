@@ -61,6 +61,7 @@ MonoBehaviour:
   waterForce: 0
   ballForce: 0
   boomForce: 0
+  ball: 0
 --- !u!50 &1668528461439243022
 Rigidbody2D:
   serializedVersion: 4

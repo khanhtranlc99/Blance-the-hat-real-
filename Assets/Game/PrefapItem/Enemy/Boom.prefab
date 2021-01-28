@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 3049297865129006029, guid: 5a4c2fd65ea2306409d83350bb3fdfeb,
     type: 3}
+  valua: -1

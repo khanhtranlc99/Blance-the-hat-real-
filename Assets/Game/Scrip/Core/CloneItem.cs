@@ -22,10 +22,10 @@ public class CloneItem : MonoBehaviour
     public float waterForce;
     public float ballForce;
     public float boomForce;
-    //public bool wasTouch;
+    public bool ball;
 
     private bool isLanded;
-
+    public bool inheath;
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
@@ -40,6 +40,7 @@ public class CloneItem : MonoBehaviour
 
     private void Start()
     {
+        inheath = false;
         StartCoroutine(_Jump());
         //effect.Stop(effect);
     }
@@ -57,13 +58,25 @@ public class CloneItem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+      
 
         if (collision.gameObject.tag.Equals(Constant.PLAYER_TAG) && !isLanded)
         {
             isLanded = true;
             itemAnimManager?.PlayLandAnim();
-            _SpawnSmoke();
+     
         }
+        if( ball == true)
+        {
+
+            rigidbody2D.AddForce(new Vector2(0, 400));
+
+        }
+      
+}
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //inheath = false;
     }
     public void _LoadData()
     {

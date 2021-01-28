@@ -19,4 +19,12 @@ public class EnemyBom : MonoBehaviour
         SimplePool.Despawn(this.gameObject);
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var a = Instantiate(explosion, new Vector3(this.transform.position.x - 0.25f, this.transform.position.y - 0.85f, 0), Quaternion.identity);
+        GameCoreManager.coreManager.earthWake = true;
+        Debug.Log("hahi");
+        SimplePool.Despawn(this.gameObject);
+    }
 }

@@ -39,5 +39,18 @@ public class Player : MonoBehaviour
             }
         }
     }
-  
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //SimplePool.Despawn(GameCoreManager.coreManager.effect.gameObject);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+     
+        _SpawnSmoke();
+
+    } 
+    private void _SpawnSmoke()
+    {
+        Instantiate(GameCoreManager.coreManager.effect.gameObject, new Vector2(GameCoreManager.coreManager.clone.transform.position.x, GameCoreManager.coreManager.clone.transform.position.y - 0.5f), Quaternion.identity);
+    }
 }

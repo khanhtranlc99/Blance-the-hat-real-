@@ -36,8 +36,8 @@ public class UiMode : ControUI
     {
         if (DataManager.StagesAsset.list.Count > 1)
             DataManager.CurrentStage = DataManager.StagesAsset.list[1];
-        normalButton.transform.localScale = new Vector2(1, 1);
-        plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
+           normalButton.transform.localScale = new Vector2(1, 1);
+           plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
     }
 
     public void OnCoinAdsButtonClick()

@@ -51,17 +51,18 @@ MonoBehaviour:
   rigidbody2D: {fileID: 3042446743588808910}
   physics: {fileID: 6200000, guid: 31f9cd08f1c71354ea27efee9e24b93d, type: 2}
   itemAnimManager: {fileID: 7584051985924704799}
-  friction: 0
+  friction: 0.003
   bounciness: 0
   mass: 2
   itemCanJump: 1
   wasJump: 1
   moveXJump: 30
   moveYJump: 200
-  timeLoopJump: 1
+  timeLoopJump: 2
   waterForce: 0
   ballForce: 0
   boomForce: 0
+  ball: 0
 --- !u!50 &3042446743588808910
 Rigidbody2D:
   serializedVersion: 4

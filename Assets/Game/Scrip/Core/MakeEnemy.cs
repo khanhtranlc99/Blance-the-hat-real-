@@ -30,7 +30,7 @@ public class MakeEnemy : MonoBehaviour
     {
         EventDispatcher.Instance?.RemoveListener((int) EventID.GameLose, OnGameLoseHandler);
     }
-
+   
     private void Awake()
     {
         make = this;
@@ -57,6 +57,7 @@ public class MakeEnemy : MonoBehaviour
         {
             _spawnWood();
         }
+      
     }
     private IEnumerator _SpawnWarter()
     {
@@ -68,11 +69,31 @@ public class MakeEnemy : MonoBehaviour
             float b = Random.Range(-1, 2);
             
             SimplePool.Spawn(enemyWater, new Vector3(b, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
-      
+            if (GameCoreManager.coreManager.coutnTime < 10)
+            {
+                timeDropWater = 3.5f;
+            }
+            if (GameCoreManager.coreManager.coutnTime < 15 && GameCoreManager.coreManager.coutnTime > 10)
+            {
+                timeDropWater = 2;
+            }
+            if (GameCoreManager.coreManager.coutnTime < 19 && GameCoreManager.coreManager.coutnTime > 15)
+            {
+                timeDropWater = 1.5f;
+            }
+            if (GameCoreManager.coreManager.coutnTime < 20 && GameCoreManager.coreManager.coutnTime > 19)
+            {
+                timeDropWater = 1;
+            }
+            if (GameCoreManager.coreManager.coutnTime > 25)
+            {
+                timeDropWater = 0.5f;
+            }
         }
         if( wasBool == true)
         {
             waterCoroutine = StartCoroutine(_SpawnWarter());
+
         }
         else
         {
@@ -102,7 +123,12 @@ public class MakeEnemy : MonoBehaviour
                 SimplePool.Spawn(enemyBoom, new Vector3(a - 0.65f, 5, 0), Quaternion.identity).transform.SetParent(GameCoreManager.coreManager.EnemyInGameContro.transform);
                 enemyBoom.valua = 1;
             }
-           
+         
+            if (GameCoreManager.coreManager.coutnTime > 25)
+            {
+                timeDropWater = 5;
+            }
+
         }
         if ( wasBool == true)
         {

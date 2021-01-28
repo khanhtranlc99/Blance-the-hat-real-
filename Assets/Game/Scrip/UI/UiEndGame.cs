@@ -9,6 +9,7 @@ public class UiEndGame : MonoBehaviour
     [SerializeField] private Image imageItem;
     [SerializeField] private Text textHightScore;
     [SerializeField] private GameObject[] coin;
+    [SerializeField] private Text textMobilize;
     private void OnEnable()
     {
         _ShowCoin();
@@ -53,9 +54,24 @@ public class UiEndGame : MonoBehaviour
         { 
             coin[i].SetActive(true);
         }
-        Debug.Log("sdaksdj");
+        _Mobilize();
      }
+    private void _Mobilize()
+    {
+        if (GameCoreManager.coreManager.coutnTime < 10)
+        {
+            textMobilize.text = "You do better than " + 50 + "% player";
+        }
+        if (GameCoreManager.coreManager.coutnTime > 10)
+        {
+            textMobilize.text = "You do better than " + 70 + "% player";
+        }
 
+        if (GameCoreManager.coreManager.coutnTime > 20)
+        {
+            textMobilize.text = "You do better than " + 75 + "% player";
+        }
+    }    
 
 
 

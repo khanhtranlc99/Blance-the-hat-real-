@@ -73,12 +73,13 @@ MonoBehaviour:
   mass: 2
   itemCanJump: 1
   wasJump: 1
-  moveXJump: 15
-  moveYJump: 100
-  timeLoopJump: 2.5
+  moveXJump: 20
+  moveYJump: 150
+  timeLoopJump: 2
   waterForce: 0
   ballForce: 0
   boomForce: 0
+  ball: 0
 --- !u!50 &2593193694997580738
 Rigidbody2D:
   serializedVersion: 4
