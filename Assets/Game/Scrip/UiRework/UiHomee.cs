@@ -28,7 +28,7 @@ public class UiHomee : ControUI
     private void SetHomeImage()
     {
         if (itemsSprite == null || itemsSprite.Length <= 0) return;
-
+        
         if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
         {
             if (!this.gameObject.activeSelf) return;
@@ -42,6 +42,7 @@ public class UiHomee : ControUI
             {
                 if (!this.gameObject.activeSelf) return;
                 StartCoroutine(ChangeItemSpriteRandomly(itemsSprite));
+                PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
             }
             else
             {
