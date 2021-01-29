@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-using System.Diagnostics;
+
 
 public class Player : MonoBehaviour
 {
@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
             postDown = cameGameCore.ScreenToViewportPoint(Input.mousePosition);
             xBegin = postDown.x;
             rotBegin = transform.eulerAngles;
+            SoundManager.Play("taptap");
+  
         }            
 
          if (Input.GetMouseButton(0))
@@ -38,6 +40,8 @@ public class Player : MonoBehaviour
                 transform.eulerAngles = rotBegin + new Vector3(0, 0, post.x - xBegin) * speed;
             }
         }
+       
+        //SoundManager.Play("");
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -48,8 +52,9 @@ public class Player : MonoBehaviour
        if(collision.gameObject.tag == "Item")
         {
             _SpawnSmoke();
+            SoundManager.Play("masat");
         }
-       
+     
 
     } 
     private void _SpawnSmoke()

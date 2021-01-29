@@ -12,7 +12,7 @@ public class DespawnSmoke : MonoBehaviour
 
     private IEnumerator _DespwanSmoke()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         //SimplePool.Despawn(this.gameObject);
         Destroy(this.gameObject);
     }    

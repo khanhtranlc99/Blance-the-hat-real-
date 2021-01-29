@@ -10,7 +10,7 @@ public class EnemyWater : MonoBehaviour
     {
         if (collision.rigidbody != null)
         {
-        
+            SoundManager.Play("waterdrop");
             collision.rigidbody.AddForceAtPosition(new Vector2(forceWater, 50), transform.position);
             Debug.Log("forceWater" + forceWater);
 

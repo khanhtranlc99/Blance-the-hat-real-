@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5469941288945952848}
   - component: {fileID: 8471876880398817055}
   - component: {fileID: 2066241744158074244}
-  - component: {fileID: 4115041080913642399}
+  - component: {fileID: 7103998188706314475}
   m_Layer: 10
   m_Name: SnowBall
   m_TagString: Item
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -0.53}
+  m_Offset: {x: 0.01, y: -0.52}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,9 +160,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.12}
+  m_Size: {x: 1.1, y: 0.13}
   m_EdgeRadius: 0
---- !u!58 &4115041080913642399
+--- !u!58 &7103998188706314475
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,9 +175,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.09}
+  m_Offset: {x: 0, y: 0.08}
   serializedVersion: 2
-  m_Radius: 0.58
+  m_Radius: 0.6
 --- !u!1001 &2989003303029192090
 PrefabInstance:
   m_ObjectHideFlags: 0

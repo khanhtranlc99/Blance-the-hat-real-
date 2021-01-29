@@ -63,8 +63,7 @@ public class CloneItem : MonoBehaviour
         if (collision.gameObject.tag.Equals(Constant.PLAYER_TAG) && !isLanded)
         {
             isLanded = true;
-            itemAnimManager?.PlayLandAnim();
-     
+    ;
         }
         if (ball == true)
         {
@@ -115,5 +114,9 @@ public class CloneItem : MonoBehaviour
         StopAllCoroutines();
         GameCoreManager.coreManager.earthWake = false;
         Destroy(gameObject);
+    }
+    private void _SpawnSmoke()
+    {
+        Instantiate(GameCoreManager.coreManager.smoke.gameObject, new Vector2(GameCoreManager.coreManager.clone.transform.position.x, GameCoreManager.coreManager.clone.transform.position.y - 0.5f), Quaternion.identity);
     }
 }

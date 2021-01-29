@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private Transform parrentTransform = null;
     private static SoundManager instance { get; set; }
-
+    public static bool onVoice;
     public static string TAG
     {
         get
@@ -39,6 +39,7 @@ public class SoundManager : MonoBehaviour
     public void Awake()
     {
         instance = this;
+        onVoice = true;
         parrentTransform = transform;
     }
     #endregion
@@ -93,21 +94,29 @@ public class SoundManager : MonoBehaviour
     }
 
     public static void Play(string fileName)
-    {
-        if (instance && !string.IsNullOrEmpty(fileName) && allSounds != null && (instance.soundToggle == null || (instance.soundToggle && instance.soundToggle.isOn)))
+    {  
+        if(onVoice == true)
         {
-            if (!allSounds.ContainsKey(fileName))
+            if (instance && !string.IsNullOrEmpty(fileName) && allSounds != null && (instance.soundToggle == null || (instance.soundToggle && instance.soundToggle.isOn)))
             {
-                var sound = Resources.Load<AudioClip>(instance.soundPath + "/" + fileName);
-                if (sound != null && !allSounds.ContainsKey(fileName))
-                    allSounds.Add(fileName, sound);
-            }
+                if (!allSounds.ContainsKey(fileName))
+                {
+                    var sound = Resources.Load<AudioClip>(instance.soundPath + "/" + fileName);
+                    if (sound != null && !allSounds.ContainsKey(fileName))
+                        allSounds.Add(fileName, sound);
 
-            if (allSounds.ContainsKey(fileName))
-                PlayTemp(allSounds[fileName]);
-            else
-                Debug.LogWarning(TAG + " There is no sound file with the name [" + fileName + "] in any of the Resources folders.\n Check that the spelling of the fileName (without the extension) is correct or if the file exists in under a Resources folder");
+                }
+                if (allSounds.ContainsKey(fileName))
+                    PlayTemp(allSounds[fileName]);
+                else
+                    Debug.LogWarning(TAG + " There is no sound file with the name [" + fileName + "] in any of the Resources folders.\n Check that the spelling of the fileName (without the extension) is correct or if the file exists in under a Resources folder");
+            }
         }
+        else
+        {
+            Debug.Log("mute");
+        }
+        
     }
 
     private static void PlayClipAt(AudioClip clip, bool setPos = false, Vector3 pos = new Vector3())

@@ -11,10 +11,12 @@ public class UIcontro : MonoBehaviour
     public UiSelectItem uiSelectItem;
     public UiHomee uiHomee;
     public UiEndGame uiEndGame;
+    public bool backtoLoadgame;
     [SerializeField] Button btnSelecItem;
     [SerializeField] Button btnMode;
     [SerializeField] Button btnHome;
-    public bool backtoLoadgame;
+    [SerializeField] GameObject postMouse;
+    [SerializeField] Camera camUi;
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
@@ -36,6 +38,18 @@ public class UIcontro : MonoBehaviour
     private void Start()
     {
     
+    }
+    private void Update()
+    {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+     
+            SoundManager.Play("taptap");
+            var post = camUi.ScreenToViewportPoint(Input.mousePosition);
+ 
+        }
+
     }
     public void ChangeUI(MenuUI menuUI)
     {
