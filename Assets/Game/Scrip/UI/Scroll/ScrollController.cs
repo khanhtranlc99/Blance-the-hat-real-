@@ -114,13 +114,9 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
             item.ActiveText(true);
             item.SetAction(() =>
             {
-                AdsManager.ShowVideoReward((s) =>
-                {
-                    if (s == AdEvent.Success)
-                    {
-                        CoinManager.Add(DataManager.GameConfig.coinAdsReward);
-                    }
-                }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
+                OnItemSelected(dataIndex);
+                btnSelect.SetCoinButton();
+                this.PostEvent((int) EventID.ItemScrollSelect, item);
             });
         }
         else if (itemsData[dataIndex].name.Equals(Constant.RANDOM_ITEM))

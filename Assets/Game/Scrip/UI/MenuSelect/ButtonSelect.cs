@@ -11,6 +11,7 @@ public class ButtonSelect : MonoBehaviour
     [SerializeField] private Button button;
     [SerializeField] private GameObject playObject;
     [SerializeField] private GameObject priceObject;
+    [SerializeField] private GameObject adsObject;
     [SerializeField] private Image priceIcon;
     [SerializeField] private Text priceNumber;
     [Header("Price Icon")]
@@ -30,6 +31,7 @@ public class ButtonSelect : MonoBehaviour
         {
             playObject.SetActive(true);
             priceObject.SetActive(false);
+            adsObject.SetActive(false);
             
             button.onClick.AddListener(() =>
             {
@@ -60,6 +62,7 @@ public class ButtonSelect : MonoBehaviour
             
             playObject.SetActive(false);
             priceObject.SetActive(true);
+            adsObject.SetActive(false);
 
             int unlockRequire = 0;
 
@@ -123,13 +126,33 @@ public class ButtonSelect : MonoBehaviour
 
     public void SetRandomItem()
     {
+        button.onClick.RemoveAllListeners();
         playObject.SetActive(true);
         priceObject.SetActive(false);
+        adsObject.SetActive(false);
         button.onClick.AddListener(() =>
         {
             PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
             UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
               
+        });
+    }
+
+    public void SetCoinButton()
+    {
+        button.onClick.RemoveAllListeners();  
+        playObject.SetActive(false);
+        priceObject.SetActive(false);
+        adsObject.SetActive(true);
+        button.onClick.AddListener(() =>
+        {
+            AdsManager.ShowVideoReward((s) =>
+            {
+                if (s == AdEvent.Success)
+                {
+                    CoinManager.Add(DataManager.GameConfig.coinAdsReward);
+                }
+            }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
         });
     }
 }
