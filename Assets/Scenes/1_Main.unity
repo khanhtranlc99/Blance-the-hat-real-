@@ -2404,7 +2404,7 @@ GameObject:
   - component: {fileID: 987577670}
   - component: {fileID: 987577669}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ButtonRate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48fe32258dddae47a7337828e9cf498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bundleVersion: 210128002
+  bundleVersion: 210129002
   versionBuildTexts:
   - {fileID: 0}
   - {fileID: 3387507984553763548}
@@ -8987,7 +8987,7 @@ PrefabInstance:
     - target: {fileID: 6804414870060802610, guid: 5c8abaa26d2724b428e9c3533d7d2340,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6804414870060802610, guid: 5c8abaa26d2724b428e9c3533d7d2340,
         type: 3}

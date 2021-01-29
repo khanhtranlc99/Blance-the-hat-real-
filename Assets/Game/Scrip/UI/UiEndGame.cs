@@ -50,11 +50,14 @@ public class UiEndGame : MonoBehaviour
 
      private void _ShowCoin()
     {
+
+     
        for (int i = 0; i < coin.Length; i ++)
         { 
             coin[i].SetActive(true);
         }
         _Mobilize();
+
      }
     private void _Mobilize()
     {

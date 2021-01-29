@@ -6,7 +6,7 @@ public class StarEffect : MonoBehaviour
 {
     public void _StarEffect()
     {
-
+        SoundManager.Play("coin");
         this.gameObject.SetActive(false);
     }    
 }

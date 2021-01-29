@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
        if(collision.gameObject.tag == "Item")
         {
             _SpawnSmoke();
-            SoundManager.Play("masat");
+            SoundManager.Play("masat3");
         }
      
 

@@ -10,8 +10,9 @@ public class PostEnemy : MonoBehaviour
     }
     public void _Destroy()
     {
-        
+        GameCoreManager.coreManager._GotoInit();
         SimplePool.Despawn(this.gameObject);
     }
+   
 
 }

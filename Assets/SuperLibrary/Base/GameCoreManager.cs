@@ -37,6 +37,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public bool earthWake;
     public GameObject smoke;
     [SerializeField] GameObject postItem;
+    private Coroutine itemCoroutine = null;
     protected override void Awake()
     {
         base.Awake();
@@ -109,39 +110,30 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
     public override void InitGame(object data)
     {
-        _GotoInit();
-        DOVirtual.DelayedCall(0.5f, () => GameStateManager.Ready(new MessageReadyGame { }));
+        main.transform.DORotate(new Vector3(0, 0, angerFirst), 0.1f);
+        DOVirtual.DelayedCall(0.5f, () => GameStateManager.Ready(new MessageReadyGame { }) );
       
     }
-    private void _GotoInit()
+    public void _GotoInit() 
     {
+       
         Debug.Log("Game Core goto InitGame: " + DataManager.CurrentItem.score);
         GameStatisticsManager.Score = 0;
-        //Hien thi con main
-        main.SetActive(true);
-        tutorial.SetActive(true);
-        if (DataManager.CurrentStage.gameMode == GameMode.Wood)
-        {
-            MakeEnemy.make._spawnWood();
-        }
-        //sinh ra con item
-
+      
         if (PlayerPrefs.GetInt(Constant.IS_RANDOM_ITEM_PREFS, 0) == 1)
         {
             DataManager.CurrentItem.isSelected = false;
             DataManager.CurrentItem = DataManager.ItemsAsset.list[UnityEngine.Random.Range(1, DataManager.ItemsAsset.list.Count)];
             DataManager.CurrentItem.isSelected = true;
         }
-
         var b = Instantiate(DataManager.CurrentItem.prefab, new Vector3(0.08f, 3.23f, 0), Quaternion.identity);
         b.transform.SetParent(itemInGameContro.transform);
         this.clone = b.GetComponent<CloneItem>();
-        var c = SimplePool.Spawn(postItem, new Vector2(b.transform.position.x, b.transform.position.y), Quaternion.identity);
         _LoadLogicEnemy();
         _Reset();
         toucPause.SetActive(false);
         /// vao game
-        SoundManager.Play("statgame");
+       
     }
 
     public override void LoadGame(object data)
@@ -165,6 +157,9 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     public override void PlayGame(object data)
     {
         Debug.Log("Game Core goto PlayGame");
+
+        var c = SimplePool.Spawn(postItem, new Vector2(0, 5), Quaternion.identity);
+        SoundManager.Play("dropItem");
         //UIPerfectToast.instance.Show("LET'S GO!!!");
     }
 
@@ -197,7 +192,16 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     protected override void ReadyGame(object data)
     {
         Debug.Log("Game Core goto ReadyGame");
-
+        SoundManager.Play("statgame");
+        main.SetActive(true);
+        tutorial.SetActive(true);
+        if (DataManager.CurrentStage.gameMode == GameMode.Wood)
+        {
+            MakeEnemy.make._spawnWood();
+        }
+        coutnTime = 0;
+        textTime.text = "" + coutnTime;
+   
     }
 
     protected override void RebornCheckPointGame(object data)
