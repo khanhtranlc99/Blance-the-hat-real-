@@ -37,6 +37,7 @@ public class CoinManager : MonoBehaviour
     {
         var current = totalCoin;
         totalCoin += numb;
+        DataManager.Save();
         if (Number != null)
         {
             if (numb > 0)
