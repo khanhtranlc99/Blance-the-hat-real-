@@ -38,7 +38,7 @@ public class MakeEnemy : MonoBehaviour
     }
     private void Start()
     {
-        wasBool = true;
+   
     }
     private void Update()
     {
@@ -160,7 +160,7 @@ public class MakeEnemy : MonoBehaviour
     /// </summary>
 
     private IEnumerator _BoomReject() //no boom
-    {
+    {   
         yield return new WaitForSeconds(timeDropWater);
         if (wasBool == true && GameCoreManager.coreManager.coutnTime > 5 )
         {             
@@ -169,7 +169,7 @@ public class MakeEnemy : MonoBehaviour
         }
         if (wasBool == true)
         {
-            waterCoroutine = StartCoroutine(_SpawnWarter());
+            waterCoroutine = StartCoroutine(_BoomReject());
         }
         else
         {
@@ -237,7 +237,7 @@ public class MakeEnemy : MonoBehaviour
         }
         if (wasBool == true)
         {
-            waterCoroutine = StartCoroutine(_SpawnWarter());
+            waterCoroutine = StartCoroutine(_WarterDrop());
 
         }
         else
@@ -287,6 +287,7 @@ public class MakeEnemy : MonoBehaviour
     }
     public void _ModeBoomReject()
     {
+        Debug.Log("BoomReject");
         wasBool = true;
         timeDropWater = 1f;
         if (waterCoroutine != null)
@@ -294,12 +295,13 @@ public class MakeEnemy : MonoBehaviour
             StopCoroutine(waterCoroutine);
             waterCoroutine = null;
         }
-        waterCoroutine = StartCoroutine(_SpawnWarter());
+        waterCoroutine = StartCoroutine(_BoomReject());
     }
     public void _ModeWaterDrop()
     {
         wasBool = true;
         timeDropWater = 1f;
+        timeDropBoom = 10;
         if (waterCoroutine != null)
         {
             StopCoroutine(waterCoroutine);
@@ -310,7 +312,7 @@ public class MakeEnemy : MonoBehaviour
             StopCoroutine(boomCoroutine);
             boomCoroutine = null;
         }
-        waterCoroutine = StartCoroutine(_SpawnWarter());
+        waterCoroutine = StartCoroutine(_WarterDrop());
         boomCoroutine = StartCoroutine(_SpawnBoom());
     }
     public void _ModeRumbelBall()
@@ -331,7 +333,6 @@ public class MakeEnemy : MonoBehaviour
     }
     public void _Boom()
     {
-
         var a = GameCoreManager.coreManager.clone.transform.position.x;
         var b = Random.Range(0, 2);
         if (b == 0)

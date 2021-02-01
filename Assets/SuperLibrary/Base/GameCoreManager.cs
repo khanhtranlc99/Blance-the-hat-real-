@@ -337,10 +337,12 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         if (DataManager.CurrentStage.gameMode == GameMode.Wood)
         {
             MakeEnemy.make._spawnWood();
+            MakeEnemy.make._ModeNormal();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.Normal)
         {
             MakeEnemy.make._ModeNormal();
+            
         }
         if (DataManager.CurrentStage.gameMode == GameMode.BoomReject)
         {
