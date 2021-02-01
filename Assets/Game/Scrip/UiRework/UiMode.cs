@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class UiMode : ControUI
 {
-    [SerializeField] private Button normalButton;
-    [SerializeField] private Button plusButton;
+    [SerializeField] private Button[] selectButton;
+  
 
     private void Start()
     {
@@ -23,23 +23,53 @@ public class UiMode : ControUI
         GameStateManager.LoadGame(null);
         UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
     }
-
+   
+    //    BoomReject = 2,
+    //    RubberBalls = 3,
+    //    Shake = 4,
+    //    WaterDrop = 5
     public void _NormalMode()
     {
         if (DataManager.StagesAsset.list.Count > 0)
             DataManager.CurrentStage = DataManager.StagesAsset.list[0];
-        normalButton.transform.localScale = new Vector2(1.5f, 1.5f);
-        plusButton.transform.localScale = new Vector2(1, 1);
+          _ScaleButton();
+        selectButton[0].transform.localScale = new Vector2(1.5f, 1.5f);
     }
 
     public void _OnPlusMode()
     {
         if (DataManager.StagesAsset.list.Count > 1)
             DataManager.CurrentStage = DataManager.StagesAsset.list[1];
-           normalButton.transform.localScale = new Vector2(1, 1);
-           plusButton.transform.localScale = new Vector2(1.5f, 1.5f);
+        _ScaleButton();
+        selectButton[1].transform.localScale = new Vector2(1.5f, 1.5f);
     }
+    public void _OnBoomReject()
+    {
+        if (DataManager.StagesAsset.list.Count > 2)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[2];
+        _ScaleButton();
+        selectButton[2].transform.localScale = new Vector2(1.5f, 1.5f);
+    }
+    public void _OnRubberBalls()
+    {
+        if (DataManager.StagesAsset.list.Count > 3)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[3];
+        _ScaleButton();
+        selectButton[3].transform.localScale = new Vector2(1.5f, 1.5f);
+    }
+    public void _OnShake()  // nho sua
+    {
+        _ScaleButton();
+        selectButton[4].transform.localScale = new Vector2(1.5f, 1.5f);
 
+    }
+    public void _OnWaterDrop()
+    {
+        if (DataManager.StagesAsset.list.Count > 5)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[5];
+           _ScaleButton();
+           selectButton[4].transform.localScale = new Vector2(1.5f, 1.5f);
+    }
     public void OnCoinAdsButtonClick()
     {
         AdsManager.ShowVideoReward((s) =>
@@ -56,7 +86,13 @@ public class UiMode : ControUI
         DataManager.CurrentStage = DataManager.StagesAsset.list[0];
     }
 
-    private void _PlusCoin()
-    {
+    private void _ScaleButton()
+    {  
+        for ( int i = 0; i < selectButton.Length; i ++)
+        {
+            selectButton[i].transform.localScale = new Vector2(1, 1);
+        }
+        //normalButton.transform.localScale = new Vector2(1.5f, 1.5f);
+        //plusButton.transform.localScale = new Vector2(1, 1);
     }
 }

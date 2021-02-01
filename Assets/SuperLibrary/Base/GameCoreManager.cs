@@ -26,7 +26,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     bool isPause = false;
     public Explosion boom;
     public EnemyWater water;
-    public Rigidbody2D ballSilicol;
+    public EnemySilicol ballSilicol;
     public CloneItem[] allItem;
     public float angerFirst;
     public GameObject wood;
@@ -195,10 +195,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         SoundManager.Play("statgame");
         main.SetActive(true);
         tutorial.SetActive(true);
-        if (DataManager.CurrentStage.gameMode == GameMode.Wood)
-        {
-            MakeEnemy.make._spawnWood();
-        }
+      
         coutnTime = 0;
         textTime.text = "" + coutnTime;
    
@@ -285,8 +282,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             water.forceWater = item.obtacles[0].force;
             boom.forceEplositon = item.obtacles[1].force;
-            ballSilicol.mass = item.obtacles[2].force;
-
+            ballSilicol.forceBalls = item.obtacles[2].force;
         }
         }
     public void _Reset()
@@ -302,7 +298,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
             timeCoroutine = null;
         }
         timeCoroutine = StartCoroutine(_Runtime()); ;
-        MakeEnemy.make._ResuameSpawn();
+        _CheckMode();
         Debug.Log("Reset");
     }
     public void _PlusScore()
@@ -317,7 +313,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             clone._Moving();
         }
-        MakeEnemy.make._ResuameSpawn();
+        _CheckMode();
         if( clone == null)
         {
             GameStateManager.LoadGame(null);
@@ -335,11 +331,34 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         var a = Random.Range(-0.69f, 0.6f);
         backGround.transform.DOMoveX( a,0.5f);
-      
-        
-
     }
+    private void _CheckMode()
+    {
+        if (DataManager.CurrentStage.gameMode == GameMode.Wood)
+        {
+            MakeEnemy.make._spawnWood();
+        }
+        if (DataManager.CurrentStage.gameMode == GameMode.Normal)
+        {
+            MakeEnemy.make._ModeNormal();
+        }
+        if (DataManager.CurrentStage.gameMode == GameMode.BoomReject)
+        {
+            MakeEnemy.make._ModeBoomReject();
+        }
+        if (DataManager.CurrentStage.gameMode == GameMode.WaterDrop)
+        {
+            MakeEnemy.make._ModeWaterDrop();
+        }
+        if (DataManager.CurrentStage.gameMode == GameMode.RubberBalls)
+        {
+            MakeEnemy.make._ModeRumbelBall();
+        }
+        if (DataManager.CurrentStage.gameMode == GameMode.Shake)
+        {
 
+        }
+    }
     private void OnGameLoseHandler(object param)
     {
         if (coreManager.wood != null)

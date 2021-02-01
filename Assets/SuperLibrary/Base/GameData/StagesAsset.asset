@@ -33,21 +33,21 @@ MonoBehaviour:
     unlockPrice: 0
     isUnlocked: 1
     isSelected: 1
-    count: 252
+    count: 309
     countHit: 0
     unlockPay: 0
-    totalPlay: 252
+    score: 61
+    totalPlay: 309
     gameMode: 0
     star: 0
     process: 0
-    score: 61
     combo: 0
     time: 1
-    totalTimePlay: 1163
-    totalRestart: 68
+    totalTimePlay: 1464
+    totalRestart: 89
     totalReborn: 0
     totalPass: 0
-    totalFail: 163
+    totalFail: 197
     totalComplete: 0
     unlockBy: 0
   - name: Stage 2
@@ -58,15 +58,119 @@ MonoBehaviour:
     unlockType: 4
     unlockPrice: 3
     isUnlocked: 0
+    isSelected: 1
+    count: 8
+    countHit: 0
+    unlockPay: 0
+    score: 0
+    totalPlay: 8
+    gameMode: 1
+    star: 0
+    process: 0
+    combo: 0
+    time: 3
+    totalTimePlay: 42
+    totalRestart: 3
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 5
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 3
+    id: Stage 3
+    idThumb: 
+    index: 2
+    description: 
+    unlockType: 4
+    unlockPrice: 3
+    isUnlocked: 0
     isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 0
+    score: 0
     totalPlay: 0
-    gameMode: 1
+    gameMode: 2
     star: 0
     process: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 4
+    id: Stage_4
+    idThumb: 
+    index: 3
+    description: 
+    unlockType: 4
+    unlockPrice: 3
+    isUnlocked: 0
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
     score: 0
+    totalPlay: 0
+    gameMode: 3
+    star: 0
+    process: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 5
+    id: Stage_5
+    idThumb: 
+    index: 4
+    description: 
+    unlockType: 4
+    unlockPrice: 3
+    isUnlocked: 0
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    score: 0
+    totalPlay: 0
+    gameMode: 4
+    star: 0
+    process: 0
+    combo: 0
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
+    totalReborn: 0
+    totalPass: 0
+    totalFail: 0
+    totalComplete: 0
+    unlockBy: 0
+  - name: Stage 6
+    id: Stage_6
+    idThumb: 
+    index: 5
+    description: 
+    unlockType: 4
+    unlockPrice: 3
+    isUnlocked: 0
+    isSelected: 0
+    count: 0
+    countHit: 0
+    unlockPay: 0
+    score: 0
+    totalPlay: 0
+    gameMode: 5
+    star: 0
+    process: 0
     combo: 0
     time: 0
     totalTimePlay: 0

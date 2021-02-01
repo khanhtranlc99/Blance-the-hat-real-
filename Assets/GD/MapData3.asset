@@ -195,4 +195,4 @@ MonoBehaviour:
   - name: Boom
     force: 0.8
   - name: Ball
-    force: 0
+    force: 0.05

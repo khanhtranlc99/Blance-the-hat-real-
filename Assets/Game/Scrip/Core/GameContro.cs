@@ -93,7 +93,7 @@ public class GameContro : MonoBehaviour
         clone._Moving();
         UI.uI.ChangeUI(UI.MenuUI.gamePlay);
         UI.uI.keyObject.SetActive(true);
-        MakeEnemy.make._ResuameSpawn();
+        MakeEnemy.make._ModeNormal();
     }
     public void _Reset()
     {

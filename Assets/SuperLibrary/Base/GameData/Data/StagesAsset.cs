@@ -112,5 +112,9 @@ public enum GameMode
 {
     Normal = 0,
     Wood = 1,
+    BoomReject = 2,
+    RubberBalls = 3,
+    Shake = 4,
+    WaterDrop =5
 }
 
