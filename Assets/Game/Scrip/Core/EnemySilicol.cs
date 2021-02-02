@@ -16,9 +16,10 @@ public class EnemySilicol : MonoBehaviour
     {
         if (collision.rigidbody != null)
         {
-            SoundManager.Play("Ballsdrop");
-            collision.rigidbody.AddForceAtPosition(new Vector2(forceBalls, 25), transform.position);
             Debug.Log("forceBalls" + forceBalls);
+
+            collision.rigidbody.AddForceAtPosition(new Vector2(25, 50), transform.position);
+      
         }
         if(collision.gameObject.tag == "wall")
         {

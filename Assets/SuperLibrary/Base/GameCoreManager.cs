@@ -282,7 +282,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             water.forceWater = item.obtacles[0].force;
             boom.forceEplositon = item.obtacles[1].force;
-            ballSilicol.forceBalls = item.obtacles[2].force;
+            //ballSilicol.forceBalls = item.obtacles[2].force;
         }
         }
     public void _Reset()
