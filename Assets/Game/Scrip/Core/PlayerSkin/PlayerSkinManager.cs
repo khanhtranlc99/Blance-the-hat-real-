@@ -9,18 +9,28 @@ public class PlayerSkinManager : MonoBehaviour
     [SerializeField] private SkeletonMecanim charSke;
     private const String charPrefix = "char";
 
-    private void OnEnable()
+    private void Awake()
     {
-        GameStateManager.OnStateChanged += OnStateChanged;
+        SkinAsset.OnChanged += OnSkinChange;
     }
 
-    private void OnStateChanged(GameState current, GameState last, object data)
+    private void OnSkinChange(SkinData current, List<SkinData> list)
     {
-        if (current == GameState.Init)
-        {
-            SetSkin(DataManager.CurrentSkin.index);
-        }
+        SetSkin(current.index + 1);
     }
+
+    // private void OnEnable()
+    // {
+    //     GameStateManager.OnStateChanged += OnStateChanged;
+    // }
+    //
+    // private void OnStateChanged(GameState current, GameState last, object data)
+    // {
+    //     if (current == GameState.Init)
+    //     {
+    //         SetSkin(DataManager.CurrentSkin.index);
+    //     }
+    // }
 
     private void GetSkinNames()
     {

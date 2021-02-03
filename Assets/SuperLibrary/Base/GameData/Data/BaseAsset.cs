@@ -74,6 +74,10 @@ public class BaseAsset<T> : ScriptableObject where T : SaveData
 
     public delegate void DataChangedDelegate(T current, List<T> list);
     public static event DataChangedDelegate OnChanged;
+    public void SetChanged(T data)
+    {
+        OnChanged?.Invoke(data, unlockedList);
+    }
 
     public List<T> unlockedList
     {

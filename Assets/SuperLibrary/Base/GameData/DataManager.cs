@@ -121,6 +121,13 @@ public class DataManager : MonoBehaviour
                 }
             }
         }
+        
+        LoadSkin();
+    }
+
+    private static void LoadSkin()
+    {
+        SkinsAsset.SetChanged(CurrentSkin);
     }
 
     public static void Load()
