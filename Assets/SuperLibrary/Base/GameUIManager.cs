@@ -25,6 +25,9 @@ public class GameUIManager : GameManagerBase<GameUIManager>
     private UIGameOver gameOverScreen = null;
 
     [SerializeField] private UISelectSkin selectSkinScreen = null;
+
+    public static UISelectSkin SelectSkinScreen => instance?.selectSkinScreen;
+
     public static UIGameOver GameOverScreen => instance?.gameOverScreen;
 
     private DateTime startLoadTime = DateTime.Now;

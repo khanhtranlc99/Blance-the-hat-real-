@@ -22,8 +22,20 @@ public class DataManager : MonoBehaviour
         get => ItemsAsset?.Current;
         set => ItemsAsset.Current = value;
     }
+
+    public static SkinData CurrentSkin
+    {
+        get => SkinsAsset?.Current;
+        set => SkinsAsset.Current = value;
+    }
     public static StagesAsset StagesAsset { get; private set; }
     public static ItemsAsset ItemsAsset { get; private set; }
+
+    public static SkinAsset SkinsAsset
+    {
+        get ; private set;
+    }
+
     public static GameData gameData { get; private set; }
     private static DataManager instance { get; set; }
 
@@ -37,6 +49,8 @@ public class DataManager : MonoBehaviour
     protected StagesAsset stagesAsset = null;
     [SerializeField]
     protected ItemsAsset itemsAsset = null;
+    [SerializeField]
+    protected SkinAsset skinsAsset = null;
 
     public static bool IsFirstTime = false;
 
@@ -56,6 +70,7 @@ public class DataManager : MonoBehaviour
     {
         instance = this;
         ItemsAsset = itemsAsset;
+        SkinsAsset = skinsAsset;
     }
 
 
@@ -200,6 +215,7 @@ public class DataManager : MonoBehaviour
             stagesAsset.ResetData();
             stagesAsset.UpdateCost();
             itemsAsset.ResetData();
+            skinsAsset.ResetData();
             Reset();
             Debug.Log("Reset and Update data to BUILD!!!");
         }

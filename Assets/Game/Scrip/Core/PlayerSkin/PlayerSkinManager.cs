@@ -18,8 +18,7 @@ public class PlayerSkinManager : MonoBehaviour
     {
         if (current == GameState.Init)
         {
-            var charSkinIndex = DataManager.gameData.user.skinIndex;
-            SetSkin(charSkinIndex);
+            SetSkin(DataManager.CurrentSkin.index);
         }
     }
 

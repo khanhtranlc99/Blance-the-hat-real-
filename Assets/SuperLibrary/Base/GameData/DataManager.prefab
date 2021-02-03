@@ -46,6 +46,7 @@ MonoBehaviour:
   configAsset: {fileID: 11400000, guid: fbab7b544e593c44d8150166192e1151, type: 2}
   stagesAsset: {fileID: 11400000, guid: 0350f4186ed14654e9c17a581bd6875f, type: 2}
   itemsAsset: {fileID: 11400000, guid: 48477410c53ee8b4faabb02e2c1e574c, type: 2}
+  skinsAsset: {fileID: 11400000, guid: 4894b5ba9a5cc5641b45b55bab5a3f1c, type: 2}
   loadOnStart: 0
   saveOnPause: 1
   saveOnQuit: 1
