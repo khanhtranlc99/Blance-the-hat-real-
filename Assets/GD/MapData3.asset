@@ -189,6 +189,17 @@ MonoBehaviour:
     moveXJump: 0
     moveYJump: 0
     timeLoopJump: 0
+  - name: Bird
+    cloneItem: {fileID: 4975877265528871091, guid: a93354be4d2708a41b79da668d314878,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
   obtacles:
   - name: Water
     force: 0.1

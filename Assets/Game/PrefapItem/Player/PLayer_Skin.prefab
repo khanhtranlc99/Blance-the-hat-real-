@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6761683300085281867}
   - component: {fileID: 6864686139840062381}
   - component: {fileID: 384392603}
+  - component: {fileID: 1426298516450173536}
   m_Layer: 10
   m_Name: PLayer_Skin
   m_TagString: Player
@@ -220,6 +221,19 @@ PolygonCollider2D:
       - {x: -0.42999998, y: -1.5875}
       - {x: -0.29999998, y: -1.5274999}
       - {x: -0.185, y: -1.4175}
+--- !u!114 &1426298516450173536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422414904823686085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f9049729caea94783ba2d3349291a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedShake: 20
 --- !u!1 &4571492781165882038
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,3 +584,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70dd6ccd9e2854f4586b94c066cd288a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyWater: {fileID: 0}

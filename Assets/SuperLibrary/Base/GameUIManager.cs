@@ -168,6 +168,7 @@ public class GameUIManager : GameManagerBase<GameUIManager>
 
     protected override void GameOver(object data)
     {
+        Debug.Log("hehee");
         inGameScreen.Hide();
         gameOverScreen.Show(GameState.GameOver);
     }

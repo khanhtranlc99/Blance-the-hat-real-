@@ -24,7 +24,7 @@ MonoBehaviour:
   unlockStarScale: 1.6
   useRandom: 0
   list:
-  - name: Stage 1
+  - name: Normal
     id: Stage_1
     idThumb: Unity
     index: 0
@@ -33,24 +33,24 @@ MonoBehaviour:
     unlockPrice: 0
     isUnlocked: 1
     isSelected: 1
-    count: 309
+    count: 410
     countHit: 0
     unlockPay: 0
     score: 61
-    totalPlay: 309
+    totalPlay: 410
     gameMode: 0
     star: 0
     process: 0
     combo: 0
     time: 1
-    totalTimePlay: 1464
-    totalRestart: 89
+    totalTimePlay: 1955
+    totalRestart: 128
     totalReborn: 0
     totalPass: 0
-    totalFail: 197
+    totalFail: 278
     totalComplete: 0
     unlockBy: 0
-  - name: Stage 2
+  - name: Wood
     id: Stage_2
     idThumb: 
     index: 1
@@ -76,7 +76,7 @@ MonoBehaviour:
     totalFail: 5
     totalComplete: 0
     unlockBy: 0
-  - name: Stage 3
+  - name: BoomReject
     id: Stage 3
     idThumb: 
     index: 2
@@ -102,7 +102,7 @@ MonoBehaviour:
     totalFail: 0
     totalComplete: 0
     unlockBy: 0
-  - name: Stage 4
+  - name: RubberBalls
     id: Stage_4
     idThumb: 
     index: 3
@@ -128,7 +128,7 @@ MonoBehaviour:
     totalFail: 0
     totalComplete: 0
     unlockBy: 0
-  - name: Stage 5
+  - name: Shake
     id: Stage_5
     idThumb: 
     index: 4
@@ -154,7 +154,7 @@ MonoBehaviour:
     totalFail: 0
     totalComplete: 0
     unlockBy: 0
-  - name: Stage 6
+  - name: WarterDrop
     id: Stage_6
     idThumb: 
     index: 5

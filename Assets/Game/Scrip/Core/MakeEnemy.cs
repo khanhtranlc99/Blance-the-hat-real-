@@ -21,7 +21,8 @@ public class MakeEnemy : MonoBehaviour
     [SerializeField] private float timeDropBoom;
     [SerializeField] private float timeDropBall;
     [SerializeField] GameObject postE;
-
+    [SerializeField] Player scripPlayer;
+    [SerializeField] Shake scripShake;
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
@@ -209,9 +210,22 @@ public class MakeEnemy : MonoBehaviour
     /// <summary>
     /// mode Shake
     /// </summary>
-    private void _Shake()
+    public  void _OnShake()
     {
-
+        if( scripPlayer.enabled == true)
+        {
+            scripPlayer.enabled = false;
+            scripShake.enabled = true;
+        }
+        Debug.Log("Shake");
+    }
+    public void _OffShake()
+    {
+        if (scripPlayer.enabled == false)
+        {
+            scripPlayer.enabled = true;
+            scripShake.enabled = false;
+        }
     }
     /// <summary>
     /// mode WaterDrop

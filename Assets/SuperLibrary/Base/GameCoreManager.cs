@@ -338,27 +338,32 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         {
             MakeEnemy.make._spawnWood();
             MakeEnemy.make._ModeNormal();
+            MakeEnemy.make._OffShake();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.Normal)
         {
             MakeEnemy.make._ModeNormal();
-            
+            MakeEnemy.make._OffShake();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.BoomReject)
         {
             MakeEnemy.make._ModeBoomReject();
+            MakeEnemy.make._OffShake();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.WaterDrop)
         {
             MakeEnemy.make._ModeWaterDrop();
+            MakeEnemy.make._OffShake();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.RubberBalls)
         {
             MakeEnemy.make._ModeRumbelBall();
+            MakeEnemy.make._OffShake();
         }
         if (DataManager.CurrentStage.gameMode == GameMode.Shake)
         {
-
+            MakeEnemy.make._ModeNormal();
+            MakeEnemy.make._OnShake();
         }
     }
     private void OnGameLoseHandler(object param)

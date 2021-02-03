@@ -59,6 +59,8 @@ public class UiMode : ControUI
     }
     public void _OnShake()  // nho sua
     {
+        if (DataManager.StagesAsset.list.Count > 4)
+            DataManager.CurrentStage = DataManager.StagesAsset.list[4];
         _ScaleButton();
         selectButton[4].transform.localScale = new Vector2(1.5f, 1.5f);
 
@@ -68,7 +70,7 @@ public class UiMode : ControUI
         if (DataManager.StagesAsset.list.Count > 5)
             DataManager.CurrentStage = DataManager.StagesAsset.list[5];
            _ScaleButton();
-           selectButton[4].transform.localScale = new Vector2(1.5f, 1.5f);
+           selectButton[5].transform.localScale = new Vector2(1.5f, 1.5f);
     }
     public void OnCoinAdsButtonClick()
     {
