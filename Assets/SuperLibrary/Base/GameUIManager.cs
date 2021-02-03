@@ -23,6 +23,11 @@ public class GameUIManager : GameManagerBase<GameUIManager>
 
     [SerializeField]
     private UIGameOver gameOverScreen = null;
+
+    [SerializeField] private UISelectSkin selectSkinScreen = null;
+
+    public static UISelectSkin SelectSkinScreen => instance?.selectSkinScreen;
+
     public static UIGameOver GameOverScreen => instance?.gameOverScreen;
 
     private DateTime startLoadTime = DateTime.Now;
@@ -302,5 +307,10 @@ public class GameUIManager : GameManagerBase<GameUIManager>
                     });
             }
         }
+    }
+
+    public void OpenPopupSelectSkins()
+    {
+        selectSkinScreen.Show();
     }
 }
