@@ -16,7 +16,7 @@ public class PlayerSkinManager : MonoBehaviour
 
     private void OnSkinChange(SkinData current, List<SkinData> list)
     {
-        SetSkin(current.index + 1);
+        SetSkin(current.index);
     }
 
     // private void OnEnable()
@@ -44,9 +44,13 @@ public class PlayerSkinManager : MonoBehaviour
     private void SetSkin(int index)
     {
         var numOfSkin = charSke.SkeletonDataAsset.GetSkeletonData(false).Skins;
-        if (index > numOfSkin.Count) return;
-        charSke.Skeleton.SetSkin($"{charPrefix}{index}");
+        if (index >= numOfSkin.Count) return;
+        // charSke.Skeleton.SetSkin($"{charPrefix}{index + 1}");
+
+        var ske = charSke.Skeleton;
+        var newSkin = new Spine.Skin("new_skin");
+        newSkin.AddSkin(ske.Data.FindSkin($"{charPrefix}{index + 1}"));
+        ske.SetSkin(newSkin);
+        ske.SetToSetupPose();
     }
-    
-    
 }

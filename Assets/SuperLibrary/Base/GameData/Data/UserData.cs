@@ -6,27 +6,31 @@ using UnityEngine;
 [Serializable]
 public class UserData : UserAnalysic
 {
-    [Header("Data")]
-    public int live = 15;
+    [Header("Data")] public int live = 15;
     public int liveCountDown;
     public float latencyUser = 0;
     public int level = 1;
-    public string [] userItem;
+    public string[] userItem;
 
 
     private string lastTimeUpdate = new DateTime(1999, 1, 1).ToString();
+
     public DateTime LastTimeUpdate
     {
         get => DateTimeConverter.ToDateTime(lastTimeUpdate);
         set => lastTimeUpdate = value.ToString();
     }
+
     private string fistTimeOpen = DateTime.Now.ToString();
+
     public DateTime FistTimeOpen
     {
         get => DateTimeConverter.ToDateTime(fistTimeOpen);
         set => fistTimeOpen = value.ToString();
     }
+
     private bool _isRemovedAds;
+
     public bool isRemovedAds
     {
         get => _isRemovedAds;
@@ -40,11 +44,15 @@ public class UserData : UserAnalysic
             }
         }
     }
+
     public double limitedPassTimeCountDown;
 
-    [Header("Money")]
-    [SerializeField]
+    [Header("Money")] [SerializeField]
+#if USE_IRON
     private int coin = 0;
+#else
+    private int coin = 999999;
+#endif
     public int totalCoin
     {
         get => coin;
@@ -79,11 +87,12 @@ public class UserData : UserAnalysic
             }
         }
     }
+
     public int totalCoinEarn = 0;
     public int totalCoinSpend = 0;
 
-    [SerializeField]
-    private int diamond;
+    [SerializeField] private int diamond;
+
     public int totalDiamond
     {
         get => diamond;
@@ -108,11 +117,12 @@ public class UserData : UserAnalysic
             }
         }
     }
+
     public int totalDiamondEarn = 0;
     public int totalDiamondSpend = 0;
 
-    [SerializeField]
-    private int star;
+    [SerializeField] private int star;
+
     public int totalStar
     {
         get
@@ -142,14 +152,15 @@ public class UserData : UserAnalysic
             }
         }
     }
+
     public int totalStarEarn = 0;
     public int totalStarSpend = 0;
 
-    [Header("Char Skin")]
-    public int skinIndex = 1;
+    [Header("Char Skin")] public int skinIndex = 1;
 
 
     private int totalStageUnlocked = 1;
+
     public int TotalStageUnlocked
     {
         get
@@ -161,13 +172,16 @@ public class UserData : UserAnalysic
                 {
                     totalStageUnlocked = temp;
                 }
+
                 return totalStageUnlocked;
             }
+
             return 1;
         }
     }
 
     private int totalPurchased = 0;
+
     public int TotalPurchased
     {
         get => totalPurchased;
@@ -181,6 +195,7 @@ public class UserData : UserAnalysic
     }
 
     public delegate void MoneyChangedDelegate(int changedValue, int current);
+
     public static event MoneyChangedDelegate OnCoinChanged;
     public static event MoneyChangedDelegate OnDiamondChanged;
     public static event MoneyChangedDelegate OnStarChanged;
@@ -189,8 +204,8 @@ public class UserData : UserAnalysic
 [Serializable]
 public class UserAnalysic : UserBase
 {
-    [Header("Analysic")]
-    private int versionInstall;
+    [Header("Analysic")] private int versionInstall;
+
     public int VersionInstall
     {
         get => versionInstall;
@@ -204,6 +219,7 @@ public class UserAnalysic : UserBase
     }
 
     private int versionCurrent;
+
     public int VersionCurrent
     {
         get => versionCurrent;
@@ -217,6 +233,7 @@ public class UserAnalysic : UserBase
     }
 
     private int session = 0;
+
     public int Session
     {
         get => session;
@@ -230,6 +247,7 @@ public class UserAnalysic : UserBase
     }
 
     private long totalPlay = 0;
+
     public long TotalPlay
     {
         get => totalPlay;
@@ -243,6 +261,7 @@ public class UserAnalysic : UserBase
     }
 
     private long totalTimePlay = 0;
+
     public long TotalTimePlay
     {
         get => totalTimePlay;
@@ -255,8 +274,8 @@ public class UserAnalysic : UserBase
         }
     }
 
-    [Header("Ads")]
-    private long totalAdInterstitial = 0;
+    [Header("Ads")] private long totalAdInterstitial = 0;
+
     public long TotalAdInterstitial
     {
         get => totalAdInterstitial;
@@ -270,6 +289,7 @@ public class UserAnalysic : UserBase
     }
 
     private long totalAdRewarded = 0;
+
     public long TotalAdRewarded
     {
         get => totalAdRewarded;
@@ -283,6 +303,7 @@ public class UserAnalysic : UserBase
     }
 
     public long totalAdBanner = 0;
+
     public long TotalAdBanner
     {
         get => totalAdBanner;
@@ -296,6 +317,7 @@ public class UserAnalysic : UserBase
     }
 
     private string abTesting;
+
     public string ABTesting
     {
         get
@@ -310,6 +332,7 @@ public class UserAnalysic : UserBase
                 else
                     abTesting = "C";
             }
+
             return abTesting;
         }
         set
@@ -322,6 +345,7 @@ public class UserAnalysic : UserBase
     }
 
     private string source;
+
     public string Source
     {
         get => source;
@@ -338,8 +362,7 @@ public class UserAnalysic : UserBase
 [Serializable]
 public class UserBase
 {
-    [Header("Base")]
-    public string id;
+    [Header("Base")] public string id;
     public string email;
     public string name;
 }

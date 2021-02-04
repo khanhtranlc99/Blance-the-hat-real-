@@ -1,125 +1,160 @@
 
 anim_char.png
-size: 1928,796
+size: 1992,1396
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 char1/char_cap
-  rotate: false
-  xy: 1794, 369
+  rotate: true
+  xy: 1679, 103
   size: 73, 223
   orig: 75, 225
   offset: 1, 1
   index: -1
 char1/char_mu
-  rotate: false
-  xy: 1391, 594
+  rotate: true
+  xy: 1719, 279
   size: 513, 197
   orig: 515, 199
   offset: 1, 1
   index: -1
 char1/char_than
   rotate: false
-  xy: 2, 179
+  xy: 2, 198
   size: 461, 612
   orig: 461, 612
   offset: 0, 0
   index: -1
 char2/char_cap
-  rotate: true
-  xy: 1451, 116
+  rotate: false
+  xy: 1904, 53
   size: 72, 224
   orig: 74, 226
   offset: 1, 1
   index: -1
 char2/char_kinh1
   rotate: false
-  xy: 1391, 190
+  xy: 1402, 794
   size: 400, 137
   orig: 402, 139
   offset: 1, 1
   index: -1
 char2/char_kinh2
   rotate: false
-  xy: 1391, 329
+  xy: 642, 50
   size: 401, 263
   orig: 403, 265
   offset: 1, 1
   index: -1
 char2/char_kinh3
-  rotate: true
-  xy: 1224, 35
+  rotate: false
+  xy: 489, 80
   size: 142, 225
   orig: 144, 227
   offset: 1, 1
   index: -1
 char2/char_kinh4
   rotate: true
-  xy: 997, 34
+  xy: 1175, 788
   size: 143, 225
   orig: 145, 227
   offset: 1, 1
   index: -1
 char2/char_mu
-  rotate: false
-  xy: 2, 2
+  rotate: true
+  xy: 465, 307
   size: 503, 175
   orig: 505, 177
   offset: 1, 1
   index: -1
 char2/char_than
-  rotate: false
-  xy: 465, 179
+  rotate: true
+  xy: 642, 315
   size: 461, 612
   orig: 461, 612
   offset: 0, 0
   index: -1
 char3/char_cap
-  rotate: true
-  xy: 1451, 43
+  rotate: false
+  xy: 1918, 598
   size: 71, 224
   orig: 73, 226
   offset: 1, 1
   index: -1
 char3/char_mu
   rotate: false
-  xy: 507, 3
+  xy: 1189, 2
   size: 488, 174
   orig: 490, 176
   offset: 1, 1
   index: -1
 char3/char_rau
   rotate: true
-  xy: 1869, 353
+  xy: 1045, 74
   size: 239, 55
   orig: 239, 55
   offset: 0, 0
   index: -1
 char3/char_than
-  rotate: false
-  xy: 928, 179
+  rotate: true
+  xy: 1175, 933
   size: 461, 612
   orig: 461, 612
   offset: 0, 0
   index: -1
 char3/char_toc
   rotate: false
-  xy: 1677, 60
+  xy: 1102, 185
   size: 109, 128
   orig: 109, 128
   offset: 0, 0
   index: -1
 char3/char_vay1
   rotate: true
-  xy: 1793, 171
+  xy: 1102, 27
   size: 156, 85
   orig: 156, 85
   offset: 0, 0
   index: -1
 char3/char_vay2
-  rotate: true
-  xy: 1788, 13
+  rotate: false
+  xy: 1804, 824
   size: 156, 85
   orig: 156, 85
   offset: 0, 0
+  index: -1
+char4/char_mu
+  rotate: false
+  xy: 2, 12
+  size: 485, 184
+  orig: 485, 184
+  offset: 0, 0
+  index: -1
+char4/char_mu_toc
+  rotate: false
+  xy: 2, 812
+  size: 642, 582
+  orig: 648, 642
+  offset: 0, 47
+  index: -1
+char4/char_than
+  rotate: false
+  xy: 1256, 178
+  size: 461, 608
+  orig: 648, 642
+  offset: 125, 0
+  index: -1
+char5/char_mu
+  rotate: true
+  xy: 1804, 911
+  size: 483, 182
+  orig: 483, 182
+  offset: 0, 0
+  index: -1
+char5/char_than
+  rotate: false
+  xy: 646, 778
+  size: 527, 616
+  orig: 648, 642
+  offset: 121, 0
   index: -1

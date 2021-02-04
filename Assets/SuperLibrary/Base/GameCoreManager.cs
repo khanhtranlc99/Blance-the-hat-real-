@@ -50,7 +50,6 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         //_LoadLogicItem();
         base.Start();
-        CoinManager.Add(1000);
     }
     private void OnEnable()
     {
