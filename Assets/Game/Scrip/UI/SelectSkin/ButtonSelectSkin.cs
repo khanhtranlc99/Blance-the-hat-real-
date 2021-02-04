@@ -10,22 +10,23 @@ public class ButtonSelectSkin : MonoBehaviour
     [SerializeField] private GameObject priceObject;
     [SerializeField] private Image priceIcon;
     [SerializeField] private Text priceNumber;
-    
-    [Header("Price Icon")]
-    [SerializeField] private Sprite iconAds;
+
+    [Header("Price Icon")] [SerializeField]
+    private Sprite iconAds;
+
     [SerializeField] private Sprite iconGold;
     [SerializeField] private Sprite iconGem;
     [SerializeField] private Sprite iconStar;
-    
+
     public void SetButton(SkinData skinData)
     {
         button.onClick.RemoveAllListeners();
-        
+
         if (skinData.isUnlocked)
         {
             playObject.SetActive(true);
             priceObject.SetActive(false);
-            
+
             button.onClick.AddListener(() =>
             {
                 DataManager.CurrentSkin.isSelected = false;
@@ -39,7 +40,7 @@ public class ButtonSelectSkin : MonoBehaviour
             Debug.Log("Skin " + skinData.name + " not unlocked");
             playObject.SetActive(false);
             priceObject.SetActive(true);
-            
+
             int unlockRequire = 0;
 
             switch (skinData.unlockType)
@@ -59,43 +60,49 @@ public class ButtonSelectSkin : MonoBehaviour
                     priceIcon.sprite = iconStar;
                     break;
             }
-            
+
             priceNumber.text = unlockRequire.ToString();
-            
+
             button.onClick.AddListener(() =>
             {
                 switch (skinData.unlockType)
                 {
                     case UnlockType.Ads:
-                        var unlockPlayed = skinData.unlockPay++;
-                        if (unlockPlayed >= skinData.unlockPrice - 1)
-                        { 
-                            skinData.isUnlocked = true;
-                        }
-                        
-                        SetButton(skinData);
-                       
+
+                        AdsManager.ShowVideoReward((s) =>
+                        {
+                            if (s == AdEvent.Success)
+                            {
+                                var unlockPlayed = skinData.unlockPay++;
+                                if (unlockPlayed >= skinData.unlockPrice - 1)
+                                {
+                                    skinData.isUnlocked = true;
+                                }
+
+                                SetButton(skinData);
+                            }
+                        }, "Select_Item", "select_skin_" + skinData.id);
+
                         break;
                     case UnlockType.Gem:
                         break;
                     case UnlockType.Gold:
                         if (CoinManager.totalCoin >= skinData.unlockPrice)
-                        { 
-                            CoinManager.Add(- skinData.unlockPrice);
+                        {
+                            CoinManager.Add(-skinData.unlockPrice);
                             skinData.isUnlocked = true;
                         }
                         else
                         {
                             Debug.Log("Not enought coin");
                         }
-                        
+
                         SetButton(skinData);
-                        
+
                         break;
                     case UnlockType.Star:
                         break;
                 }
-            
             });
         }
     }
