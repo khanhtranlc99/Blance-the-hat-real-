@@ -32,7 +32,7 @@ public class ButtonSugget : MonoBehaviour
                         selectItem.isUnlocked = true;
                         UiEndGame.ui._SuggetOff();
                     }
-                }, "Select_Item", "select_item_Sugget_" + DataManager.GameConfig.coinAdsReward);
+                }, "Suggest_Item", "suggest_item_" + selectItem.id);
             });
         }
     }
@@ -55,7 +55,7 @@ public class ButtonSugget : MonoBehaviour
                         selectItem.isUnlocked = true;
                         UiEndGame.ui._SuggetOff();
                     }
-                }, "Select_Skin", "select_Skin_" + DataManager.GameConfig.coinAdsReward);
+                }, "Select_Skin", "suggest_skin_" + selectItem.id);
             });
         }
 
