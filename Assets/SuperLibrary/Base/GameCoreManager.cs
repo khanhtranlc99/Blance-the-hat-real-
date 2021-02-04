@@ -39,8 +39,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     [SerializeField] GameObject postItem;
     private Coroutine itemCoroutine = null;
     protected override void Awake()
-    {
-      
+    {     
         base.Awake();
         coreManager = this;
         TouchPanelEventScript.OnPointerDownHandle += OnPointerDownHandle;
@@ -80,8 +79,6 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
 
 
         }
-
-  
 
     }
 
@@ -220,6 +217,13 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     protected override void WaitingGameOver(object data)
     {
         Debug.Log("Game Core goto WaitingGameOver");
+        AdsManager.ShowVideoReward((s) =>
+        {
+            if (s == AdEvent.Success)
+            {
+              
+            }
+        }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
         _StopTime();
     }
     public void _ChageMenu(object param)
