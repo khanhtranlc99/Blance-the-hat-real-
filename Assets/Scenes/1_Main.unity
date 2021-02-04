@@ -1048,6 +1048,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1426298516450173536, guid: db15723a783aa7a47b531ce8e3473810,
+        type: 3}
+      propertyPath: speedShake
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5884027461586742913, guid: db15723a783aa7a47b531ce8e3473810,
         type: 3}
       propertyPath: m_Mesh
@@ -9374,7 +9379,7 @@ PrefabInstance:
     - target: {fileID: 6804414870060802610, guid: 5c8abaa26d2724b428e9c3533d7d2340,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 6804414870060802610, guid: 5c8abaa26d2724b428e9c3533d7d2340,
         type: 3}

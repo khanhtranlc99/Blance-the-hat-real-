@@ -40,6 +40,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     private Coroutine itemCoroutine = null;
     protected override void Awake()
     {
+      
         base.Awake();
         coreManager = this;
         TouchPanelEventScript.OnPointerDownHandle += OnPointerDownHandle;
@@ -49,6 +50,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     {
         //_LoadLogicItem();
         base.Start();
+        CoinManager.Add(1000);
     }
     private void OnEnable()
     {

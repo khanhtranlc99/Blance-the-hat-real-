@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Shake : MonoBehaviour
 {
@@ -19,9 +20,8 @@ public class Shake : MonoBehaviour
     private void _Shake()
     {
         var post = Input.acceleration.x * speedShake;
-        transform.eulerAngles = new Vector3(0, 0, post);
-
-
+        transform.eulerAngles = new Vector3(0, 0, -post);
+     
 
 
     }    
