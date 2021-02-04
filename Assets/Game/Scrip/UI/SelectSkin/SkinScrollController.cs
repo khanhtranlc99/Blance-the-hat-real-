@@ -15,6 +15,8 @@ public class SkinScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private SkinAsset skins => DataManager.SkinsAsset;
     private List<ItemSkinScrollData> itemsData;
     
+    private int currentIndexItem = 100;
+    
     public int GetNumberOfCells(EnhancedScroller scroller)
     {
         return itemsData.Count;
@@ -44,13 +46,29 @@ public class SkinScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private void OnItemSelected(int index, Action actionComplete = null)
     {
         scroller.JumpToDataIndex(index, 0.5f, 0.5f, true, scrollerTweenType, scrollerTweenTime, actionComplete);
+        currentIndexItem = index;
     }
     
     private void OnEnable()
     {
+        scroller.cellViewVisibilityChanged += OnCellViewVisibilityChanged;
         InitScroll();
     }
-    
+
+    private void OnDisable()
+    {
+        btnSelect.gameObject.SetActive(false);
+        currentIndexItem = 100;
+    }
+
+    private void OnCellViewVisibilityChanged(EnhancedScrollerCellView cellview)
+    {
+        if (cellview.dataIndex == currentIndexItem)
+        {
+            this.PostEvent((int) EventID.ItemScrollSelect, cellview as ItemSkinScroll);
+        }
+    }
+
 
     private void InitScroll()
     {
@@ -66,6 +84,7 @@ public class SkinScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         {
             var item = scroller.GetCellViewAtDataIndex(skinIndex);
             item.transform.localScale = new Vector2(1.5f, 1.5f);
+            btnSelect.SetButton(skins.list[skinIndex]);
         });
     }
     

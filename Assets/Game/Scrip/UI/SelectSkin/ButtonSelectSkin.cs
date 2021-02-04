@@ -105,5 +105,7 @@ public class ButtonSelectSkin : MonoBehaviour
                 }
             });
         }
+        this.gameObject.SetActive(true);
     }
+    
 }
