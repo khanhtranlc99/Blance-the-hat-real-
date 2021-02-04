@@ -29,25 +29,25 @@ MonoBehaviour:
     idThumb: Unity
     index: 0
     description: 
-    unlockType: 4
+    unlockType: 0
     unlockPrice: 0
-    isUnlocked: 1
+    isUnlocked: 0
     isSelected: 1
-    count: 410
+    count: 12
     countHit: 0
     unlockPay: 0
-    score: 61
-    totalPlay: 410
+    score: 0
+    totalPlay: 12
     gameMode: 0
     star: 0
     process: 0
     combo: 0
-    time: 1
-    totalTimePlay: 1955
-    totalRestart: 128
+    time: 2
+    totalTimePlay: 24
+    totalRestart: 3
     totalReborn: 0
     totalPass: 0
-    totalFail: 278
+    totalFail: 12
     totalComplete: 0
     unlockBy: 0
   - name: Wood
@@ -58,22 +58,22 @@ MonoBehaviour:
     unlockType: 4
     unlockPrice: 3
     isUnlocked: 0
-    isSelected: 1
-    count: 8
+    isSelected: 0
+    count: 0
     countHit: 0
     unlockPay: 0
     score: 0
-    totalPlay: 8
+    totalPlay: 0
     gameMode: 1
     star: 0
     process: 0
     combo: 0
-    time: 3
-    totalTimePlay: 42
-    totalRestart: 3
+    time: 0
+    totalTimePlay: 0
+    totalRestart: 0
     totalReborn: 0
     totalPass: 0
-    totalFail: 5
+    totalFail: 0
     totalComplete: 0
     unlockBy: 0
   - name: BoomReject
@@ -81,8 +81,8 @@ MonoBehaviour:
     idThumb: 
     index: 2
     description: 
-    unlockType: 4
-    unlockPrice: 3
+    unlockType: 1
+    unlockPrice: 60
     isUnlocked: 0
     isSelected: 0
     count: 0
@@ -108,7 +108,7 @@ MonoBehaviour:
     index: 3
     description: 
     unlockType: 4
-    unlockPrice: 3
+    unlockPrice: 9
     isUnlocked: 0
     isSelected: 0
     count: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
     index: 4
     description: 
     unlockType: 4
-    unlockPrice: 3
+    unlockPrice: 12
     isUnlocked: 0
     isSelected: 0
     count: 0
@@ -159,8 +159,8 @@ MonoBehaviour:
     idThumb: 
     index: 5
     description: 
-    unlockType: 4
-    unlockPrice: 3
+    unlockType: 1
+    unlockPrice: 60
     isUnlocked: 0
     isSelected: 0
     count: 0
