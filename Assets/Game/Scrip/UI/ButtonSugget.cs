@@ -1,27 +1,78 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonSugget : MonoBehaviour
 {
     [SerializeField] Button button;
-    private void Start()
+    [SerializeField] Image image;
+    int random;
+    private void OnEnable()
     {
-        SetCoinButton();
+        _Random();
     }
-    public void SetCoinButton()
+    public void SetItem()
     {
-       
-        button.onClick.AddListener(() =>
+        var selectItem = DataManager.ItemsAsset.list.FirstOrDefault(_ => _.isUnlocked == false);
+        if (selectItem == null)
         {
-            AdsManager.ShowVideoReward((s) =>
+            UiEndGame.ui._SuggetOff();
+        }
+        else
+        {
+            image.sprite = selectItem.thumbnail; ;
+            button.onClick.AddListener(() =>
             {
-                if (s == AdEvent.Success)
+                AdsManager.ShowVideoReward((s) =>
                 {
-                    CoinManager.Add(DataManager.GameConfig.coinAdsReward);
-                }
-            }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
-        });
+                    if (s == AdEvent.Success)
+                    {
+                        selectItem.isUnlocked = true;
+                        UiEndGame.ui._SuggetOff();
+                    }
+                }, "Select_Item", "select_item_Sugget_" + DataManager.GameConfig.coinAdsReward);
+            });
+        }
+    }
+    public void SetSkin()
+    {
+        var selectItem = DataManager.SkinsAsset.list.FirstOrDefault(_ => _.isUnlocked == false);
+        if ( selectItem == null)
+        {
+            UiEndGame.ui._SuggetOff();
+        }
+        else
+        {
+            image.sprite = selectItem.thumbnail; ;
+            button.onClick.AddListener(() =>
+            {
+                AdsManager.ShowVideoReward((s) =>
+                {
+                    if (s == AdEvent.Success)
+                    {
+                        selectItem.isUnlocked = true;
+                        UiEndGame.ui._SuggetOff();
+                    }
+                }, "Select_Skin", "select_Skin_" + DataManager.GameConfig.coinAdsReward);
+            });
+        }
+
+       
+
+
+    }    
+    private void _Random()
+    {
+        var a = Random.Range(0, 2);
+        if( a == 0)
+        {
+            SetItem();
+        }
+        else
+        {
+            SetSkin();
+        }
     }
 }

@@ -1783,6 +1783,8 @@ MonoBehaviour:
   - {fileID: 2486288328809839284}
   - {fileID: 710001821425028604}
   textMobilize: {fileID: 0}
+  suggets: {fileID: 4885862897144117222}
+  cout: 0
 --- !u!1 &3309025722066519715
 GameObject:
   m_ObjectHideFlags: 0
@@ -4769,6 +4771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 7282578288251498270}
+  image: {fileID: 4842062013391111833}
 --- !u!1 &9166481333725542624
 GameObject:
   m_ObjectHideFlags: 0
@@ -7053,7 +7056,7 @@ PrefabInstance:
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 224476727122264912, guid: 3872eb99040dfa04b8536d2460b009d4,
         type: 3}

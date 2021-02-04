@@ -5,18 +5,22 @@ using UnityEngine.UI;
 
 public class UiEndGame : MonoBehaviour
 {
+    public static UiEndGame ui;
     [SerializeField] private Text textTimeEndGame;
     [SerializeField] private Image imageItem;
     [SerializeField] private Text textHightScore;
     [SerializeField] private GameObject[] coin;
     [SerializeField] private Text textMobilize;
+    [SerializeField] private Image suggets;
+    [SerializeField] private int cout;
+   
     private void OnEnable()
     {
         _ShowCoin();
     }
     private void Awake()
     {
-       
+        ui = this; 
     }
     public void _PrinTime()
     {   
@@ -76,6 +80,22 @@ public class UiEndGame : MonoBehaviour
         }
     }    
 
-
+     public void _Sugget()
+    {
+        cout += 1;      
+        if ( cout == 5)
+        {
+            suggets.gameObject.SetActive(true);        
+         
+        }
+       
+        Debug.Log("" + cout);
+    }
+    public void _SuggetOff()
+    {
+       
+            suggets.gameObject.SetActive(false);
+    
+    }
 
 }

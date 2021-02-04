@@ -220,10 +220,9 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
         AdsManager.ShowVideoReward((s) =>
         {
             if (s == AdEvent.Success)
-            {
-              
+            {          
             }
-        }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
+        }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
         _StopTime();
     }
     public void _ChageMenu(object param)

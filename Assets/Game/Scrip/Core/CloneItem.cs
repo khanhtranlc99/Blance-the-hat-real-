@@ -113,6 +113,7 @@ public class CloneItem : MonoBehaviour
     {
         StopAllCoroutines();
         GameCoreManager.coreManager.earthWake = false;
+        UiEndGame.ui._Sugget();
         Destroy(gameObject);
     }
     private void _SpawnSmoke()
