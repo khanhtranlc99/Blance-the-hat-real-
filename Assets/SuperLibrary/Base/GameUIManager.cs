@@ -28,6 +28,8 @@ public class GameUIManager : GameManagerBase<GameUIManager>
 
     public static UISelectSkin SelectSkinScreen => instance?.selectSkinScreen;
 
+    [SerializeField] private UIDailyGift dailyGiftScreen;
+
     public static UIGameOver GameOverScreen => instance?.gameOverScreen;
 
     private DateTime startLoadTime = DateTime.Now;
@@ -312,5 +314,10 @@ public class GameUIManager : GameManagerBase<GameUIManager>
     public void OpenPopupSelectSkins()
     {
         selectSkinScreen.Show();
+    }
+
+    public void OpenPopupDailyGift()
+    {
+        dailyGiftScreen.Show();
     }
 }
