@@ -21,8 +21,5 @@ public class Shake : MonoBehaviour
     {
         var post = Input.acceleration.x * speedShake;
         transform.eulerAngles = new Vector3(0, 0, -post);
-     
-
-
     }    
 }

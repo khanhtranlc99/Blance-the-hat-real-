@@ -13,7 +13,7 @@ public class UiEndGame : MonoBehaviour
     [SerializeField] private Text textMobilize;
     [SerializeField] private Image suggets;
     [SerializeField] private int cout;
-   
+
     private void OnEnable()
     {
         _ShowCoin();
@@ -88,6 +88,10 @@ public class UiEndGame : MonoBehaviour
             suggets.gameObject.SetActive(true);        
          
         }
+        else
+        {
+            suggets.gameObject.SetActive(false);
+        }    
        
         Debug.Log("" + cout);
     }
