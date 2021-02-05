@@ -82,15 +82,21 @@ public class UiEndGame : MonoBehaviour
 
      public void _Sugget()
     {
-        cout = 5;      
+        cout += 1;      
         if ( cout == 5)
         {
-            suggets.gameObject.SetActive(true);        
-         
+            suggets.gameObject.SetActive(true);
+            cout = 0;
         }
         else
         {
             suggets.gameObject.SetActive(false);
+            AdsManager.ShowVideoReward((s) =>
+            {
+                if (s == AdEvent.Success)
+                {
+                }
+            }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
         }    
        
         Debug.Log("" + cout);

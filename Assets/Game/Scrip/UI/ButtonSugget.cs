@@ -13,7 +13,7 @@ public class ButtonSugget : MonoBehaviour
     int random;
     private void OnEnable()
     {
-        _Random();
+        SetItem();
     }
     public void SetItem()
     {

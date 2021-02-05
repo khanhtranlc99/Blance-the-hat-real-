@@ -44,7 +44,7 @@ MonoBehaviour:
     index: 1
     description: 
     unlockType: 3
-    unlockPrice: 0
+    unlockPrice: 5
     isUnlocked: 0
     isSelected: 0
     count: 0
