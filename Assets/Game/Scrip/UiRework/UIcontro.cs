@@ -17,6 +17,7 @@ public class UIcontro : MonoBehaviour
     [SerializeField] Button btnHome;
     [SerializeField] GameObject postMouse;
     [SerializeField] Camera camUi;
+    [SerializeField] GameObject buttonSetting;
     private void OnEnable()
     {
         this.RegisterListener((int) EventID.GameLose, OnGameLoseHandler);
@@ -83,5 +84,16 @@ public class UIcontro : MonoBehaviour
     private void OnGameLoseHandler(object param)
     {
         uIcontro.uiEndGame._PrinTime();
+    }
+    public void _SettingOff()
+    {
+        if( buttonSetting.activeSelf == true)
+        {
+            buttonSetting.SetActive(false);
+        }
+        else
+        {
+            buttonSetting.SetActive(true);
+        }
     }
 }

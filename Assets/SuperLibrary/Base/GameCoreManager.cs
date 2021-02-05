@@ -217,12 +217,7 @@ public class GameCoreManager : GameManagerBase<GameCoreManager>
     protected override void WaitingGameOver(object data)
     {
         Debug.Log("Game Core goto WaitingGameOver");
-        AdsManager.ShowVideoReward((s) =>
-        {
-            if (s == AdEvent.Success)
-            {          
-            }
-        }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
+    
         _StopTime();
     }
     public void _ChageMenu(object param)
