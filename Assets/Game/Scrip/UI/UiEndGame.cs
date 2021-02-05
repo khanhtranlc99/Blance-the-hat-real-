@@ -91,7 +91,7 @@ public class UiEndGame : MonoBehaviour
         else
         {
             suggets.gameObject.SetActive(false);
-            AdsManager.ShowVideoReward((s) =>
+            AdsManager.ShowInterstitial((s) =>
             {
                 if (s == AdEvent.Success)
                 {

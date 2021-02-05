@@ -68,7 +68,7 @@ public class ButtonSugget : MonoBehaviour
 
             button.onClick.AddListener(() =>
             {
-                AdsManager.ShowInterstitial((s) =>
+                AdsManager.ShowVideoReward((s) =>
                 {
                     if (s == AdEvent.Success)
                     {
