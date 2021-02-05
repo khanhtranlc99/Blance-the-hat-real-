@@ -82,7 +82,7 @@ public class UiEndGame : MonoBehaviour
 
      public void _Sugget()
     {
-        cout += 1;      
+        cout = 5;      
         if ( cout == 5)
         {
             suggets.gameObject.SetActive(true);        
