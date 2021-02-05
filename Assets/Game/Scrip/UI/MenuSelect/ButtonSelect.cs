@@ -130,6 +130,7 @@ public class ButtonSelect : MonoBehaviour
                 }
             });
         }
+        this.gameObject.SetActive(true);
     }
 
     public void SetRandomItem()
@@ -143,6 +144,7 @@ public class ButtonSelect : MonoBehaviour
             PlayerPrefs.SetInt(Constant.IS_RANDOM_ITEM_PREFS, 1);
             UIcontro.uIcontro.ChangeUI(UIcontro.MenuUI.Home);
         });
+        this.gameObject.SetActive(true);
     }
 
     public void SetCoinButton()
@@ -161,5 +163,6 @@ public class ButtonSelect : MonoBehaviour
                 }
             }, "Select_Item", "select_item_coin_" + DataManager.GameConfig.coinAdsReward);
         });
+        this.gameObject.SetActive(true);
     }
 }

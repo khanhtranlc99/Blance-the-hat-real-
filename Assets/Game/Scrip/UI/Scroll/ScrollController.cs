@@ -18,11 +18,14 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private ItemsAsset items => DataManager.ItemsAsset;
     private List<ItermScrollData> itemsData;
 
+    private int currentIndexItem = 100;
+
     private void Awake()
     {
         DataManager.OnLoaded += DataManager_OnLoaded;
+        scroller.cellViewVisibilityChanged += OnCellViewVisibilityChanged;
     }
-
+    
     private void OnEnable()
     {
         InitScroll();
@@ -31,11 +34,21 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private void OnDisable()
     {
         scroller.ClearAll();
+        currentIndexItem = 100;
+        btnSelect.gameObject.SetActive(false);
     }
 
     private void DataManager_OnLoaded(GameData gameData)
     {
         InitScroll();
+    }
+    
+    private void OnCellViewVisibilityChanged(EnhancedScrollerCellView cellview)
+    {
+        if (cellview.dataIndex == currentIndexItem)
+        {
+            this.PostEvent((int) EventID.ItemScrollSelect, cellview as ItemScroll);
+        }
     }
 
     private void InitScroll()
@@ -51,7 +64,8 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         OnItemSelected(1, () =>
         {
             var item = scroller.GetCellViewAtDataIndex(1);
-            item.transform.localScale = new Vector2(1.5f, 1.5f);
+            this.PostEvent((int) EventID.ItemScrollSelect, item as ItemScroll);
+            btnSelect.SetRandomItem();
         });
     }
 
@@ -84,6 +98,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
     private void OnItemSelected(int index, Action actionComplete = null)
     {
         scroller.JumpToDataIndex(index, 0.5f, 0.5f, true, scrollerTweenType, scrollerTweenTime, actionComplete);
+        currentIndexItem = index;
     }
 
     public int GetNumberOfCells(EnhancedScroller scroller)
@@ -101,7 +116,7 @@ public class ScrollController : MonoBehaviour, IEnhancedScrollerDelegate
         ItemScroll item = scroller.GetCellView(cellViewPrefab) as ItemScroll;
         item.name = itemsData[dataIndex].name;
         item.SetData(itemsData[dataIndex]);
-
+        
         var randomItem = item.GetComponent<RandomItemScroll>();
         if (randomItem)
         {

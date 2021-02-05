@@ -16,6 +16,11 @@ public class ItemSkinScroll : EnhancedScrollerCellView
         this.RegisterListener((int) EventID.ItemScrollSelect, OnItemSelectHandler);
     }
 
+    private void OnDisable()
+    {
+        EventDispatcher.Instance?.RemoveListener((int) EventID.ItemScrollSelect, OnItemSelectHandler);
+    }
+
     private void OnItemSelectHandler(object param)
     {
         var skin = (ItemSkinScroll) param;
