@@ -99,7 +99,7 @@ public class UiEndGame : MonoBehaviour
             }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
         }    
        
-        Debug.Log("" + cout);
+        Debug.Log("Ads" + cout);
     }
     public void _SuggetOff()
     {
