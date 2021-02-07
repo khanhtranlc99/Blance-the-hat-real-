@@ -91,15 +91,17 @@ public class UiEndGame : MonoBehaviour
         else
         {
             suggets.gameObject.SetActive(false);
-            AdsManager.ShowInterstitial((s) =>
+            AdsManager.ShowVideoReward((s) =>
             {
                 if (s == AdEvent.Success)
                 {
+
+
                 }
             }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
         }    
        
-        Debug.Log("Ads" + cout);
+        Debug.Log("" + cout);
     }
     public void _SuggetOff()
     {
