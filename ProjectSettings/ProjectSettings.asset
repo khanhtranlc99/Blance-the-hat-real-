@@ -174,7 +174,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.abi.game.fun.impostor.balance
   buildNumber: {}
-  AndroidBundleVersionCode: 210203003
+  AndroidBundleVersionCode: 210207003
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
