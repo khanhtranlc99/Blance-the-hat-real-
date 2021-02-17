@@ -1703,6 +1703,7 @@ GameObject:
   - component: {fileID: 3291681734551594128}
   - component: {fileID: 3291681734551594129}
   - component: {fileID: 3291681734551594349}
+  - component: {fileID: 3386281072844322994}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -1859,6 +1860,18 @@ MonoBehaviour:
   textMobilize: {fileID: 0}
   suggets: {fileID: 4885862897144117222}
   cout: 0
+--- !u!114 &3386281072844322994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291681734551594131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b592954bc4eb5f643b34a4ad5ec26377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3309025722066519715
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3228,7 @@ GameObject:
   - component: {fileID: 6778226656458617661}
   - component: {fileID: 6778226656458617634}
   m_Layer: 5
-  m_Name: ButtonRate
+  m_Name: ButtonShare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3319,7 +3332,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6778226656458617661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3386281072844322994}
+        m_MethodName: _OnClickBtnShare
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6778226656789291377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,7 +4928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8707753176822111336
 RectTransform:
   m_ObjectHideFlags: 0
