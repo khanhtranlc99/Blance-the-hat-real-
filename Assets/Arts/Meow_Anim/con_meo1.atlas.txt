@@ -1,0 +1,139 @@
+
+con_meo1.png
+size: 516,204
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chan_ph
+  rotate: true
+  xy: 310, 15
+  size: 40, 94
+  orig: 44, 94
+  offset: 0, 0
+  index: -1
+chan_tr
+  rotate: true
+  xy: 402, 93
+  size: 40, 94
+  orig: 44, 94
+  offset: 4, 0
+  index: -1
+duoi
+  rotate: false
+  xy: 310, 57
+  size: 90, 144
+  orig: 90, 144
+  offset: 0, 0
+  index: -1
+mat_nen_ph
+  rotate: false
+  xy: 402, 135
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1
+mat_nen_tr
+  rotate: false
+  xy: 402, 135
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1
+mat_trong_ph
+  rotate: false
+  xy: 460, 25
+  size: 22, 21
+  orig: 22, 21
+  offset: 0, 0
+  index: -1
+mat_trong_ph1
+  rotate: false
+  xy: 458, 48
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+mat_trong_tr1
+  rotate: false
+  xy: 458, 48
+  size: 29, 29
+  orig: 29, 29
+  offset: 0, 0
+  index: -1
+mat_trong_tr
+  rotate: false
+  xy: 484, 17
+  size: 21, 21
+  orig: 21, 21
+  offset: 0, 0
+  index: -1
+mo_hoi
+  rotate: false
+  xy: 470, 135
+  size: 41, 66
+  orig: 41, 67
+  offset: 0, 0
+  index: -1
+mui
+  rotate: true
+  xy: 437, 20
+  size: 26, 21
+  orig: 26, 21
+  offset: 0, 0
+  index: -1
+rau_1
+  rotate: false
+  xy: 402, 79
+  size: 39, 12
+  orig: 39, 12
+  offset: 0, 0
+  index: -1
+rau_2
+  rotate: true
+  xy: 498, 79
+  size: 54, 11
+  orig: 54, 11
+  offset: 0, 0
+  index: -1
+rau_3
+  rotate: true
+  xy: 489, 40
+  size: 37, 15
+  orig: 37, 15
+  offset: 0, 0
+  index: -1
+rau_4
+  rotate: false
+  xy: 443, 79
+  size: 39, 12
+  orig: 40, 12
+  offset: 0, 0
+  index: -1
+rau_5
+  rotate: false
+  xy: 402, 66
+  size: 54, 11
+  orig: 54, 11
+  offset: 0, 0
+  index: -1
+rau_6
+  rotate: true
+  xy: 420, 27
+  size: 37, 15
+  orig: 37, 15
+  offset: 0, 0
+  index: -1
+tang_nhang
+  rotate: false
+  xy: 310, 2
+  size: 108, 11
+  orig: 108, 11
+  offset: 0, 0
+  index: -1
+than
+  rotate: true
+  xy: 2, 8
+  size: 193, 306
+  orig: 193, 306
+  offset: 0, 0
+  index: -1
