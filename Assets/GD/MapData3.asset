@@ -190,7 +190,128 @@ MonoBehaviour:
     moveYJump: 0
     timeLoopJump: 0
   - name: Bird
-    cloneItem: {fileID: 4975877265528871091, guid: a93354be4d2708a41b79da668d314878,
+    cloneItem: {fileID: 7887214927647555079, guid: a93354be4d2708a41b79da668d314878,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Badminton
+    cloneItem: {fileID: 2374168000177919159, guid: 883e9f72a4965e143b01fc78fa1d6101,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Beanie
+    cloneItem: {fileID: 4189549727255519205, guid: 1c5e8afe675440b4ab9a644cbf1d662c,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Beer
+    cloneItem: {fileID: 6593286513850506069, guid: 3ee0dfa90f58670429f405c155063dea,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Meow
+    cloneItem: {fileID: 7055642373090594082, guid: 158904033a0d3bd41be8182c4f39e225,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: NoelHat
+    cloneItem: {fileID: 4166981280967089303, guid: c474e6bd9ba821f4dbe810fc0977ef03,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Pebble
+    cloneItem: {fileID: 6048985592865731950, guid: 3cbd927892552b94cbce0edf73563ad5,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Ping Pong
+    cloneItem: {fileID: 2366250996122024970, guid: 32c1ba7f6019cbb488da2bd83fbec93e,
+      type: 3}
+    friction: 0
+    bounciness: 1
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: Slippy
+    cloneItem: {fileID: 5170059274922425829, guid: 04863642daf21614d9518f86329ad2de,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: TenisBall
+    cloneItem: {fileID: 745385245390465411, guid: cfc51436bd010b14fb800023098413ba,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: VolleyBall
+    cloneItem: {fileID: 6940787902181280050, guid: b5c243218e2e677438b17aab97c87b82,
+      type: 3}
+    friction: 0
+    bounciness: 0
+    mass: 1.5
+    itemCanJump: 0
+    wasJump: 0
+    moveXJump: 0
+    moveYJump: 0
+    timeLoopJump: 0
+  - name: WaterBottle
+    cloneItem: {fileID: 8880063973428779249, guid: 74376ff9897706143838d2c8ba110d42,
       type: 3}
     friction: 0
     bounciness: 0
