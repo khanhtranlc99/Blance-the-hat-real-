@@ -8,8 +8,11 @@ public class UiMode : ControUI
     [SerializeField] private Button[] selectButton;
     [SerializeField] private Button ButtonPlay;
     [SerializeField] private Button ButtonClone;
-    [SerializeField] private Button ButtonWater; 
-    private void Start()
+    [SerializeField] private Button ButtonWater;
+  
+
+    
+ private void Start()
     {
         _NormalMode();
     }
@@ -158,4 +161,11 @@ public class UiMode : ControUI
         }
 
     }
+    public void _BtnNoAds()
+    {
+        DataManager.UserData.isRemovedAds = true;
+
+
+         
+    }    
 }

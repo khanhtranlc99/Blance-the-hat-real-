@@ -51,8 +51,8 @@ public class DataManager : MonoBehaviour
     protected ItemsAsset itemsAsset = null;
     [SerializeField]
     protected SkinAsset skinsAsset = null;
-
-    public static bool IsFirstTime = false;
+ 
+public static bool IsFirstTime = false;
 
     [Header("GameData auto SAVE LOAD")]
     [SerializeField]
@@ -99,7 +99,7 @@ public class DataManager : MonoBehaviour
                 Debug.Log("Save cloud is not implement!");
             }
         }
-    }
+    } 
 
     public static IEnumerator DoLoad()
     {

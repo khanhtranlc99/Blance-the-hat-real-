@@ -272,7 +272,7 @@ MonoBehaviour:
     unlockType: 3
     unlockPrice: 4
     isUnlocked: 1
-    isSelected: 1
+    isSelected: 0
     count: 0
     countHit: 0
     unlockPay: 4
@@ -335,13 +335,13 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 0
-    isSelected: 0
+    isUnlocked: 1
+    isSelected: 1
     count: 0
     countHit: 0
     unlockPay: 0
-    score: 31
-    thumbnail: {fileID: 21300000, guid: 21fe8949b046906469073b7cd7429778, type: 3}
+    score: 52
+    thumbnail: {fileID: 21300000, guid: 31c65f5548a03d34eb0976a07e7b3feb, type: 3}
     prefab: {fileID: 7866792665410098321, guid: 3cbd927892552b94cbce0edf73563ad5,
       type: 3}
   - name: Slippy
@@ -453,7 +453,7 @@ MonoBehaviour:
     countHit: 0
     unlockPay: 0
     score: 31
-    thumbnail: {fileID: 21300000, guid: 1abd0920b134fed43be7e618bc08f5a2, type: 3}
+    thumbnail: {fileID: 21300000, guid: 382b2583c28c2444ca9d2595a86b1607, type: 3}
     prefab: {fileID: 7304321000986098346, guid: 3ee0dfa90f58670429f405c155063dea,
       type: 3}
   - name: Ping Pong
@@ -463,7 +463,7 @@ MonoBehaviour:
     description: 
     unlockType: 1
     unlockPrice: 50
-    isUnlocked: 0
+    isUnlocked: 1
     isSelected: 0
     count: 0
     countHit: 0
