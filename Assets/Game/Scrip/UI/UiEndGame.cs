@@ -90,15 +90,24 @@ public class UiEndGame : MonoBehaviour
         }
         else
         {
-            suggets.gameObject.SetActive(false);
-            AdsManager.ShowVideoReward((s) =>
+             if( AdsManager.IsConnected == true)
             {
-                if (s == AdEvent.Success)
+                AdsManager.ShowVideoReward((s) =>
                 {
+                    if (s == AdEvent.Success)
+                    {
+                    }
+                }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
+            }   
+             else
+            {
 
 
-                }
-            }, "Ads", "Ads_EndGame" + DataManager.GameConfig.coinAdsReward);
+                Debug.Log("noConnect");
+
+            }                
+            suggets.gameObject.SetActive(false);
+          
         }    
        
         Debug.Log("" + cout);

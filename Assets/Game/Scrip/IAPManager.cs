@@ -3,38 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Purchasing;
 
-public class IAPManager : MonoBehaviour , IStoreListener
+public class IAPManager : MonoBehaviour 
 
 {
-    void IStoreListener.OnInitialized(IStoreController controller, IExtensionProvider extensions)
+    private string noAds = "com.Tester";
+    public void OnPurChaseComplete(Product product)
     {
-        throw new System.NotImplementedException();
-    }
 
-    void IStoreListener.OnInitializeFailed(InitializationFailureReason error)
-    {
-        throw new System.NotImplementedException();
+        if (product.definition.id == noAds)
+        {
+            DataManager.UserData.isRemovedAds = true;
+            Debug.Log("noAds");
+        }
     }
-
-    void IStoreListener.OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
+    public void OnPurChaseFalse(Product product, PurchaseFailureReason reason)
     {
-        throw new System.NotImplementedException();
-    }
-
-    PurchaseProcessingResult IStoreListener.ProcessPurchase(PurchaseEventArgs purchaseEvent)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
+        Debug.Log("Purchase of " + product.definition.id + " false " + reason);
     }
 }

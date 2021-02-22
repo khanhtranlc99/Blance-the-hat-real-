@@ -61,7 +61,7 @@ MonoBehaviour:
   waterForce: 0
   ballForce: 0
   boomForce: 0
-  ball: 1
+  ball: 0
   inheath: 0
 --- !u!50 &2497338999208423083
 Rigidbody2D:

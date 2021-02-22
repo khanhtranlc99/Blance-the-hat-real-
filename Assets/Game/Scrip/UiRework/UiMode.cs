@@ -161,11 +161,5 @@ public class UiMode : ControUI
         }
 
     }
-    public void _BtnNoAds()
-    {
-        DataManager.UserData.isRemovedAds = true;
-
-
-         
-    }    
+  
 }

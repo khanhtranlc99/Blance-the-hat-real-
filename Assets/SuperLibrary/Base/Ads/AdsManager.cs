@@ -10,7 +10,7 @@ using FalconSDK;
 
 public class AdsManager : MonoBehaviour
 {
-
+ 
     [Header("Main Network")]
     [SerializeField]
     private AdMobile adNetWork = AdMobile.ADMOD;
@@ -50,6 +50,7 @@ public class AdsManager : MonoBehaviour
 
     [SerializeField]
     protected UIToggle isRemoveAds;
+     
     public static bool IsRemoveAds
     {
         get
